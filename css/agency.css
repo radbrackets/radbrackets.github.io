@@ -628,11 +628,11 @@ footer ul.quicklinks {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-ul.social-buttons {
+ul.contact-buttons {
   margin-bottom: 0;
 }
 
-ul.social-buttons li a {
+ul.contact-buttons li a {
   font-size: 20px;
   line-height: 40px;
   display: block;
@@ -647,6 +647,6 @@ ul.social-buttons li a {
   background-color: #212529;
 }
 
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+ul.contact-buttons li a:active, ul.contact-buttons li a:focus, ul.contact-buttons li a:hover {
   background-color: #95959E;
 }
