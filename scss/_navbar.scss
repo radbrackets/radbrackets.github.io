@@ -2,6 +2,7 @@
 #mainNav {
   background-color: white;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.17);
+  padding: 0 1em;
   .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -22,6 +23,11 @@
     &:hover {
       color: darken($primary, 20%);
     }
+    .navbar-logo {
+      height: 3em;
+    }
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .navbar-nav {
     .nav-item {
@@ -42,8 +48,8 @@
 }
 @media(min-width:992px) {
   #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -53,6 +59,9 @@
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
+      .navbar-logo {
+        height: 6em;
+      }
     }
     .navbar-nav {
       .nav-item {
@@ -67,7 +76,11 @@
       background-color: white;
       .navbar-brand {
         font-size: 1.25em;
-        padding: 12px 0;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        .navbar-logo {
+          height: 3em;
+        }
       }
     }
   }
