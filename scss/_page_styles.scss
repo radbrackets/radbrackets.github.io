@@ -1,0 +1,30 @@
+.bg-color-page-yellow {
+	background-color:  rgb(236,193,0);
+}
+.bg-color-page-dark-gray {
+	background-color:  rgb(22,22,22);
+}
+
+.bg-image-header {
+	background-image: url( '/img/bg-header.jpg' );
+	background-size: cover;
+	padding-bottom: 56.25%; // 1080 / 1920
+}
+
+.bg-image-lead {
+	background-image: url( '/img/bg-these-people.jpg' );
+	background-size: cover;
+	padding-bottom: 56.25%; // 1080 / 1920
+}
+
+.bg-image-team {
+	background-image: url( '/img/bg-our-team.jpg' );
+	background-size: cover;
+	padding-bottom: 70.83%; // 1360 / 1920
+}
+
+.bg-image-logo {
+	background-image: url( '/img/logo-radbrackets.svg' );
+	background-size: cover;
+	padding-bottom: 29.25%; // 86 / 294
+}

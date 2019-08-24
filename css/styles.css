@@ -101,3 +101,35 @@ img::selection {
 img::-moz-selection {
   background: transparent;
 }
+
+.bg-color-page-yellow {
+  background-color: #ecc100;
+}
+
+.bg-color-page-dark-gray {
+  background-color: #161616;
+}
+
+.bg-image-header {
+  background-image: url("/img/bg-header.jpg");
+  background-size: cover;
+  padding-bottom: 56.25%;
+}
+
+.bg-image-lead {
+  background-image: url("/img/bg-these-people.jpg");
+  background-size: cover;
+  padding-bottom: 56.25%;
+}
+
+.bg-image-team {
+  background-image: url("/img/bg-our-team.jpg");
+  background-size: cover;
+  padding-bottom: 70.83%;
+}
+
+.bg-image-logo {
+  background-image: url("/img/logo-radbrackets.svg");
+  background-size: cover;
+  padding-bottom: 29.25%;
+}
