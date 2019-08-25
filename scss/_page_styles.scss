@@ -28,3 +28,7 @@
 	background-size: cover;
 	padding-bottom: 29.25%; // 86 / 294
 }
+
+.my-text-responsive {
+  font-size: calc(100% + 1vw + 1vh);
+}
