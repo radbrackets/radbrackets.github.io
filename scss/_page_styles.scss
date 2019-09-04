@@ -1,3 +1,12 @@
+.fontStyleItalic {
+  font-style: italic;
+}
+.fontStyleBold {
+  font-weight: bold;
+}
+
+
+
 .bg-color-page-yellow {
 	background-color:  rgb(236,193,0);
 }
@@ -31,4 +40,62 @@
 
 .my-text-responsive {
   font-size: calc(100% + 1vw + 1vh);
+}
+
+.section-header {
+	.topMenu {
+		div {
+			position: absolute; margin-top: 3%; margin-left: 70%; font-size: calc(1.7vw);
+		}
+		a { color:white; text-transform: uppercase; }	
+	}
+	.rightMenuMargin { position: absolute; margin-top: 20%; }
+	.rightMenu { 
+		position: absolute; margin-top: 25%; margin-left: 56%; font-size: calc(3vw);
+	
+		ul {
+			list-style-type: none; text-align: right; text-transform: uppercase; 
+			li a { color:white; }
+		}
+	}
+}
+
+
+.section-lead {
+	.logo { position: absolute; margin-top: 5%; margin-left: 5%; width: 70%;
+		
+	}
+	
+	.leadGradientBackground {
+		background: #F00;
+	}
+	
+	ul.lead { 
+		position: absolute; right: 0; margin-top: 5%; margin-left: 0%; margin-right: 5%; text-align: right;
+		font-size: calc(3.5vw); font-weight: bold; 
+	
+		
+			list-style-type: none; text-align: right; text-transform: uppercase; 
+			li { color:black; }
+			li.huge { color: white; font-size: calc(5vw); }
+	}
+	
+}
+
+.section-traits {
+	
+}
+
+.section-team {
+	
+}
+
+.section-about {
+	
+	
+}
+
+.section-contact {
+	
+	
 }
