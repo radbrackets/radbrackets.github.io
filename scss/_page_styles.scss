@@ -4,7 +4,9 @@
 .fontStyleBold {
   font-weight: bold;
 }
-
+.showDiv {
+	div {padding: 20px 10px; border: 1px solid; background:yellow; }
+}
 
 
 .bg-color-page-yellow {
@@ -15,25 +17,25 @@
 }
 
 .bg-image-header {
-	background-image: url( '/img/bg-header.jpg' );
+	background-image: url( '/img/bg/header.jpg' );
 	background-size: cover;
 	padding-bottom: 56.25%; // 1080 / 1920
 }
 
 .bg-image-lead {
-	background-image: url( '/img/bg-these-people.jpg' );
+	background-image: url( '/img/bg/these-people.jpg' );
 	background-size: cover;
 	padding-bottom: 56.25%; // 1080 / 1920
 }
 
 .bg-image-team {
-	background-image: url( '/img/bg-our-team.jpg' );
+	background-image: url( '/img/bg/our-team.jpg' );
 	background-size: cover;
 	padding-bottom: 70.83%; // 1360 / 1920
 }
 
 .bg-image-logo {
-	background-image: url( '/img/logo-radbrackets.svg' );
+	background-image: url( '/img/logo/logo-radbrackets.svg' );
 	background-size: cover;
 	padding-bottom: 29.25%; // 86 / 294
 }
