@@ -31,8 +31,37 @@
 .bg-image-team {
 	background-image: url( '/img/bg/our-team.jpg' );
 	background-size: cover;
-	padding-bottom: 70.83%; // 1360 / 1920
+	padding-bottom: 0%; // 1360 / 1920
+	// padding-bottom: 70.83%; // 1360 / 1920
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+.bg-image-team {
+	
+}
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+.bg-image-team {
+	padding-bottom: 40%; // 1360 / 1920
+}
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.bg-image-team {
+		padding-bottom: 70.83%; // 1360 / 1920
+	}
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.bg-image-team {
+		padding-bottom: 70.83%; // 1360 / 1920
+	}
+}
+
+
+
 
 .bg-image-logo {
 	background-image: url( '/img/logo/logo-radbrackets.svg' );

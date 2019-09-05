@@ -125,25 +125,43 @@ img::-moz-selection {
 }
 
 .bg-image-header {
-  background-image: url("/img/bg-header.jpg");
+  background-image: url("/img/bg/header.jpg");
   background-size: cover;
   padding-bottom: 56.25%;
 }
 
 .bg-image-lead {
-  background-image: url("/img/bg-these-people.jpg");
+  background-image: url("/img/bg/these-people.jpg");
   background-size: cover;
   padding-bottom: 56.25%;
 }
 
 .bg-image-team {
-  background-image: url("/img/bg-our-team.jpg");
+  background-image: url("/img/bg/our-team.jpg");
   background-size: cover;
-  padding-bottom: 70.83%;
+  padding-bottom: 0%;
+}
+
+@media (min-width: 768px) {
+  .bg-image-team {
+    padding-bottom: 40%;
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-image-team {
+    padding-bottom: 70.83%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bg-image-team {
+    padding-bottom: 70.83%;
+  }
 }
 
 .bg-image-logo {
-  background-image: url("/img/logo-radbrackets.svg");
+  background-image: url("/img/logo/logo-radbrackets.svg");
   background-size: cover;
   padding-bottom: 29.25%;
 }
