@@ -319,6 +319,16 @@ img::-moz-selection {
   color: white;
 }
 
+.sectionLead .triangle {
+  position: absolute;
+  right: 0;
+  margin-top: 0%;
+  width: 58%;
+  height: 140%;
+  background: #ecc100;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
 .sectionTraits .sectionFont {
   font-weight: bold;
   text-transform: uppercase;
@@ -454,6 +464,15 @@ img::-moz-selection {
   font-size: calc(4vw);
 }
 
+.sectionTeam .triangle {
+  position: absolute;
+  margin-top: 28%;
+  width: 35%;
+  height: 76%;
+  background: #161616;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+}
+
 .sectionAbout .textFont {
   font-weight: 500;
   color: white;
@@ -485,7 +504,7 @@ img::-moz-selection {
 }
 
 .sectionContact .logo {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 5%;
   width: 45%;
 }
@@ -508,4 +527,14 @@ img::-moz-selection {
 .sectionContact .contactIcons {
   text-align: center;
   padding-bottom: 15%;
+}
+
+.sectionContact .triangle {
+  position: absolute;
+  left: 0;
+  width: 35%;
+  height: 64%;
+  background: #161616;
+  clip-path: polygon(-1% -1%, 100% -1%, -1% 100%);
+  /* The points are: centered top, left bottom, right bottom */
 }
