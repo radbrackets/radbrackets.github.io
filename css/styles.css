@@ -222,19 +222,19 @@ img::-moz-selection {
 .iconLinkedin {
   background-image: url("/img/icons/linkedin.svg");
   background-size: cover;
-  padding-bottom: 97%;
+  padding-bottom: 100%;
 }
 
 .iconTwitter {
   background-image: url("/img/icons/twitter.svg");
   background-size: cover;
-  padding-bottom: 97%;
+  padding-bottom: 100%;
 }
 
 .iconMail {
   background-image: url("/img/icons/mail.svg");
   background-size: cover;
-  padding-bottom: 97%;
+  padding-bottom: 100%;
 }
 
 .iconLinkedinLight {
@@ -536,5 +536,4 @@ img::-moz-selection {
   height: 64%;
   background: #161616;
   clip-path: polygon(-1% -1%, 100% -1%, -1% 100%);
-  /* The points are: centered top, left bottom, right bottom */
 }
