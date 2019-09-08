@@ -41,3 +41,6 @@ npm install gulp-header --save-dev
 npm install gulp-rename --save-dev
 npm install gulp-uglify --save-dev
 ```
+
+# Resources
+- Font: https://fonts.google.com/specimen/Montserrat
