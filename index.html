@@ -24,24 +24,23 @@
 <body>
 
 <!-- section: header -->
-<div class="section-header bg-image-header">
+<div class="sectionHeader bgImageHeader">
 	<!-- top menu -->
 	<div class="container-fluid">
 		<div class="row justify-content-end">
 			<div class="col-6">
-
-					<nav class="topMenu">
-						<a href="#traits">Traits</a>
-						<a href="#team">Team</a>
-						<a href="#contact">Contact</a>
-					</nav>
+				<nav class="topMenu">
+					<a href="#traits">Traits</a>
+					<a href="#team">Team</a>
+					<a href="#contact">Contact</a>
+				</nav>
 			</div>
 		</div>
 		
 		<div class="row justify-content-end">
 		
 			<div class="col-6">
-				<div class="rightMenu">
+				<nav class="rightMenu">
 					<ul>
 						<li><a href="#" class="fontStyleBold">Listen</a></li>
 						<li><a href="#">Learn</a></li>
@@ -49,20 +48,20 @@
 						<li><a href="#">Draw conclusions</a></li>
 						<li><a href="#">Start over</a></li>
 					</ul>
-				</div>
+				</nav>
 			</div>
 		</div>
 	</div>
 </div>
 
 <!-- section: lead -->
-<div class="section-lead bg-image-lead">
+<div class="sectionLead bgImageLead">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-3">
 				
 				<div class="logo">
-					<div class="bg-image-logo"></div>
+					<div class="bgImageLogo"></div>
 				</div>
 			</div>
 			<div class="col-9" class="leadGradientBackground">
@@ -81,43 +80,63 @@
 </div>
 
 <!-- section: traits -->
-<div class="section-traits bg-color-page-yellow" id="traits">
+<div class="sectionTraits bgColorPageYellow" id="traits">
 	<div class="container-fluid">
 	
 		<div class="row justify-content-center">
-			<div class="sectionTitle">Let us help you grow your business.</div>
+			<h2 class="sectionFont sectionTitle">Let us help you grow your business.</h2>
 		</div>
 		<div class="row">
 			<div class="col">
-				<h3>Custom software</h3>
-				<p>
-					We are a small software house that implements tailor-made software.<br/>
-					We believe that the best applications have their source in through knowledge pf business domain as well as effective client communication.
-				</p>
+				<div class="customSoftware">
+					<div class="sectionFont subsectionFont subsectionTitle">
+						<ul>
+							<li>Custom</li>
+							<li>software</li>
+						</ul>
+					</div>
+					<p class="textFont">
+						We are a small software house that implements tailor-made software.<br/>
+						We believe that the best applications have their source in through knowledge pf business domain as well as effective client communication.
+					</p>
+				</div>
 			</div>
-			<div class="col">
-				<object type="image/svg+xml" data="img/logo/bracket-1.svg"></object>
-				<object type="image/svg+xml" data="img/logo/bracket-2.svg"></object>
-				<object type="image/svg+xml" data="img/logo/bracket-3.svg"></object>
+			<div class="col-6">
+				<div class="pursuitOfKnowledge">
 
-				<h3>Pursuit of knowledge</h3>
-				<p>
-					We are a lifelong learners who always opt for tools that fully meet customer needs.<br/>
-					We rely on Test Driven Development and implement our products in the heart of Domain Driven Design.
-				</p>
+					<div class="brackets">
+						<div class="bracket1"><div class="bracketBg"></div></div>
+						<div class="bracket2"><div class="bracketBg"></div></div>
+						<div class="bracket3"><div class="bracketBg"></div></div>
+					</div>
+					<div style="display: none; width: 0; height: 0;">
+						<object type="image/svg+xml" data="img/logo/bracket-1.svg"></object>
+						<object type="image/svg+xml" data="img/logo/bracket-2.svg"></object>
+						<object type="image/svg+xml" data="img/logo/bracket-3.svg"></object>
+					</div>
+				
+					<div class="sectionFont subsectionFont subsectionTitle">Pursuit of knowledge</div>
+					
+					<p class="textFont lessWide">
+						We are a lifelong learners who always opt for tools that fully meet customer needs.<br/>
+						We rely on Test Driven Development and implement our products in the heart of Domain Driven Design.
+					</p>
+				</div>
 			</div>
 			<div class="col">
-				<p>
-					We strongly belive that systematic client feedback enabling us to make project adjustments regularly is a key to success.<br/>
-					Therefore, Continuous Delivery and agile methodology are essential in our collaboration.
-				</p>
+				<div class="untitledSubsection">
+					<p class="textFont">
+						We strongly belive that systematic client feedback enabling us to make project adjustments regularly is a key to success.<br/>
+						Therefore, Continuous Delivery and agile methodology are essential in our collaboration.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
 <!-- section: team -->
-<div class="section-team bg-image-team" id="team">
+<div class="sectionTeam bgImageTeam" id="team">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col">
@@ -159,7 +178,7 @@
 </div>
 
 <!-- section: about -->
-<div class="section-about bg-color-page-dark-gray">
+<div class="sectionAbout bgColorPageDarkGray">
 	<div class="container-fluid">
 		<div class="row">
 			<div>Good friends, excellent developers.</div>
@@ -193,7 +212,7 @@
 </div>
 
 
-<div class="section-contact bg-color-page-yellow" id="contact">
+<div class="sectionContact bgColorPageYellow" id="contact">
 	<div class="container-fluid">
 		<div class="row">
 			
