@@ -34,8 +34,8 @@
 .bgImageTeam {
 	background-image: url( '/img/bg/our-team.jpg' );
 	background-size: cover;
-	padding-bottom: 0%; // 1360 / 1920
-	// padding-bottom: 70.83%; // 1360 / 1920
+	padding-bottom: 65%;
+	//padding-bottom: 70.83%; // 1360 / 1920
 }
 
 .bgImageLogo {
@@ -43,6 +43,13 @@
 	background-size: cover;
 	padding-bottom: 29.25%; // 86 / 294
 }
+
+.bgImageLogoLight {
+	background-image: url( '/img/logo/logo-radbrackets-light.svg' );
+	background-size: cover;
+	padding-bottom: 29.27%; // 260 / 888
+}
+
 .brackets {
 	text-align: center; 
 	.bracket1 {
@@ -99,31 +106,41 @@
 }
 
 
+.iconLinkedin {
+	background-image: url( '/img/icons/linkedin.svg' );
+	background-size: cover;
+	padding-bottom: 100%;
+	// padding-bottom: 27.63%; // 76 / 275
+}
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-.bgImageTeam {
-	
+.iconTwitter {
+	background-image: url( '/img/icons/twitter.svg' );
+	background-size: cover;
+	padding-bottom: 100%;
+	// padding-bottom: 27.63%; // 76 / 275
 }
+
+.iconMail {
+	background-image: url( '/img/icons/mail.svg' );
+	background-size: cover;
+	padding-bottom: 100%;
+	// padding-bottom: 27.63%; // 76 / 275
 }
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-.bgImageTeam {
-	padding-bottom: 40%; // 1360 / 1920
+
+.iconLinkedinLight {
+	background-image: url( '/img/icons/linkedin-light.svg' );
+	background-size: cover;
+	padding-bottom: 95.7%;
+	//padding-bottom: 42.10%; // 40 / 95
 }
+.iconTwitterLight {
+	background-image: url( '/img/icons/twitter-light.svg' );
+	background-size: cover;
+	padding-bottom: 95.7%;
+	// padding-bottom: 42.10%; // 40 / 95
 }
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-	.bgImageTeam {
-		padding-bottom: 70.83%; // 1360 / 1920
-	}
-}
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-	.bgImageTeam {
-		padding-bottom: 70.83%; // 1360 / 1920
-	}
-}
+
+
 
 
 .sectionHeader {
@@ -220,12 +237,83 @@
 }
 
 .sectionTeam {
+	.memberNameFont {
+		font-weight: 800; text-transform: uppercase; color: white;
+		font-size: calc(1.7vw); 
+	}
+	.memberNameFontBlack {
+		color: black;
+	}
+	.membersLabel {
+		font-weight: bold; 
+		font-size: calc(2.2vw); 
+	}
 	
+	.textFont {
+		font-weight: bold; color: white;
+		font-size: calc(1.3vw); 
+	}
+
+		
+	.teamHeader {
+		position: absolute;
+		.member1 {
+			
+		}
+		.member2 {
+			
+		}
+		.membersLabel {
+			
+		}
+	}
+	
+	.teamInfo { 
+		position: absolute;
+		margin-top: 30%; 
+
+		.social {
+			.icon {
+				width: 5%;
+				display: inline-block;
+				overflow: visible;
+			} 
+		}
+	
+		.member1 {
+			.social {
+				 padding-left: 10%;
+			}
+			p {
+				padding-left: 10%;
+			}
+		}
+		.member2 {
+			.social {
+				text-align: right;
+				padding-right: 20%;
+			}
+			p {
+				padding-right: 20%;
+				padding-left: 20%;
+				text-align: right;
+				
+			}
+		}
+	}
+	
+	.goodFriends {
+		position: absolute;
+		margin-top: 56%;
+		
+		font-weight: bold; color: white;
+		font-size: calc(4vw); 
+	}
 }
 
 .sectionAbout {
 	
-	
+	22222
 }
 
 .sectionContact {

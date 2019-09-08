@@ -52,6 +52,22 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Chrome SVG as backgroung display bug fix -->
+	<div style="width: 1px; height: 1px;">
+		<object type="image/svg+xml" data="img/logo/logo-radbrackets.svg" width="1" height="1"></object>
+		<object type="image/svg+xml" data="img/logo/logo-radbrackets-light.svg" width="1" height="1"></object>
+		
+		<object type="image/svg+xml" data="img/logo/bracket-1.svg" width="1" height="1"></object>
+		<object type="image/svg+xml" data="img/logo/bracket-2.svg" width="1" height="1"></object>
+		<object type="image/svg+xml" data="img/logo/bracket-3.svg" width="1" height="1"></object>
+		
+		<object type="image/svg+xml" data="img/icons/linkedin.svg" width="1" height="1"></object>
+		<object type="image/svg+xml" data="img/icons/twitter.svg" width="1" height="1"></object>
+		<object type="image/svg+xml" data="img/icons/mail.svg" width="1" height="1"></object>
+		<object type="image/svg+xml" data="img/icons/linkedin-light.svg" width="1" height="1"></object>
+		<object type="image/svg+xml" data="img/icons/twitter-light.svg" width="1" height="1"></object>
+	</div>
 </div>
 
 <!-- section: lead -->
@@ -109,12 +125,7 @@
 						<div class="bracket2"><div class="bracketBg"></div></div>
 						<div class="bracket3"><div class="bracketBg"></div></div>
 					</div>
-					<div style="display: none; width: 0; height: 0;">
-						<object type="image/svg+xml" data="img/logo/bracket-1.svg"></object>
-						<object type="image/svg+xml" data="img/logo/bracket-2.svg"></object>
-						<object type="image/svg+xml" data="img/logo/bracket-3.svg"></object>
-					</div>
-				
+
 					<div class="sectionFont subsectionFont subsectionTitle">Pursuit of knowledge</div>
 					
 					<p class="textFont lessWide">
@@ -138,24 +149,25 @@
 <!-- section: team -->
 <div class="sectionTeam bgImageTeam" id="team">
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col">
-				<h4 class="name">Patryk Zieliński</h4>
+		<div class="row teamHeader">
+			<div class="col-5 member1">
+				<div class="memberNameFont">Patryk Zieliński</div>
 			</div>
-			<div class="col">
-				<h4 class="name-black">Rafał Piotrowski</h4>
+			<div class="col-5 member2">
+				<div class="memberNameFont memberNameFontBlack">Rafał Piotrowski</div>
 			</div>
-			<div class="col">
-				<h4 class="team rotated">Our Team </h4> 
+			<div class="col-2 membersLabelContainer">
+				<div class="memberNameFont membersLabel">Our Team </div> 
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col">
-				<p class="social">
-					[icons/linkedin-light][icons/twitter-light]
-				</p>
-				<p class="biography">
+		<div class="row teamInfo">
+			<div class="col member1">
+				<div class="social">
+					<div class="icon"><div class="iconLinkedinLight"></div></div>
+					<div class="icon"><div class="iconTwitterLight"></div></div>
+				</div>
+				<p class="textFont">
 					Local DDD community co-organiser, Java/JS developer. Domain-Driven Design practitioner for more than 6 years.
 					Believes that the key to success is good client needs understanding. TDD and Continuous Integration fan. 
 					Currently interested in functional programming, studying the usefulness of functional approach in domain modelling.
@@ -163,16 +175,23 @@
 			</div>
 
 
-			<div class="col">
-				<p class="social">
-					[icons/linkedin-light][icons/twitter-light]
-				</p>
-				<p class="biography">
-					Pragmatic Fulstack developer, clean code freak.<br/>
-					Software crafter who is passionate about Domain-Driven Design.<br/>
+			<div class="col member2">
+				<div class="social">
+					
+					<div class="icon"><div class="iconLinkedinLight"></div></div>
+					<div class="icon"><div class="iconTwitterLight"></div></div>
+				</div>
+				<p class="textFont">
+					Pragmatic Fulstack developer, <br/> clean code freak.<br/>
+					Software crafter who is passionate about <br/>Domain-Driven Design.<br/>
 					Connected with Java for more than ten years.
 				</p>
 			</div>
+		</div>
+		
+		<div class="row justify-content-center">
+		
+			<div class="goodFriends">Good friends, excellent developers.</div>
 		</div>
 	</div>
 </div>
@@ -180,9 +199,7 @@
 <!-- section: about -->
 <div class="sectionAbout bgColorPageDarkGray">
 	<div class="container-fluid">
-		<div class="row">
-			<div>Good friends, excellent developers.</div>
-		</div>
+
 		<div class="row">
 			<div class="col-2">
 				<p>About us</p>
@@ -215,21 +232,33 @@
 <div class="sectionContact bgColorPageYellow" id="contact">
 	<div class="container-fluid">
 		<div class="row">
-			
-			<object type="image/svg+xml" data="img/logo/logo-radbrackets-light.svg"></object>
-			[logo/logo-radbrackets-light]
+			<div class="col-2">
+				<div class="bgImageLogoLight">
+				</div>
+			</div>
 		</div>
 		<div class="row">
 			<div>Contact us</div>
 		</div>
 		
-		<div class="row"> 
-			[icons/linkedin][icons/twiter][icons/mail]
+		<div class="row">
+			<div class="iconLinkedin"></div>
+			<div class="iconTwitter"></div>
+			<div class="iconMail"></div>
+
+			<!-- Chrome SVG as backgroung display bug fix -->
+			<div style="width: 1px; height: 1px;">
+
+			</div>
 		</div>
+		
+
 	</div>
 </div>
 
-<object type="image/svg+xml" data="img/logo/logo-radbrackets.svg"></object>
+
+
+
 	<!-- Bootstrap core JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="vendor/jquery/jquery.min.js"></script>

@@ -141,13 +141,19 @@ img::-moz-selection {
 .bgImageTeam {
   background-image: url("/img/bg/our-team.jpg");
   background-size: cover;
-  padding-bottom: 0%;
+  padding-bottom: 65%;
 }
 
 .bgImageLogo {
   background-image: url("/img/logo/logo-radbrackets.svg");
   background-size: cover;
   padding-bottom: 29.25%;
+}
+
+.bgImageLogoLight {
+  background-image: url("/img/logo/logo-radbrackets-light.svg");
+  background-size: cover;
+  padding-bottom: 29.27%;
 }
 
 .brackets {
@@ -213,22 +219,34 @@ img::-moz-selection {
   padding-bottom: 300.95%;
 }
 
-@media (min-width: 768px) {
-  .bgImageTeam {
-    padding-bottom: 40%;
-  }
+.iconLinkedin {
+  background-image: url("/img/icons/linkedin.svg");
+  background-size: cover;
+  padding-bottom: 100%;
 }
 
-@media (min-width: 992px) {
-  .bgImageTeam {
-    padding-bottom: 70.83%;
-  }
+.iconTwitter {
+  background-image: url("/img/icons/twitter.svg");
+  background-size: cover;
+  padding-bottom: 100%;
 }
 
-@media (min-width: 1200px) {
-  .bgImageTeam {
-    padding-bottom: 70.83%;
-  }
+.iconMail {
+  background-image: url("/img/icons/mail.svg");
+  background-size: cover;
+  padding-bottom: 100%;
+}
+
+.iconLinkedinLight {
+  background-image: url("/img/icons/linkedin-light.svg");
+  background-size: cover;
+  padding-bottom: 95.7%;
+}
+
+.iconTwitterLight {
+  background-image: url("/img/icons/twitter-light.svg");
+  background-size: cover;
+  padding-bottom: 95.7%;
 }
 
 .sectionHeader .topMenu {
@@ -354,4 +372,68 @@ img::-moz-selection {
 
 .sectionTraits .untitledSubsection {
   padding-top: 17em;
+}
+
+.sectionTeam .memberNameFont {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  font-size: calc(1.7vw);
+}
+
+.sectionTeam .memberNameFontBlack {
+  color: black;
+}
+
+.sectionTeam .membersLabel {
+  font-weight: bold;
+  font-size: calc(2.2vw);
+}
+
+.sectionTeam .textFont {
+  font-weight: bold;
+  color: white;
+  font-size: calc(1.3vw);
+}
+
+.sectionTeam .teamHeader {
+  position: absolute;
+}
+
+.sectionTeam .teamInfo {
+  position: absolute;
+  margin-top: 30%;
+}
+
+.sectionTeam .teamInfo .social .icon {
+  width: 5%;
+  display: inline-block;
+  overflow: visible;
+}
+
+.sectionTeam .teamInfo .member1 .social {
+  padding-left: 10%;
+}
+
+.sectionTeam .teamInfo .member1 p {
+  padding-left: 10%;
+}
+
+.sectionTeam .teamInfo .member2 .social {
+  text-align: right;
+  padding-right: 20%;
+}
+
+.sectionTeam .teamInfo .member2 p {
+  padding-right: 20%;
+  padding-left: 20%;
+  text-align: right;
+}
+
+.sectionTeam .goodFriends {
+  position: absolute;
+  margin-top: 56%;
+  font-weight: bold;
+  color: white;
+  font-size: calc(4vw);
 }
