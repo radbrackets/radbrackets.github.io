@@ -246,7 +246,9 @@
 	}
 	.membersLabel {
 		font-weight: bold; 
-		font-size: calc(2.2vw); 
+		font-size: calc(2.6vw); 
+		transform: rotate(90deg);
+		
 	}
 	
 	.textFont {
@@ -256,15 +258,22 @@
 
 		
 	.teamHeader {
-		position: absolute;
+		
 		.member1 {
-			
+			position: absolute;
+			margin-top: 12%;
+			margin-left: 33%;
 		}
 		.member2 {
-			
+			position: absolute;
+			margin-top: 75%;
+			margin-left: 35%;
 		}
 		.membersLabel {
-			
+			position: absolute;
+			right: 0;
+			margin-top: 45%;
+			margin-right: 30%; 
 		}
 	}
 	
@@ -313,7 +322,34 @@
 
 .sectionAbout {
 	
-	22222
+	.textFont {
+		font-weight: 500; color: white;
+		font-size: calc(1.5vw); 
+		
+		span {
+			color: rgb(236,193,0);
+		}
+	}
+	
+	.aboutUsHeader {
+		position: absolute;
+		left: 0; top: 0;
+		margin-top: 90%;
+		margin-left: 10%; 
+		
+		transform: rotate(-90deg);
+		font-weight: bold; text-transform: uppercase; color: white;
+		font-size: calc(2.6vw); 
+		
+		
+	}
+	
+	.aboutUsText {
+		padding-top: 2em;
+		padding-bottom: 8em;
+		padding-left: 5%;
+		padding-right: 10%;
+	}
 }
 
 .sectionContact {

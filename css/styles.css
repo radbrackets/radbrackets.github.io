@@ -387,7 +387,8 @@ img::-moz-selection {
 
 .sectionTeam .membersLabel {
   font-weight: bold;
-  font-size: calc(2.2vw);
+  font-size: calc(2.6vw);
+  transform: rotate(90deg);
 }
 
 .sectionTeam .textFont {
@@ -396,8 +397,23 @@ img::-moz-selection {
   font-size: calc(1.3vw);
 }
 
-.sectionTeam .teamHeader {
+.sectionTeam .teamHeader .member1 {
   position: absolute;
+  margin-top: 12%;
+  margin-left: 33%;
+}
+
+.sectionTeam .teamHeader .member2 {
+  position: absolute;
+  margin-top: 75%;
+  margin-left: 35%;
+}
+
+.sectionTeam .teamHeader .membersLabel {
+  position: absolute;
+  right: 0;
+  margin-top: 45%;
+  margin-right: 30%;
 }
 
 .sectionTeam .teamInfo {
@@ -436,4 +452,34 @@ img::-moz-selection {
   font-weight: bold;
   color: white;
   font-size: calc(4vw);
+}
+
+.sectionAbout .textFont {
+  font-weight: 500;
+  color: white;
+  font-size: calc(1.5vw);
+}
+
+.sectionAbout .textFont span {
+  color: #ecc100;
+}
+
+.sectionAbout .aboutUsHeader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 90%;
+  margin-left: 10%;
+  transform: rotate(-90deg);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-size: calc(2.6vw);
+}
+
+.sectionAbout .aboutUsText {
+  padding-top: 2em;
+  padding-bottom: 8em;
+  padding-left: 5%;
+  padding-right: 10%;
 }
