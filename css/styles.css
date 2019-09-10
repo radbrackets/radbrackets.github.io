@@ -390,7 +390,7 @@ img::-moz-selection {
 
 .sectionTraits .pursuitOfKnowledge {
   text-align: center;
-  padding-bottom: 6em;
+  padding-bottom: 10%;
 }
 
 .sectionTraits .pursuitOfKnowledge .subsectionTitle {
@@ -399,8 +399,9 @@ img::-moz-selection {
 }
 
 .sectionTraits .pursuitOfKnowledge .lessWide {
-  margin-left: 20%;
-  width: 60%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .sectionTraits .untitledSubsection {
