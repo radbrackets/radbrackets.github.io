@@ -203,50 +203,64 @@ img::-moz-selection {
 
 .bgBracket1 {
   background-image: url("/img/logo/bracket-1.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 391.13%;
 }
 
 .bgBracket2 {
   background-image: url("/img/logo/bracket-2.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 265.51%;
 }
 
 .bgBracket3 {
   background-image: url("/img/logo/bracket-3.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 300.95%;
 }
 
 .iconLinkedin {
   background-image: url("/img/icons/linkedin.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 100%;
 }
 
 .iconTwitter {
   background-image: url("/img/icons/twitter.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 100%;
+  width: 100%;
 }
 
 .iconMail {
   background-image: url("/img/icons/mail.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 100%;
+  width: 100%;
 }
 
 .iconLinkedinLight {
   background-image: url("/img/icons/linkedin-light.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 95.7%;
 }
 
 .iconTwitterLight {
   background-image: url("/img/icons/twitter-light.svg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-bottom: 95.7%;
+}
+
+.sectionHeader {
+  position: relative;
 }
 
 .sectionHeader .topMenu {
@@ -284,6 +298,10 @@ img::-moz-selection {
   color: white;
 }
 
+.sectionLead {
+  position: relative;
+}
+
 .sectionLead .logo {
   position: absolute;
   margin-top: 15%;
@@ -301,7 +319,7 @@ img::-moz-selection {
   text-align: right;
   margin-top: 5%;
   margin-left: 0%;
-  margin-right: 5%;
+  margin-right: 4%;
   font-size: calc(4vw);
   font-weight: bold;
   list-style-type: none;
@@ -314,6 +332,8 @@ img::-moz-selection {
 }
 
 .sectionLead ul.lead li.huge {
+  margin-top: 3%;
+  padding-right: 1%;
   font-size: calc(8vw);
   font-weight: bold;
   color: white;
@@ -322,11 +342,14 @@ img::-moz-selection {
 .sectionLead .triangle {
   position: absolute;
   right: 0;
-  margin-top: 0%;
-  width: 58%;
-  height: 140%;
+  width: 56%;
+  height: 101%;
   background: #ecc100;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 77% 100%);
+}
+
+.sectionTraits {
+  position: relative;
 }
 
 .sectionTraits .sectionFont {
@@ -381,7 +404,11 @@ img::-moz-selection {
 }
 
 .sectionTraits .untitledSubsection {
-  padding-top: 17em;
+  padding-top: 60%;
+}
+
+.sectionTeam {
+  position: relative;
 }
 
 .sectionTeam .memberNameFont {
@@ -466,11 +493,15 @@ img::-moz-selection {
 
 .sectionTeam .triangle {
   position: absolute;
-  margin-top: 28%;
-  width: 35%;
-  height: 76%;
+  top: 0;
+  width: 33%;
+  height: 101%;
   background: #161616;
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(0% 40%, 0% 100%, 100% 100%);
+}
+
+.sectionAbout {
+  position: relative;
 }
 
 .sectionAbout .textFont {
@@ -503,6 +534,10 @@ img::-moz-selection {
   padding-right: 10%;
 }
 
+.sectionContact {
+  position: relative;
+}
+
 .sectionContact .logo {
   margin-top: 2%;
   margin-left: 5%;
@@ -532,6 +567,7 @@ img::-moz-selection {
 .sectionContact .triangle {
   position: absolute;
   left: 0;
+  top: 0;
   width: 35%;
   height: 64%;
   background: #161616;
