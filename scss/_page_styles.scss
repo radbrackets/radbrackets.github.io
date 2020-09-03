@@ -238,7 +238,6 @@
 		font-weight: 500;
 	}
 
-
 	.customSoftware {
 		ul {
 			padding-top: 2em; padding-bottom: 0em;
@@ -249,6 +248,7 @@
 			text-align: right;
 		}
 	}
+
 	.pursuitOfKnowledge{
 		text-align: center;
 		padding-bottom: 10%;
@@ -262,8 +262,10 @@
 		}
 	}
 	
-	.untitledSubsection {
-		padding-top: 60%;
+	.feedback {
+		.subsectionTitle {
+            padding-top: 2em; padding-bottom: 3em;
+        }
 	}
 }
 

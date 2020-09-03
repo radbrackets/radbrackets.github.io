@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2019 Start Bootstrap
+ * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 body {
@@ -411,8 +411,9 @@ img::-moz-selection {
   margin-right: 10%;
 }
 
-.sectionTraits .untitledSubsection {
-  padding-top: 60%;
+.sectionTraits .feedback .subsectionTitle {
+  padding-top: 2em;
+  padding-bottom: 3em;
 }
 
 .sectionTeam {
