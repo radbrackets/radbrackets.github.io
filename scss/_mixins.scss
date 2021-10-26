@@ -20,3 +20,15 @@
 @mixin heading-font {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+@mixin rotatedHeader($top) {
+  position: absolute;
+  left: 0;
+  top: $top;
+  transform: translateX(-12%) translateY(-50%) rotate(-90deg);
+  text-transform: uppercase;
+  color: $white;
+  font-size: calc(2.6vw);
+  width: 100%;
+  font-weight: bold;
+}
