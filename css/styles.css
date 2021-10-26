@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2020 Start Bootstrap
+ * Copyright 2013-2021 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 body {
@@ -116,6 +116,10 @@ img::-moz-selection {
 
 .fontStyleBolder {
   font-weight: bolder;
+}
+
+.fontColorAccent {
+  color: #ecc100;
 }
 
 .bgColorPageYellow {
@@ -532,14 +536,13 @@ img::-moz-selection {
 .sectionAbout .aboutUsHeader {
   position: absolute;
   left: 0;
-  top: 0;
-  margin-top: 90%;
-  margin-left: 10%;
-  transform: rotate(-90deg);
-  font-weight: bold;
+  top: 30%;
+  transform: translateX(-12%) translateY(-50%) rotate(-90deg);
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   font-size: calc(2.6vw);
+  width: 100%;
+  font-weight: bold;
 }
 
 .sectionAbout .aboutUsText {
@@ -547,6 +550,92 @@ img::-moz-selection {
   padding-bottom: 4em;
   padding-left: 5%;
   padding-right: 10%;
+}
+
+.sectionTestimonials {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(0deg, #161616, #1e1e1e 80%) no-repeat;
+  padding-bottom: 3em;
+}
+
+.sectionTestimonials .sectionTitle {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.sectionTestimonials .sectionFont {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: calc(2.6vw);
+}
+
+.sectionTestimonials .textFont {
+  font-size: calc(1.5vw);
+  color: #fff;
+  margin-top: 1em;
+}
+
+.sectionTestimonials .carousel {
+  padding-left: 5%;
+  padding-right: 10%;
+}
+
+.sectionTestimonials .carousel-content {
+  display: flex;
+  align-items: center;
+  height: 140px;
+}
+
+@media (min-width: 576px) {
+  .sectionTestimonials .carousel-content {
+    height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sectionTestimonials .carousel-content {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sectionTestimonials .carousel-content {
+    min-height: 530px;
+  }
+}
+
+.sectionTestimonials .carousel-control-prev {
+  left: -9%;
+}
+
+.sectionTestimonials .carousel-control-next {
+  right: -4%;
+}
+
+.sectionTestimonials .carousel-control-next-icon,
+.sectionTestimonials .carousel-control-prev-icon {
+  width: calc(3vw);
+  height: calc(3vw);
+}
+
+.sectionTestimonials .testimonialsHeader {
+  position: absolute;
+  left: 0;
+  top: 55%;
+  transform: translateX(-12%) translateY(-50%) rotate(-90deg);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: calc(2.6vw);
+  width: 100%;
+  font-weight: bold;
+}
+
+.sectionTestimonials .quotationMark {
+  font-size: calc(4vw);
+  color: #fff;
 }
 
 .sectionContact {

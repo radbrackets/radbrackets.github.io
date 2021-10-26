@@ -11,12 +11,15 @@
 .fontStyleBolder {
   font-weight: bolder;
 }
+.fontColorAccent {
+  color: $accent;
+}
 
 .bgColorPageYellow {
-	background-color:  rgb(236,193,0);
+	background-color:  $accent;
 }
 .bgColorPageDarkGray {
-	background-color:  rgb(22,22,22);
+	background-color:  $darkGrey;
 }
 
 .bgImageHeader {
@@ -215,7 +218,7 @@
 		transform: rotate(53deg);
 		top: -10%;
 		right: -46%;
-		background: rgb(236,193,0);
+		background: $accent;
 	}
 }
 
@@ -378,29 +381,92 @@
 		font-size: calc(1.5vw); 
 		
 		span {
-			color: rgb(236,193,0);
+			color: $accent;
 		}
 	}
 	
 	.aboutUsHeader {
-		position: absolute;
-		left: 0; top: 0;
-		margin-top: 90%;
-		margin-left: 10%; 
-		
-		transform: rotate(-90deg);
-		font-weight: bold; text-transform: uppercase; color: white;
-		font-size: calc(2.6vw); 
-		
-		
-	}
-	
+    @include rotatedHeader(30%);
+  }
+
 	.aboutUsText {
 		padding-top: 2em;
 		padding-bottom: 4em;
 		padding-left: 5%;
 		padding-right: 10%;
 	}
+}
+
+.sectionTestimonials {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(0deg, $darkGrey, lighten($darkGrey, 3%) 80%) no-repeat;
+  padding-bottom: 3em;
+
+  .sectionTitle {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+
+  .sectionFont {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    font-size: calc(2.6vw);
+  }
+
+  .textFont {
+    font-size: calc(1.5vw);
+    color: $white;
+    margin-top: 1em;
+  }
+
+  .carousel {
+    padding-left: 5%;
+    padding-right: 10%;
+  }
+
+  .carousel-content {
+    display: flex;
+    align-items: center;
+    height: 140px;
+
+    @media (min-width: 576px) {
+      height: 180px;
+    }
+
+    @media (min-width: 768px) {
+      height: 320px;
+    }
+
+    @media (min-width: 1400px) {
+      min-height: 530px;
+    }
+  }
+
+  .carousel-control-prev {
+    left: -9%;
+  }
+
+  .carousel-control-next {
+    right: -4%;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: calc(3vw);
+    height: calc(3vw);
+  }
+
+  .testimonialsHeader {
+    @include rotatedHeader(55%);
+  }
+
+  .quotationMark {
+    font-size: calc(4vw);
+    color: $white;
+  }
 }
 
 .sectionContact {
@@ -440,6 +506,6 @@
 		transform: rotate(45deg);
 		top: -90%;
 		left: -68%;
-		background: rgb(22,22,22);
+		background: $darkGrey;
 	}	
 }
