@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2021 Start Bootstrap
+ * Copyright 2013-2022 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 body {
@@ -13,15 +13,11 @@ p {
 }
 
 a {
-  color: #95959E;
+  color: #000;
 }
 
 a:hover {
-  color: #7a7a86;
-}
-
-.text-primary {
-  color: #95959E !important;
+  color: #000;
 }
 
 h1,
@@ -30,58 +26,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 600;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-section {
-  padding: 100px 0;
-}
-
-section h2.section-heading {
-  font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-section h3.section-subheading {
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: 75px;
-  text-transform: none;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding: 150px 0;
-  }
-}
-
-.btn {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-.btn-xl {
-  font-size: 18px;
-  padding: 20px 40px;
-}
-
-.btn-primary {
-  background-color: #95959E;
-  border-color: #95959E;
-}
-
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #81818c !important;
-  border-color: #81818c !important;
-  color: white;
-}
-
-.btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
 ::-moz-selection {
@@ -103,7 +49,7 @@ img::-moz-selection {
 }
 
 .container-fluid {
-  font-family: 'Montserrat', 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .fontStyleItalic {
@@ -112,10 +58,6 @@ img::-moz-selection {
 
 .fontStyleBold {
   font-weight: bold;
-}
-
-.fontStyleBolder {
-  font-weight: bolder;
 }
 
 .fontColorAccent {
@@ -149,7 +91,7 @@ img::-moz-selection {
 }
 
 .bgImageLogo {
-  background-image: url("/img/logo/logo-radbrackets.svg");
+  background-image: url("/img/logo/logo-radbrackets-light.svg");
   background-size: cover;
   padding-bottom: 29.25%;
 }
@@ -203,27 +145,6 @@ img::-moz-selection {
   background-image: url("/img/logo/bracket-3.svg");
   background-size: cover;
   padding-bottom: 260%;
-}
-
-.bgBracket1 {
-  background-image: url("/img/logo/bracket-1.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 391.13%;
-}
-
-.bgBracket2 {
-  background-image: url("/img/logo/bracket-2.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 265.51%;
-}
-
-.bgBracket3 {
-  background-image: url("/img/logo/bracket-3.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 300.95%;
 }
 
 .iconLinkedin {
@@ -281,7 +202,7 @@ img::-moz-selection {
 
 .sectionHeader .topMenu a {
   padding: 0.5em;
-  color: white;
+  color: #fff;
 }
 
 .sectionHeader .rightMenu {
@@ -300,7 +221,7 @@ img::-moz-selection {
 }
 
 .sectionHeader .rightMenu ul a {
-  color: white;
+  color: #fff;
 }
 
 .sectionLead {
@@ -313,10 +234,6 @@ img::-moz-selection {
   margin-top: 15%;
   margin-left: 20%;
   width: 70%;
-}
-
-.sectionLead .leadGradientBackground {
-  background: #F00;
 }
 
 .sectionLead ul.lead {
@@ -334,7 +251,7 @@ img::-moz-selection {
 }
 
 .sectionLead ul.lead li {
-  color: black;
+  color: #000;
 }
 
 .sectionLead ul.lead li.huge {
@@ -342,7 +259,7 @@ img::-moz-selection {
   padding-right: 1%;
   font-size: calc(8vw);
   font-weight: bold;
-  color: white;
+  color: #fff;
 }
 
 .sectionLead .triangle {
@@ -366,7 +283,7 @@ img::-moz-selection {
 .sectionTraits .sectionFont {
   font-weight: bold;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   font-size: calc(2.6vw);
 }
 
@@ -428,12 +345,12 @@ img::-moz-selection {
 .sectionTeam .memberNameFont {
   font-weight: 800;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   font-size: calc(1.7vw);
 }
 
 .sectionTeam .memberNameFontBlack {
-  color: black;
+  color: #000;
 }
 
 .sectionTeam .membersLabel {
@@ -444,7 +361,7 @@ img::-moz-selection {
 
 .sectionTeam .textFont {
   font-weight: bold;
-  color: white;
+  color: #fff;
   font-size: calc(1.3vw);
 }
 
@@ -501,7 +418,7 @@ img::-moz-selection {
   position: absolute;
   margin-top: 56%;
   font-weight: bold;
-  color: white;
+  color: #fff;
   font-size: calc(4vw);
 }
 
@@ -525,7 +442,7 @@ img::-moz-selection {
 
 .sectionAbout .textFont {
   font-weight: 500;
-  color: white;
+  color: #fff;
   font-size: calc(1.5vw);
 }
 
@@ -660,7 +577,7 @@ img::-moz-selection {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  color: black;
+  color: #000;
   font-size: calc(4vw);
 }
 
@@ -680,4 +597,194 @@ img::-moz-selection {
   top: -90%;
   left: -68%;
   background: #161616;
+}
+
+.offerPage .container-fluid {
+  max-width: 1200px;
+}
+
+.offerPage .offerSectionMargin {
+  padding-top: 20px;
+  margin-bottom: 70px;
+}
+
+.offerPage .offerMainHeading {
+  font-size: 35px;
+  color: #495057;
+  text-align: center;
+}
+
+.offerPage .offerHeading {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 22px;
+  margin-top: 35px;
+  z-index: 1;
+}
+
+.offerPage .offerHeading:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  z-index: -1;
+  width: 300px;
+  height: 20px;
+  background: #ecc100;
+}
+
+@media (min-width: 992px) {
+  .offerPage .offerHeading:before {
+    bottom: -4px;
+    width: 360px;
+  }
+}
+
+@media (min-width: 992px) {
+  .offerPage .offerHeading {
+    font-size: 30px;
+    padding-top: 60px;
+    margin-top: 0;
+    margin-bottom: 42px;
+  }
+}
+
+.offerPage .offerSubheading {
+  font-size: 20px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.offerPage .offerSubheading:before {
+  content: "";
+  position: absolute;
+  top: -1;
+  left: 0;
+  z-index: -1;
+  width: 62px;
+  height: 20px;
+  background: #ecc100;
+}
+
+@media (min-width: 992px) {
+  .offerPage .offerSubheading:before {
+    top: 2px;
+  }
+}
+
+.offerPage .offerSubheading + .offerText {
+  margin-left: 28px;
+}
+
+.offerPage .offerSubheading + ul.offerText {
+  margin-left: 10px;
+}
+
+@media (min-width: 992px) {
+  .offerPage .offerSubheading {
+    font-size: 24px;
+  }
+}
+
+.offerPage .offerText {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media (min-width: 992px) {
+  .offerPage .offerText {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.offerPage .offerInfoBox {
+  background: #ecc100;
+  margin: 30px 0;
+}
+
+.offerPage .offerInfoBox .text {
+  padding: 32px 28px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  .offerPage .offerInfoBox .text {
+    padding: 52px 28px 38px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.offerPage .offerInfoBox:last-of-type {
+  margin: 0;
+}
+
+.offerPage .offerImage {
+  width: 250px;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .offerPage .offerImage {
+    float: right;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 400px;
+  }
+}
+
+.offerPage .sectionSoftwareAudit .offerImage {
+  shape-outside: url(img/offer/software-audit.svg);
+}
+
+.offerPage .sectionProjectKickOff .offerImage {
+  shape-outside: url(img/offer/project-kick-off.svg);
+}
+
+.offerPage .sectionCustomDevelopment .offerImage {
+  shape-outside: url(img/offer/custom-development.svg);
+}
+
+.offerPage .sectionConsultancyPerHour .offerImage {
+  shape-outside: url(img/offer/consultancy-per-hour.svg);
+}
+
+.offerPage .sectionTeamExtension .offerImage {
+  shape-outside: url(img/offer/team-extension.svg);
+}
+
+.offerPage .sectionTableOfContent {
+  padding: 40px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/img/bg/these-people.jpg");
+}
+
+.offerPage .sectionTableOfContent li {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  .offerPage .sectionTableOfContent li {
+    font-size: 24px;
+  }
+}
+
+.offerPage .sectionContact {
+  color: #000;
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  .offerPage .sectionContact * {
+    font-size: 40px;
+  }
+  .offerPage .sectionContact .contactInfo {
+    line-height: 1.5;
+  }
 }
