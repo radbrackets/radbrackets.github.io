@@ -1,388 +1,554 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<title>RadBrackets</title>
-	<meta name="description" content="RadBrackets">
-	<meta name="author" content="RadBrackets">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <title>RadBrackets</title>
+    <meta name="description" content="RadBrackets" />
+    <meta name="author" content="RadBrackets" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-	<!-- Custom fonts for this template -->
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom fonts for this template -->
+    <link
+      href="vendor/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-	<!-- Custom font - Monterrat -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <!-- Custom font - Monterrat -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
 
-	<!-- CSS -->
-	<link href="css/styles.min.css?v=1" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/styles.min.css?v=1" rel="stylesheet" />
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147727018-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'UA-147727018-1');
-	</script>
-</head>
-<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-147727018-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<!-- section: header -->
-<div class="sectionHeader bgImageHeader">
-	<!-- top menu -->
-	<div class="container-fluid">
-		<div class="row justify-content-end">
-			<div class="col-6">
-				<nav class="topMenu">
-					<a href="#traits">Traits</a>
-					<a href="#team">Founders</a>
-					<a href="#contact">Contact</a>
-				</nav>
-			</div>
-		</div>
-		
-		<div class="row justify-content-end">
-		
-			<div class="col-6">
-				<nav class="rightMenu">
-					<ul>
-						<li><a href="#" class="fontStyleBold">Listen</a></li>
-						<li><a href="#">Learn</a></li>
-						<li><a href="#" class="fontStyleItalic">Design</a></li>
-						<li><a href="#">Draw conclusions</a></li>
-						<li><a href="#">Start over</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Chrome SVG as backgroung display bug fix -->
-	<div style="width: 1px; height: 1px;">
-		<object type="image/svg+xml" data="img/logo/logo-radbrackets.svg" width="1" height="1"></object>
-		<object type="image/svg+xml" data="img/logo/logo-radbrackets-light.svg" width="1" height="1"></object>
-		
-		<object type="image/svg+xml" data="img/logo/bracket-1.svg" width="1" height="1"></object>
-		<object type="image/svg+xml" data="img/logo/bracket-2.svg" width="1" height="1"></object>
-		<object type="image/svg+xml" data="img/logo/bracket-3.svg" width="1" height="1"></object>
-		
-		<object type="image/svg+xml" data="img/icons/linkedin.svg" width="1" height="1"></object>
-		<object type="image/svg+xml" data="img/icons/twitter.svg" width="1" height="1"></object>
-		<object type="image/svg+xml" data="img/icons/mail.svg" width="1" height="1"></object>
-		<object type="image/svg+xml" data="img/icons/linkedin-light.svg" width="1" height="1"></object>
-		<object type="image/svg+xml" data="img/icons/twitter-light.svg" width="1" height="1"></object>
-	</div>
-</div>
+      gtag("config", "UA-147727018-1");
+    </script>
+  </head>
+  <body>
+    <!-- section: header -->
+    <div class="sectionHeader bgImageHeader">
+      <!-- top menu -->
+      <div class="container-fluid">
+        <div class="row justify-content-end">
+          <div class="col-6">
+            <nav class="topMenu">
+              <a href="#traits">Traits</a>
+              <a href="#team">Founders</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+        </div>
 
-<!-- section: lead -->
-<div class="sectionLead bgImageLead">
-	<div class="triangle"></div>
-	<div class="container-fluid">
-	
-		<div class="row">
-		
-			<div class="col-3">
-				
-				<div class="logo">
-					<div class="bgImageLogo"></div>
-				</div>
-			</div>
-			<div class="col-9" class="leadGradientBackground">
-				<div>
-					<ul class="lead">
-						<li>These are people</li>
-						<li>and relations</li>
-						<li>that make</li>
-						<li>the software</li>
-						<li class="huge">GREAT</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+        <div class="row justify-content-end">
+          <div class="col-6">
+            <nav class="rightMenu">
+              <ul>
+                <li><a href="#" class="fontStyleBold">Listen</a></li>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#" class="fontStyleItalic">Design</a></li>
+                <li><a href="#">Draw conclusions</a></li>
+                <li><a href="#">Start over</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
 
-<!-- section: traits -->
-<div class="sectionTraits bgColorPageYellow" >
-	<div class="container-fluid">
-	
-		<div class="row justify-content-center">
-			<h2 class="sectionFont sectionTitle" id="traits">Let us help you grow your business.</h2>
-		</div>
-		<div class="row">
-			<div class="col">
-				<div class="customSoftware">
-					<div class="sectionFont subsectionFont subsectionTitle">
-						<ul>
-							<li>Custom</li>
-							<li>software</li>
-						</ul>
-					</div>
-					<p class="textFont">
-						We are a small software house that implements tailor-made software.<br/>
-						We believe that the best applications have their source in through knowledge pf business domain as well as effective client communication.
-					</p>
-				</div>
-			</div>
-			<div class="col-5">
-				<div class="pursuitOfKnowledge">
+      <!-- Chrome SVG as backgroung display bug fix -->
+      <div style="width: 1px; height: 1px">
+        <object
+          type="image/svg+xml"
+          data="img/logo/logo-radbrackets.svg"
+          width="1"
+          height="1"
+        ></object>
+        <object
+          type="image/svg+xml"
+          data="img/logo/logo-radbrackets-light.svg"
+          width="1"
+          height="1"
+        ></object>
 
-					<div class="brackets">
-						<div class="bracket1"><div class="bracketBg"></div></div>
-						<div class="bracket2"><div class="bracketBg"></div></div>
-						<div class="bracket3"><div class="bracketBg"></div></div>
-					</div>
+        <object
+          type="image/svg+xml"
+          data="img/logo/bracket-1.svg"
+          width="1"
+          height="1"
+        ></object>
+        <object
+          type="image/svg+xml"
+          data="img/logo/bracket-2.svg"
+          width="1"
+          height="1"
+        ></object>
+        <object
+          type="image/svg+xml"
+          data="img/logo/bracket-3.svg"
+          width="1"
+          height="1"
+        ></object>
 
-					<div class="sectionFont subsectionFont subsectionTitle">Pursuit of knowledge</div>
-					
-					<p class="textFont lessWide">
-						We are a lifelong learners who always opt for tools that fully meet customer needs.<br/>
-						We rely on Test Driven Development and implement our products in the heart of Domain Driven Design.
-					</p>
-				</div>
-			</div>
-			<div class="col">
-				<div class="feedback">
+        <object
+          type="image/svg+xml"
+          data="img/icons/linkedin.svg"
+          width="1"
+          height="1"
+        ></object>
+        <object
+          type="image/svg+xml"
+          data="img/icons/twitter.svg"
+          width="1"
+          height="1"
+        ></object>
+        <object
+          type="image/svg+xml"
+          data="img/icons/mail.svg"
+          width="1"
+          height="1"
+        ></object>
+        <object
+          type="image/svg+xml"
+          data="img/icons/linkedin-light.svg"
+          width="1"
+          height="1"
+        ></object>
+        <object
+          type="image/svg+xml"
+          data="img/icons/twitter-light.svg"
+          width="1"
+          height="1"
+        ></object>
+      </div>
+    </div>
 
-					<div class="sectionFont subsectionFont subsectionTitle">Feedback</div>
+    <!-- section: lead -->
+    <div class="sectionLead bgImageLead">
+      <div class="triangle"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3">
+            <div class="logo">
+              <div class="bgImageLogo"></div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div>
+              <ul class="lead">
+                <li>These are people</li>
+                <li>and relations</li>
+                <li>that make</li>
+                <li>the software</li>
+                <li class="huge">GREAT</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-					<p class="textFont">
-						We strongly believe that systematic client feedback enabling us to make project adjustments regularly is a key to success.<br/>
-						Therefore, Continuous Delivery and agile methodology are essential in our collaboration.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <!-- section: traits -->
+    <div class="sectionTraits bgColorPageYellow">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <h2 class="sectionFont sectionTitle" id="traits">
+            Let us help you grow your business.
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="customSoftware">
+              <div class="sectionFont subsectionFont subsectionTitle">
+                <ul>
+                  <li>Custom</li>
+                  <li>software</li>
+                </ul>
+              </div>
+              <p class="textFont">
+                We are a small software house that implements tailor-made
+                software.<br />
+                We believe that the best applications have their source in
+                through knowledge pf business domain as well as effective client
+                communication.
+              </p>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="pursuitOfKnowledge">
+              <div class="brackets">
+                <div class="bracket1"><div class="bracketBg"></div></div>
+                <div class="bracket2"><div class="bracketBg"></div></div>
+                <div class="bracket3"><div class="bracketBg"></div></div>
+              </div>
 
-<!-- section: team -->
-<div class="sectionTeam bgImageTeam" id="team">
-	<div class="triangle"></div>
-	<div class="container-fluid">
-		<div class="row teamHeader">
-			<div class="col-5">
-				<div class="member1">
-					<div class="memberNameFont">Patryk Zieliński</div>
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="member2">
-					<div class="memberNameFont memberNameFontBlack">Rafał Piotrowski</div>
-				</div>
-			</div>
-			<div class="col-3 membersLabelContainer">
-				<div class="memberNameFont membersLabel">Founders</div>
-			</div>
-		</div>
+              <div class="sectionFont subsectionFont subsectionTitle">
+                Pursuit of knowledge
+              </div>
 
-		<div class="row teamInfo">
-			<div class="col member1">
-				<div class="social">
-					<div class="icon">
-						<a href="https://linkedin.com/in/patryk-zielinski" target="_blank">
-							<div class="iconLinkedinLight"></div>
-						</a>
-					</div>
-					<div class="icon">
-						<a href="https://twitter.com/zielinski1983" target="_blank">
-							<div class="iconTwitterLight"></div>
-						</a>
-					</div>
-				</div>
-				<p class="textFont">
-					Local DDD community co-organiser, Java/JS developer. Domain-Driven Design practitioner for more than 6 years.
-					Believes that the key to success is good client needs understanding. TDD and Continuous Integration fan. 
-					Currently interested in functional programming, studying the usefulness of functional approach in domain modelling.
-				</p>
-			</div>
+              <p class="textFont lessWide">
+                We are a lifelong learners who always opt for tools that fully
+                meet customer needs.<br />
+                We rely on Test Driven Development and implement our products in
+                the heart of Domain Driven Design.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="feedback">
+              <div class="sectionFont subsectionFont subsectionTitle">
+                Feedback
+              </div>
 
-			<div class="col member2">
-				<div class="social">
-					<div class="icon">
-						<a href="https://linkedin.com/in/piotrowskirafal" target="_blank">
-							<div class="iconLinkedinLight"></div>
-						</a>
-					</div>
-					<div class="icon">
-						<a href="https://twitter.com/RafalPiotrowski" target="_blank">
-							<div class="iconTwitterLight"></div>
-						</a>
-					</div>
-				</div>
-				<p class="textFont">
-					Pragmatic Fullstack developer, <br/> clean code freak.<br/>
-					Software crafter who is passionate about <br/>Domain-Driven Design.<br/>
-					Connected with Java for more than ten years.
-				</p>
-			</div>
-		</div>
-		
-		<div class="row justify-content-center">
-		
-			<div class="goodFriends">Good friends, excellent developers.</div>
-		</div>
-	</div>
-</div>
+              <p class="textFont">
+                We strongly believe that systematic client feedback enabling us
+                to make project adjustments regularly is a key to success.<br />
+                Therefore, Continuous Delivery and agile methodology are
+                essential in our collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- section: about -->
-<div class="sectionAbout bgColorPageDarkGray">
-	<div class="container-fluid">
+    <!-- section: team -->
+    <div class="sectionTeam bgImageTeam" id="team">
+      <div class="triangle"></div>
+      <div class="container-fluid">
+        <div class="row teamHeader">
+          <div class="col-5">
+            <div class="member1">
+              <div class="memberNameFont">Patryk Zieliński</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="member2">
+              <div class="memberNameFont memberNameFontBlack">
+                Rafał Piotrowski
+              </div>
+            </div>
+          </div>
+          <div class="col-3 membersLabelContainer">
+            <div class="memberNameFont membersLabel">Founders</div>
+          </div>
+        </div>
 
-		<div class="row">
-			<div class="col-2">
-				<div class="aboutUsHeader">About us</div>
-			</div>
-			<div class="col">
-				<div class="aboutUsText">
-					<p class="textFont">
-					We are a <span>good pack of friends</span>, who were joined by the same <span>values and views about software development</span>. We know that an excellent team is almost half of the story.<br/>
-					We origin from <span>Java backend</span> and focus on <span>well designed, tested and clean solutions</span>.
-					</p>
-					<p class="textFont">
-					Software craftsmanship is where we deliver the most value. 
-					At the same time we trust that through <span>understanding of business needs</span> and <span>agile delivery</span> are crucial for successful IT projects. 
-					We concentrate more on <span>proper architecture</span> rather than frameworks or languages.
-					</p>
-					<p class="textFont">
-					What we value in a day to day work is the <span>knowledge exchange</span>. Pair programming and code review are the must do practices.
-					We rely on <span>test driven development</span> as it provides <span>higher productivity</span> and makes the <span>code more readable</span>.
-					</p>
-					<p class="textFont">
-					We also believe that a few tests are more valuable than often outdated documentation. 
-					Moreover <span>we find complicated business rules really interesting</span> as they create
-					a small unknown world that can be implemented in domain driven design.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+        <div class="row teamInfo">
+          <div class="col member1">
+            <div class="social">
+              <div class="icon">
+                <a
+                  href="https://linkedin.com/in/patryk-zielinski"
+                  target="_blank"
+                >
+                  <div class="iconLinkedinLight"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="https://twitter.com/zielinski1983" target="_blank">
+                  <div class="iconTwitterLight"></div>
+                </a>
+              </div>
+            </div>
+            <p class="textFont">
+              Local DDD community co-organiser, Java/JS developer. Domain-Driven
+              Design practitioner for more than 6 years. Believes that the key
+              to success is good client needs understanding. TDD and Continuous
+              Integration fan. Currently interested in functional programming,
+              studying the usefulness of functional approach in domain
+              modelling.
+            </p>
+          </div>
 
-<!-- section: testimonials -->
-<div class="sectionTestimonials">
-	<div class="container-fluid">
-		<div class="row justify-content-center">
-			<h2 class="sectionFont sectionTitle fontStyleBold">People say...</h2>
-		</div>
-		<div class="row">
-			<div class="col-2">
-				<div class="testimonialsHeader">testimonials</div>
-			</div>
-			<div class="col">
-					<div id="testimonialsCarousel" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="carousel-content">
-									<div>
-										<i class="quotationMark fa fa-quote-right"></i>
-										<p class="textFont">RadBrackets team helped us with gathering requirements and designing architecture for our
-											flag project OLAF (Assistent of Smart Treatment). They were part of our core team and <span class="fontColorAccent">mentored other team members</span>.
-											I can recommend RadBrackets to anyone who needs <span class="fontColorAccent">professional custom development service</span>.
-										</p>
-										<p class="textFont fontStyleBold">Łukasz Zontek, IT Director, Vice President, Lideo</p>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="carousel-content">
-									<div>
-										<i class="quotationMark fa fa-quote-right"></i>
-										<p class="textFont">Patryk and Rafal <span class="fontColorAccent">changed my perspective on software agencies</span>. They <span class="fontColorAccent">care about building
-											the product</span> that the business needs. Their domain-oriented approach avoids the usual feeling
-											that you can’t take your eyes from the project for a second or everything will go wrong.
-										</p>
-										<p class="textFont fontStyleBold">Fabio Carneiro, Artitech, CTO</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+          <div class="col member2">
+            <div class="social">
+              <div class="icon">
+                <a
+                  href="https://linkedin.com/in/piotrowskirafal"
+                  target="_blank"
+                >
+                  <div class="iconLinkedinLight"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="https://twitter.com/RafalPiotrowski" target="_blank">
+                  <div class="iconTwitterLight"></div>
+                </a>
+              </div>
+            </div>
+            <p class="textFont">
+              Pragmatic Fullstack developer, <br />
+              clean code freak.<br />
+              Software crafter who is passionate about <br />Domain-Driven
+              Design.<br />
+              Connected with Java for more than ten years.
+            </p>
+          </div>
+        </div>
 
-<div class="sectionContact " id="contact">
-	<div class="triangle"></div>
-	<div class="container-fluid bgColorPageYellow">
+        <div class="row justify-content-center">
+          <div class="goodFriends">Good friends, excellent developers.</div>
+        </div>
+      </div>
+    </div>
 
-		<div class="row">
-			<div class="col-12">
-				<div class="logo">
-					<div class="bgImageLogoLight"></div>
-				</div>
-			</div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-12">
-				<div class="contactUsTitle">Contact us</div>
-			</div>
-			
-			<div class="col-12"> 
-				<div class="contactIcons">
-					<div class="icon">
-						<a href="https://linkedin.com/company/radbrackets" target="_blank">
-							<div class="iconLinkedin"></div>
-						</a>
-					</div>
-					<div class="icon">
-						<a href="https://twitter.com/radbrackets" target="_blank">
-							<div class="iconTwitter"></div>
-						</a>
-					</div>
-					<div class="icon">
-						<a href="mailto:contact@radbrackets.com" target="_blank">
-							<div class="iconMail"></div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-</div>
+    <!-- section: about -->
+    <div class="sectionAbout bgColorPageDarkGray">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2">
+            <div class="aboutUsHeader">About us</div>
+          </div>
+          <div class="col">
+            <div class="aboutUsText">
+              <p class="textFont">
+                We are a <span>good pack of friends</span>, who were joined by
+                the same
+                <span>values and views about software development</span>. We
+                know that an excellent team is almost half of the story.<br />
+                We origin from <span>Java backend</span> and focus on
+                <span>well designed, tested and clean solutions</span>.
+              </p>
+              <p class="textFont">
+                Software craftsmanship is where we deliver the most value. At
+                the same time we trust that through
+                <span>understanding of business needs</span> and
+                <span>agile delivery</span> are crucial for successful IT
+                projects. We concentrate more on
+                <span>proper architecture</span> rather than frameworks or
+                languages.
+              </p>
+              <p class="textFont">
+                What we value in a day to day work is the
+                <span>knowledge exchange</span>. Pair programming and code
+                review are the must do practices. We rely on
+                <span>test driven development</span> as it provides
+                <span>higher productivity</span> and makes the
+                <span>code more readable</span>.
+              </p>
+              <p class="textFont">
+                We also believe that a few tests are more valuable than often
+                outdated documentation. Moreover
+                <span
+                  >we find complicated business rules really interesting</span
+                >
+                as they create a small unknown world that can be implemented in
+                domain driven design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<!-- Bootstrap core JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- section: testimonials -->
+    <div class="sectionTestimonials">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <h2 class="sectionFont sectionTitle fontStyleBold">People say...</h2>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div class="testimonialsHeader">testimonials</div>
+          </div>
+          <div class="col">
+            <div
+              id="testimonialsCarousel"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="carousel-content">
+                    <div>
+                      <i class="quotationMark fa fa-quote-right"></i>
+                      <p class="textFont">
+                        RadBrackets team helped us with gathering requirements
+                        and designing architecture for our flag project OLAF
+                        (Assistent of Smart Treatment). They were part of our
+                        core team and
+                        <span class="fontColorAccent"
+                          >mentored other team members</span
+                        >. I can recommend RadBrackets to anyone who needs
+                        <span class="fontColorAccent"
+                          >professional custom development service</span
+                        >.
+                      </p>
+                      <p class="textFont fontStyleBold">
+                        Łukasz Zontek, IT Director, Vice President, Lideo
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-content">
+                    <div>
+                      <i class="quotationMark fa fa-quote-right"></i>
+                      <p class="textFont">
+                        Patryk and Rafal
+                        <span class="fontColorAccent"
+                          >changed my perspective on software agencies</span
+                        >. They
+                        <span class="fontColorAccent"
+                          >care about building the product</span
+                        >
+                        that the business needs. Their domain-oriented approach
+                        avoids the usual feeling that you can’t take your eyes
+                        from the project for a second or everything will go
+                        wrong.
+                      </p>
+                      <p class="textFont fontStyleBold">
+                        Fabio Carneiro, Artitech, CTO
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#testimonialsCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#testimonialsCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sectionContact" id="contact">
+      <div class="triangle"></div>
+      <div class="container-fluid bgColorPageYellow">
+        <div class="row">
+          <div class="col-12">
+            <div class="logo">
+              <div class="bgImageLogo"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="contactUsTitle">Contact us</div>
+          </div>
 
-	<!-- Plugin JavaScript -->
-	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-</body>
+          <div class="col-12">
+            <div class="contactIcons">
+              <div class="icon">
+                <a
+                  href="https://linkedin.com/company/radbrackets"
+                  target="_blank"
+                >
+                  <div class="iconLinkedin"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="https://twitter.com/radbrackets" target="_blank">
+                  <div class="iconTwitter"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="mailto:contact@radbrackets.com" target="_blank">
+                  <div class="iconMail"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  </body>
 </html>
