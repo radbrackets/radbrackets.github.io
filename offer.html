@@ -63,14 +63,26 @@
     <link href="css/styles.min.css?v=1" rel="stylesheet" />
   </head>
   <body class="offerPage">
+    <header class="offerHeader">
+      <nav class="navbar container-fluid">
+        <a href="/"
+          ><img
+            class="navbarLogo"
+            src="img/logo/logo-radbrackets-light.svg"
+            alt="company logo"
+        /></a>
+        <ul class="navbarList">
+          <li class="navbarListItem">
+            <a class="navbarListItemLink homePage" href="/">home</a>
+          </li>
+          <li class="navbarListItem">
+            <a class="navbarListItemLink offerPage" href="/offer.html">offer</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <!-- Chrome SVG as background display bug fix -->
     <div style="width: 1px; height: 1px">
-      <object
-        type="image/svg+xml"
-        data="img/logo/logo-radbrackets.svg"
-        width="1"
-        height="1"
-      ></object>
       <object
         type="image/svg+xml"
         data="img/logo/logo-radbrackets-light.svg"
@@ -108,12 +120,12 @@
         height="1"
       ></object>
     </div>
-    <section class="sectionTableOfContent offerSectionMargin">
+    <section class="sectionTableOfContent offerSectionPadding">
       <div class="container-fluid">
         <h1 class="offerMainHeading">Service Overview</h1>
         <h2 class="offerHeading">Table of content</h2>
         <ul class="offerText">
-          <li class=""><a href="#software-audit">Software audit</a></li>
+          <li><a href="#software-audit">Software audit</a></li>
           <li><a href="#project-kick-off">Project Kick-off</a></li>
           <li><a href="#custom-development">Custom Development</a></li>
           <li><a href="#consultancy-per-hour">Consultancy Per Hour</a></li>
@@ -123,7 +135,7 @@
     </section>
     <section
       id="software-audit"
-      class="sectionSoftwareAudit offerSectionMargin"
+      class="sectionSoftwareAudit offerSectionPadding"
     >
       <div class="container-fluid">
         <img src="img/offer/software-audit.svg" alt="" class="offerImage" />
@@ -224,7 +236,7 @@
     </section>
     <section
       id="project-kick-off"
-      class="sectionProjectKickOff offerSectionMargin"
+      class="sectionProjectKickOff offerSectionPadding"
     >
       <div class="container-fluid">
         <img src="img/offer/project-kick-off.svg" alt="" class="offerImage" />
@@ -266,7 +278,7 @@
     </section>
     <section
       id="custom-development"
-      class="sectionCustomDevelopment offerSectionMargin"
+      class="sectionCustomDevelopment offerSectionPadding"
     >
       <div class="container-fluid">
         <img src="img/offer/custom-development.svg" alt="" class="offerImage" />
@@ -337,7 +349,7 @@
     </section>
     <section
       id="consultancy-per-hour"
-      class="sectionConsultancyPerHour offerSectionMargin"
+      class="sectionConsultancyPerHour offerSectionPadding"
     >
       <div class="container-fluid">
         <img
@@ -374,7 +386,7 @@
     </section>
     <section
       id="team-extension"
-      class="sectionTeamExtension offerSectionMargin"
+      class="sectionTeamExtension offerSectionPadding"
     >
       <div class="container-fluid">
         <img src="img/offer/team-extension.svg" alt="" class="offerImage" />
@@ -452,5 +464,7 @@
         </div>
       </div>
     </section>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
