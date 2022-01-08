@@ -10,9 +10,76 @@ $sections: (
   .container-fluid {
     max-width: 1200px;
   }
-  .offerSectionMargin {
-    padding-top: 20px;
-    margin-bottom: 70px;
+
+  .offerHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 0;
+    width: 100%;
+    background: $darkGrey;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+    text-transform: uppercase;
+    transition: padding 0.4s;
+    .navbar {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .navbarLogo {
+      width: 130px;
+      transition: width 0.4s;
+    }
+    .navbarList {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      transition: font-size 0.4s;
+      .navbarListItem {
+        .navbarListItemLink {
+          padding-left: 16px;
+          color: $white;
+          &.offerPage {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &.scrolled {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      .navbarLogo {
+        width: 115px;
+      }
+      .navbarList {
+        font-size: 15px;
+      }
+    }
+    @media (min-width: 992px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .navbarLogo {
+        width: 250px;
+      }
+      .navbarList {
+        font-size: 22px;
+      }
+      &.scrolled {
+        .navbarLogo {
+          width: 150px;
+        }
+        .navbarList {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .offerSectionPadding {
+    padding-top: 90px;
   }
   .offerMainHeading {
     font-size: 35px;
@@ -95,7 +162,7 @@ $sections: (
       }
     }
     &:last-of-type {
-      margin: 0;
+      margin-bottom: 0;
     }
   }
   .offerImage {
@@ -116,7 +183,7 @@ $sections: (
   }
 
   .sectionTableOfContent {
-    padding: 40px 0;
+    padding: 140px 0 40px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -128,7 +195,10 @@ $sections: (
     li {
       padding-bottom: 20px;
       font-size: 20px;
-      @media (min-width: 992px) {
+    }
+    @media (min-width: 992px) {
+      padding-top: 200px;
+      li {
         font-size: 24px;
       }
     }
