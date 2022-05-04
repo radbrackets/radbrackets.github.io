@@ -208,6 +208,10 @@ img::-moz-selection {
   }
 }
 
+.homepage .container-fluid {
+  max-width: none;
+}
+
 .fontStyleItalic {
   font-style: italic;
 }
