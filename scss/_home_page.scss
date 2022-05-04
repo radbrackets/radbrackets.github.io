@@ -131,6 +131,9 @@
       padding: 0.5em;
       color: $white;
     }
+    @media (min-width: 992px) {
+      font-size: calc(1.1vw);
+    }
   }
   .rightMenu {
     position: absolute;
