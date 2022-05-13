@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
-  @include body-font;
+  font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 
 p {
@@ -21,13 +22,9 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  @include heading-font;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-::-moz-selection {
-  background: $primary;
-  text-shadow: none;
-}
 ::selection {
   background: $primary;
   text-shadow: none;
@@ -35,13 +32,8 @@ h6 {
 img::selection {
   background: transparent;
 }
-img::-moz-selection {
-  background: transparent;
-}
 
 .container-fluid {
-  font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
   max-width: 1200px;
 }
 

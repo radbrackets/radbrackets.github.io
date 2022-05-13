@@ -5,7 +5,7 @@
  */
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -27,12 +27,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-::-moz-selection {
-  background: #95959E;
-  text-shadow: none;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 ::selection {
@@ -44,12 +39,7 @@ img::selection {
   background: transparent;
 }
 
-img::-moz-selection {
-  background: transparent;
-}
-
 .container-fluid {
-  font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 1200px;
 }
 
@@ -251,7 +241,7 @@ img::-moz-selection {
 }
 
 .bgImageLogo {
-  background-image: url("/img/logo/logo-radbrackets-light.svg");
+  background-image: url("/img/logo/logo-radbrackets.svg");
   background-size: cover;
   padding-bottom: 29.25%;
 }
