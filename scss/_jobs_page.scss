@@ -105,6 +105,10 @@
     border-radius: 5px;
     border: 1px solid $gray-300;
     margin-bottom: 1.5rem;
+    &:not(:first-of-type):not(:last-of-type) {
+      border-radius: 5px;
+      border-bottom: 1px solid $gray-300;
+    }
   }
   .card-header {
     background-color: transparent;
