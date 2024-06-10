@@ -437,6 +437,15 @@
 .sectionContact {
   position: relative;
   overflow: hidden;
+
+  .textFont {
+    font-weight: 500;
+    color: $white;
+    font-size: calc(1.5vw);
+    span {
+      color: $accent;
+    }
+  }
   .logo {
     margin-top: 2%;
     margin-left: 5%;

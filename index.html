@@ -400,7 +400,7 @@
                 languages.
               </p>
               <p class="textFont">
-                What we value in our day to day work is 
+                What we value in our day to day work is
                 <span>knowledge exchange</span>. Pair programming and code
                 review are must - do practices. We rely on
                 <span>test driven development</span>, as it provides
@@ -542,6 +542,17 @@
           </div>
         </div>
         <div class="row justify-content-center">
+          <div class="col-8">
+            <form id="contact-us" action="https://hooks.zapier.com/hooks/catch/15191504/2yf7d59">
+              <div class="form-group">
+                <label for="email" class="textFont">Email</label>
+                <input id="email" name="email" type="email" class="form-control form-control-lg" required>
+                <label for="reason" class="textFont">Few words</label>
+                <textarea id="reason" name="reason" type="email" class="form-control form-control-lg" required></textarea>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </form>
+          </div>
           <div class="col-12">
             <div class="contactUsTitle">Contact us</div>
           </div>
@@ -584,5 +595,29 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+   <script>
+     $(document).ready(function(e) {
+
+       $("#contact-us").submit(function(e) {
+
+         e.preventDefault(); // avoid to execute the actual submit of the form.
+
+         var form = $(this);
+         var actionUrl = form.attr('action');
+
+         $.ajax({
+           type: "POST",
+           url: actionUrl,
+           data: form.serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+             alert(data); // show response from the php script.
+           }
+         });
+
+       });
+
+     });
+   </script>
   </body>
 </html>
