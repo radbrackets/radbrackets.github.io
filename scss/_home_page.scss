@@ -452,7 +452,7 @@
     width: 45%;
   }
   .icon {
-    width: 6%;
+    width: 20%;
     display: inline-block;
     padding: 1%;
   }
@@ -462,7 +462,15 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $black;
-    font-size: calc(4vw);
+    font-size: calc(3vw);
+  }
+  .orTitle {
+    padding-top: 8%;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $black;
+    font-size: calc(2vw);
   }
   .contactIcons {
     text-align: center;
@@ -480,4 +488,22 @@
     left: -68%;
     background: $darkGrey;
   }
+
+  .bottom-buffer {
+    margin-bottom: 30px;
+  }
+
+  .btn-primary {
+    background-color: black;
+    border-color: black;
+  }
+
+
+}
+
+.get-back-top{
+  position: fixed;
+  top: 5px;
+  left:2%;
+  width: 96%;
 }
