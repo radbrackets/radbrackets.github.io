@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2022 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
- */
 body {
   overflow-x: hidden;
   font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15,7 +10,6 @@ p {
 a {
   color: #000;
 }
-
 a:hover {
   color: #000;
 }
@@ -56,17 +50,14 @@ img::selection {
   text-transform: uppercase;
   transition: padding 0.4s;
 }
-
 .subpageHeader .navbar {
   padding-top: 0;
   padding-bottom: 0;
 }
-
 .subpageHeader .navbarLogo {
   width: 130px;
   transition: width 0.4s;
 }
-
 .subpageHeader .navbarList {
   display: flex;
   list-style: none;
@@ -75,25 +66,20 @@ img::selection {
   font-size: 15px;
   transition: font-size 0.4s;
 }
-
 .subpageHeader .navbarList .navbarListItem .navbarListItemLink {
   padding-left: 16px;
   color: #fff;
 }
-
 .subpageHeader.scrolled {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
 .subpageHeader.scrolled .navbarLogo {
   width: 115px;
 }
-
 .subpageHeader.scrolled .navbarList {
   font-size: 15px;
 }
-
 @media (min-width: 992px) {
   .subpageHeader {
     padding-top: 30px;
@@ -121,7 +107,6 @@ img::selection {
   margin-top: 35px;
   z-index: 1;
 }
-
 .highlightedHeading:before {
   content: "";
   position: absolute;
@@ -132,14 +117,12 @@ img::selection {
   height: 20px;
   background: #ecc100;
 }
-
 @media (min-width: 992px) {
   .highlightedHeading:before {
     bottom: -4px;
     width: 360px;
   }
 }
-
 @media (min-width: 992px) {
   .highlightedHeading {
     font-size: 30px;
@@ -154,7 +137,6 @@ img::selection {
   padding-left: 28px;
   z-index: 1;
 }
-
 .highlightedSubheading:before {
   content: "";
   position: absolute;
@@ -165,21 +147,17 @@ img::selection {
   height: 20px;
   background: #ecc100;
 }
-
 @media (min-width: 992px) {
   .highlightedSubheading:before {
     top: 2px;
   }
 }
-
 .highlightedSubheading + .details {
   margin-left: 28px;
 }
-
 .highlightedSubheading + ul.details {
   margin-left: 10px;
 }
-
 @media (min-width: 992px) {
   .highlightedSubheading {
     font-size: 24px;
@@ -190,7 +168,6 @@ img::selection {
   font-size: 16px;
   font-weight: 300;
 }
-
 @media (min-width: 992px) {
   .details {
     font-size: 20px;
@@ -255,20 +232,17 @@ img::selection {
 .brackets {
   text-align: center;
 }
-
 .brackets .bracket1 {
   width: 23%;
   padding-left: 0%;
   padding-right: 10%;
   display: inline-block;
 }
-
 .brackets .bracket1 .bracketBg {
   background-image: url("/img/logo/bracket-1.svg");
   background-size: cover;
   padding-bottom: 260%;
 }
-
 .brackets .bracket2 {
   width: 23%;
   padding-left: 5%;
@@ -277,20 +251,17 @@ img::selection {
   margin-right: 10%;
   display: inline-block;
 }
-
 .brackets .bracket2 .bracketBg {
   background-image: url("/img/logo/bracket-2.svg");
   background-size: cover;
   padding-bottom: 260%;
 }
-
 .brackets .bracket3 {
   width: 23%;
   padding-left: 10%;
   padding-right: 0%;
   display: inline-block;
 }
-
 .brackets .bracket3 .bracketBg {
   background-image: url("/img/logo/bracket-3.svg");
   background-size: cover;
@@ -338,7 +309,6 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-
 .sectionHeader .topMenu {
   position: absolute;
   right: 0;
@@ -346,21 +316,18 @@ img::selection {
   margin-right: 10%;
   margin-top: 10%;
   width: 100%;
-  font-size: calc(1.5vw);
+  font-size: 1.5vw;
   text-transform: uppercase;
 }
-
 .sectionHeader .topMenu a {
   padding: 0.5em;
   color: #fff;
 }
-
 @media (min-width: 992px) {
   .sectionHeader .topMenu {
-    font-size: calc(1.1vw);
+    font-size: 1.1vw;
   }
 }
-
 .sectionHeader .rightMenu {
   position: absolute;
   right: 0;
@@ -368,14 +335,12 @@ img::selection {
   margin-top: 64%;
   width: 100%;
 }
-
 .sectionHeader .rightMenu ul {
   list-style-type: none;
   text-align: right;
-  font-size: calc(2.7vw);
+  font-size: 2.7vw;
   text-transform: uppercase;
 }
-
 .sectionHeader .rightMenu ul a {
   color: #fff;
 }
@@ -384,14 +349,12 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-
 .sectionLead .logo {
   position: absolute;
   margin-top: 15%;
   margin-left: 20%;
   width: 70%;
 }
-
 .sectionLead ul.lead {
   position: absolute;
   right: 0;
@@ -399,25 +362,22 @@ img::selection {
   margin-top: 5%;
   margin-left: 0%;
   margin-right: 4%;
-  font-size: calc(4vw);
+  font-size: 4vw;
   font-weight: bold;
   list-style-type: none;
   text-align: right;
   text-transform: uppercase;
 }
-
 .sectionLead ul.lead li {
   color: #000;
 }
-
 .sectionLead ul.lead li.huge {
   margin-top: 3%;
   padding-right: 1%;
-  font-size: calc(8vw);
+  font-size: 8vw;
   font-weight: bold;
   color: #fff;
 }
-
 .sectionLead .triangle {
   position: absolute;
   display: block;
@@ -435,59 +395,48 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-
 .sectionTraits .sectionFont {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  font-size: calc(2.6vw);
+  font-size: 2.6vw;
 }
-
 .sectionTraits .subsectionFont {
-  font-size: calc(2.3vw);
+  font-size: 2.3vw;
 }
-
 .sectionTraits .sectionTitle {
   padding-top: 2em;
   padding-bottom: 2em;
 }
-
 .sectionTraits .textFont {
-  font-size: calc(1.2vw);
+  font-size: 1.2vw;
   font-weight: 500;
 }
-
 .sectionTraits .customSoftware ul {
   padding-top: 2em;
   padding-bottom: 0em;
   list-style-type: none;
   text-align: right;
 }
-
 .sectionTraits .customSoftware ul li {
   padding-bottom: 0.5em;
 }
-
 .sectionTraits .customSoftware p {
   text-align: right;
 }
-
 .sectionTraits .pursuitOfKnowledge {
   text-align: center;
   padding-bottom: 10%;
 }
-
 .sectionTraits .pursuitOfKnowledge .subsectionTitle {
   padding-top: 1em;
   padding-bottom: 2em;
 }
-
 .sectionTraits .pursuitOfKnowledge .lessWide {
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
 }
-
 .sectionTraits .feedback .subsectionTitle {
   padding-top: 2em;
   padding-bottom: 3em;
@@ -497,87 +446,72 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-
 .sectionTeam .memberNameFont {
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
-  font-size: calc(1.7vw);
+  font-size: 1.7vw;
 }
-
 .sectionTeam .memberNameFontBlack {
   color: #000;
 }
-
 .sectionTeam .membersLabel {
   font-weight: bold;
-  font-size: calc(2.6vw);
+  font-size: 2.6vw;
   transform: rotate(90deg);
 }
-
 .sectionTeam .textFont {
   font-weight: bold;
   color: #fff;
-  font-size: calc(1.3vw);
+  font-size: 1.3vw;
 }
-
 .sectionTeam .teamHeader .member1 {
   position: absolute;
   margin-top: 12%;
   margin-left: 33%;
 }
-
 .sectionTeam .teamHeader .member2 {
   position: absolute;
   margin-top: 75%;
   margin-left: 35%;
 }
-
 .sectionTeam .teamHeader .membersLabel {
   position: absolute;
   right: 0;
   margin-top: 45%;
   margin-right: 30%;
 }
-
 .sectionTeam .teamInfo {
   position: absolute;
   margin-top: 30%;
 }
-
 .sectionTeam .teamInfo .social .icon {
   width: 1.3em;
   display: inline-block;
   overflow: visible;
 }
-
 .sectionTeam .teamInfo .member1 .social {
   padding-left: 10%;
 }
-
 .sectionTeam .teamInfo .member1 p {
   padding-left: 10%;
 }
-
 .sectionTeam .teamInfo .member2 .social {
   text-align: right;
   padding-right: 20%;
 }
-
 .sectionTeam .teamInfo .member2 p {
   padding-right: 20%;
   padding-left: 20%;
   text-align: right;
 }
-
 .sectionTeam .goodFriends {
   position: absolute;
   margin-top: 56%;
   font-weight: bold;
   color: #fff;
-  font-size: calc(4vw);
+  font-size: 4vw;
 }
-
 .sectionTeam .triangle {
   position: absolute;
   display: block;
@@ -588,24 +522,21 @@ img::selection {
   transform: rotate(45deg);
   top: 50%;
   left: -58%;
-  background: #161616;
+  background: rgb(22, 22, 22);
 }
 
 .sectionAbout {
   position: relative;
   overflow: hidden;
 }
-
 .sectionAbout .textFont {
   font-weight: 500;
   color: #fff;
-  font-size: calc(1.5vw);
+  font-size: 1.5vw;
 }
-
 .sectionAbout .textFont span {
   color: #ecc100;
 }
-
 .sectionAbout .aboutUsHeader {
   position: absolute;
   left: 0;
@@ -613,11 +544,10 @@ img::selection {
   transform: translateX(-12%) translateY(-50%) rotate(-90deg);
   text-transform: uppercase;
   color: #fff;
-  font-size: calc(2.6vw);
+  font-size: 2.6vw;
   width: 100%;
   font-weight: bold;
 }
-
 .sectionAbout .aboutUsText {
   padding-top: 2em;
   padding-bottom: 4em;
@@ -631,69 +561,57 @@ img::selection {
   background: linear-gradient(0deg, #161616, #1e1e1e 80%) no-repeat;
   padding-bottom: 3em;
 }
-
 .sectionTestimonials .sectionTitle {
   padding-top: 2em;
   padding-bottom: 1em;
 }
-
 .sectionTestimonials .sectionFont {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  font-size: calc(2.6vw);
+  font-size: 2.6vw;
 }
-
 .sectionTestimonials .textFont {
-  font-size: calc(1.5vw);
+  font-size: 1.5vw;
   color: #fff;
   margin-top: 1em;
 }
-
 .sectionTestimonials .carousel {
   padding-left: 5%;
   padding-right: 10%;
 }
-
 .sectionTestimonials .carousel-content {
   display: flex;
   align-items: center;
   height: 140px;
 }
-
 @media (min-width: 576px) {
   .sectionTestimonials .carousel-content {
     height: 180px;
   }
 }
-
 @media (min-width: 768px) {
   .sectionTestimonials .carousel-content {
     height: 320px;
   }
 }
-
 @media (min-width: 1400px) {
   .sectionTestimonials .carousel-content {
     min-height: 530px;
   }
 }
-
 .sectionTestimonials .carousel-control-prev {
   left: -9%;
 }
-
 .sectionTestimonials .carousel-control-next {
   right: -4%;
 }
-
 .sectionTestimonials .carousel-control-next-icon,
 .sectionTestimonials .carousel-control-prev-icon {
-  width: calc(3vw);
-  height: calc(3vw);
+  width: 3vw;
+  height: 3vw;
 }
-
 .sectionTestimonials .testimonialsHeader {
   position: absolute;
   left: 0;
@@ -701,13 +619,12 @@ img::selection {
   transform: translateX(-12%) translateY(-50%) rotate(-90deg);
   text-transform: uppercase;
   color: #fff;
-  font-size: calc(2.6vw);
+  font-size: 2.6vw;
   width: 100%;
   font-weight: bold;
 }
-
 .sectionTestimonials .quotationMark {
-  font-size: calc(4vw);
+  font-size: 4vw;
   color: #fff;
 }
 
@@ -715,33 +632,31 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-
 .sectionContact .logo {
   margin-top: 2%;
   margin-left: 5%;
   width: 45%;
 }
-
 .sectionContact .icon {
   width: 6%;
   display: inline-block;
   padding: 1%;
 }
-
 .sectionContact .contactUsTitle {
   padding-top: 8%;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   color: #000;
-  font-size: calc(4vw);
+  font-size: 4vw;
 }
-
+.sectionContact .address {
+  text-align: center;
+}
 .sectionContact .contactIcons {
   text-align: center;
   padding-bottom: 15%;
 }
-
 .sectionContact .triangle {
   position: absolute;
   display: block;
@@ -758,28 +673,23 @@ img::selection {
 .offerPage .subpageHeader .navbarListItemLink.offerPage {
   text-decoration: underline;
 }
-
 .offerPage .offerSectionPadding {
   padding-top: 90px;
 }
-
 .offerPage .offerMainHeading {
   font-size: 35px;
   color: #495057;
   text-align: center;
 }
-
 .offerPage .infoBox {
   background: #ecc100;
   margin: 30px 0;
 }
-
 .offerPage .infoBox .text {
   padding: 32px 28px;
   font-size: 20px;
   font-weight: 600;
 }
-
 @media (min-width: 992px) {
   .offerPage .infoBox .text {
     padding: 52px 28px 38px;
@@ -787,17 +697,14 @@ img::selection {
     line-height: 34px;
   }
 }
-
 .offerPage .infoBox:last-of-type {
   margin-bottom: 0;
 }
-
 .offerPage .offerImage {
   width: 250px;
   margin: 0 auto 30px auto;
   display: block;
 }
-
 @media (min-width: 992px) {
   .offerPage .offerImage {
     float: right;
@@ -806,27 +713,21 @@ img::selection {
     width: 400px;
   }
 }
-
 .offerPage .sectionSoftwareAudit .offerImage {
   shape-outside: url(img/offer/software-audit.svg);
 }
-
 .offerPage .sectionProjectKickOff .offerImage {
   shape-outside: url(img/offer/project-kick-off.svg);
 }
-
 .offerPage .sectionCustomDevelopment .offerImage {
   shape-outside: url(img/offer/custom-development.svg);
 }
-
 .offerPage .sectionConsultancyPerHour .offerImage {
   shape-outside: url(img/offer/consultancy-per-hour.svg);
 }
-
 .offerPage .sectionTeamExtension .offerImage {
   shape-outside: url(img/offer/team-extension.svg);
 }
-
 .offerPage .sectionTableOfContent {
   padding: 140px 0 40px;
   background-size: cover;
@@ -834,12 +735,10 @@ img::selection {
   background-position: center;
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/img/bg/these-people.jpg");
 }
-
 .offerPage .sectionTableOfContent li {
   padding-bottom: 20px;
   font-size: 20px;
 }
-
 @media (min-width: 992px) {
   .offerPage .sectionTableOfContent {
     padding-top: 200px;
@@ -848,12 +747,10 @@ img::selection {
     font-size: 24px;
   }
 }
-
 .offerPage .sectionContact {
   color: #000;
   font-size: 20px;
 }
-
 @media (min-width: 992px) {
   .offerPage .sectionContact * {
     font-size: 40px;
@@ -866,29 +763,24 @@ img::selection {
 .jobsPage .subpageHeader .navbarListItemLink.jobsPage {
   text-decoration: underline;
 }
-
 .jobsPage .jobsSectionPadding {
   padding-top: 5px;
 }
-
 @media (min-width: 992px) {
   .jobsPage .jobsSectionPadding {
     padding-bottom: 90px;
   }
 }
-
 .jobsPage .sectionAboutUs {
   font-size: 16px;
   padding-top: 95px;
 }
-
 @media (min-width: 992px) {
   .jobsPage .sectionAboutUs {
     font-size: 20px;
     padding-top: 200px;
   }
 }
-
 .jobsPage .jobHeader {
   text-align: left;
   font-size: 16px;
@@ -902,11 +794,9 @@ img::selection {
   padding: 0;
   cursor: pointer;
 }
-
-.jobsPage .jobHeader[aria-expanded="true"] .rotateIcon {
+.jobsPage .jobHeader[aria-expanded=true] .rotateIcon {
   transform: rotate(180deg);
 }
-
 .jobsPage .jobHeading {
   font-size: 24px;
   color: #161616;
@@ -914,35 +804,29 @@ img::selection {
   margin-bottom: 1rem;
   line-height: 1.2;
 }
-
 @media (min-width: 992px) {
   .jobsPage .jobHeading {
     font-size: 30px;
   }
 }
-
 .jobsPage .jobSalary {
   color: #ecc100;
   margin-bottom: 0.5rem;
 }
-
 @media (min-width: 992px) {
   .jobsPage .jobSalary {
     font-size: 20px;
   }
 }
-
 .jobsPage .jobContractType {
   color: #868e96;
   font-size: 12px;
 }
-
 @media (min-width: 992px) {
   .jobsPage .jobContractType {
     font-size: 16px;
   }
 }
-
 .jobsPage .joinUsLink {
   border-radius: 5px;
   padding: 8px;
@@ -957,50 +841,48 @@ img::selection {
   text-transform: uppercase;
   transition: all 0.32s ease;
 }
-
 .jobsPage .joinUsLink:hover {
   text-decoration: none;
   color: #ecc100;
   background: #fff;
   border-color: #ecc100;
 }
-
 @media (min-width: 992px) {
   .jobsPage .joinUsLink {
     font-size: 26px;
   }
 }
-
 .jobsPage .sectionContact {
   background: #161616;
   color: #fff;
   font-size: 16px;
   margin-top: 46px;
 }
-
 .jobsPage .sectionContact .contactInfo {
   color: #ecc100;
 }
-
 @media (min-width: 992px) {
   .jobsPage .sectionContact * {
     font-size: 24px;
   }
 }
-
 .jobsPage .accordion .card {
   border-radius: 5px;
   border: 1px solid #dee2e6;
   margin-bottom: 1.5rem;
 }
-
+.jobsPage .accordion .card:not(:first-of-type):not(:last-of-type) {
+  border-radius: 5px;
+  border-bottom: 1px solid #dee2e6;
+}
 .jobsPage .card-header {
   background-color: transparent;
   padding: 30px 20px;
   cursor: pointer;
   border-bottom: 0;
 }
-
 .jobsPage .card-body {
   color: #495057;
 }
+
+/*# sourceMappingURL=styles.css.map */
