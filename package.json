@@ -16,6 +16,9 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
         "email": "feedback@startbootstrap.com"
     },
+    "scripts": {
+        "sass": "sass  scss/styles.scss:css/styles-v3.min.css --style compressed && sass  scss/styles.scss:css/styles.css"
+    },
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": [
@@ -38,7 +41,7 @@
         "gulp-clean-css": "3.9.4",
         "gulp-header": "2.0.5",
         "gulp-rename": "^1.2.2",
-        "gulp-sass": "^4.0.1",
-        "gulp-uglify": "3.0.0"
+        "gulp-uglify": "3.0.0",
+        "sass": "^1.77.4"
     }
 }
