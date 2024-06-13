@@ -652,6 +652,7 @@ img::selection {
 }
 .sectionContact .address {
   text-align: center;
+  font-size: 1.5vw;
 }
 .sectionContact .contactIcons {
   text-align: center;
