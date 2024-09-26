@@ -169,3 +169,63 @@ img::selection {
     line-height: 28px;
   }
 }
+.footer {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3% 5%;
+  background-color: $black;
+  .logoFooter {
+    background-image: url(/img/logo/logo-radbrackets-light.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 60px;
+  }
+  .address {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+  }
+  .social {
+    .social-icon {
+      display: inline;
+      margin: 0.5rem;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    .address {
+      ul {
+        text-align: left;
+        font-size: 1rem;
+      }
+    }
+    .social {
+      .social-icon {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
