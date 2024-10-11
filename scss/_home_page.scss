@@ -33,9 +33,6 @@
   //padding-bottom: 70.83%; // 1360 / 1920
 }
 
-
-
-
 .bgImageLogo {
   background-image: url("/img/logo/logo-radbrackets.svg");
   background-size: cover;
@@ -433,12 +430,11 @@
     color: $white;
   }
 }
-
 .sectionContact {
   position: relative;
   overflow: hidden;
   .logo {
-    margin-top: 2%;
+    padding-top: 2%;
     margin-left: 5%;
     width: 45%;
   }
@@ -448,20 +444,20 @@
     padding: 1%;
   }
   .contactUsTitle {
-    padding-top: 8%;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
     color: $black;
-    font-size: calc(4vw);
+    font-size: 3rem;
+    // font-size: calc(4vw);
   }
-  .address {
-    text-align: center;
-    font-size: calc(1.5vw);
-  }
+  // .address {
+  //   text-align: center;
+  //   font-size: calc(1.5vw);
+  // }
   .contactIcons {
     text-align: center;
-    padding-bottom: 15%;
+    // padding-bottom: 15%;
   }
   .triangle {
     position: absolute;
@@ -474,5 +470,79 @@
     top: -90%;
     left: -68%;
     background: $darkGrey;
+  }
+  .orTitle {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    // font-size: 2vw;
+    font-size: 2.5rem;
+  }
+
+  .formBox {
+    padding: 5%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    .icon {
+      width: 20%;
+      display: inline-block;
+      padding: 1%;
+    }
+    form {
+      width: 50%;
+      input#email {
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 25%) !important;
+          border-color: #ffffff;
+        }
+      }
+      label {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      textarea {
+        resize: none;
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 25%) !important;
+          border-color: #ffffff;
+        }
+      }
+      button {
+        background-color: $black;
+        border: 1px solid $black;
+        &:hover,
+        &:active {
+          border: 1px solid white !important;
+          background-color: white !important;
+          color: $black !important;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .sectionContact {
+    .contactUsTitle {
+      font-size: 2rem;
+    }
+    .orTitle {
+      font-size: 1.5rem;
+    }
+    .formBox {
+      flex-direction: column;
+      gap: 1rem;
+      form {
+        width: 100%;
+        label {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }
