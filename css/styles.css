@@ -175,58 +175,6 @@ img::selection {
   }
 }
 
-.footer {
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 3% 5%;
-  background-color: #000;
-}
-.footer .logoFooter {
-  background-image: url(/img/logo/logo-radbrackets-light.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 260px;
-  height: 60px;
-}
-.footer .address {
-  text-align: center;
-  font-size: 1rem;
-  color: white;
-}
-.footer .address ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-  font-size: 1.1rem;
-}
-.footer .social .social-icon {
-  display: inline;
-  margin: 0.5rem;
-}
-.footer .social .social-icon img {
-  width: 50px;
-  height: 50px;
-}
-
-@media only screen and (max-width: 1150px) {
-  .footer {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-  .footer .address ul {
-    text-align: left;
-    font-size: 1rem;
-  }
-  .footer .social .social-icon img {
-    width: 40px;
-    height: 40px;
-  }
-}
 .homepage .container-fluid {
   max-width: none;
 }
@@ -685,7 +633,7 @@ img::selection {
   overflow: hidden;
 }
 .sectionContact .logo {
-  padding-top: 2%;
+  margin-top: 2%;
   margin-left: 5%;
   width: 45%;
 }
@@ -695,14 +643,20 @@ img::selection {
   padding: 1%;
 }
 .sectionContact .contactUsTitle {
+  padding-top: 8%;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   color: #000;
-  font-size: 3rem;
+  font-size: 4vw;
+}
+.sectionContact .address {
+  text-align: center;
+  font-size: 1.5vw;
 }
 .sectionContact .contactIcons {
   text-align: center;
+  padding-bottom: 15%;
 }
 .sectionContact .triangle {
   position: absolute;
@@ -716,74 +670,7 @@ img::selection {
   left: -68%;
   background: #161616;
 }
-.sectionContact .orTitle {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 2.5rem;
-}
-.sectionContact .formBox {
-  padding: 5%;
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-}
-.sectionContact .formBox .icon {
-  width: 20%;
-  display: inline-block;
-  padding: 1%;
-}
-.sectionContact .formBox form {
-  width: 50%;
-}
-.sectionContact .formBox form input#email:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
-  border-color: #ffffff;
-}
-.sectionContact .formBox form label {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-.sectionContact .formBox form textarea {
-  resize: none;
-}
-.sectionContact .formBox form textarea:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25) !important;
-  border-color: #ffffff;
-}
-.sectionContact .formBox form button {
-  background-color: #000;
-  border: 1px solid #000;
-}
-.sectionContact .formBox form button:hover, .sectionContact .formBox form button:active {
-  border: 1px solid white !important;
-  background-color: white !important;
-  color: #000 !important;
-}
-.sectionContact .formBox form button:focus {
-  box-shadow: none;
-}
 
-@media only screen and (max-width: 1000px) {
-  .sectionContact .contactUsTitle {
-    font-size: 2rem;
-  }
-  .sectionContact .orTitle {
-    font-size: 1.5rem;
-  }
-  .sectionContact .formBox {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .sectionContact .formBox form {
-    width: 100%;
-  }
-  .sectionContact .formBox form label {
-    font-size: 1rem;
-  }
-}
 .offerPage .subpageHeader .navbarListItemLink.offerPage {
   text-decoration: underline;
 }
