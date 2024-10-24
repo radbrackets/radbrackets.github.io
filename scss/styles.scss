@@ -1,8 +1,8 @@
 // Core variables and mixins
-@import "variables.scss";
-@import "mixins.scss";
+@use "variables.scss";
+@use "mixins.scss";
 // Global CSS
-@import "global.scss";
-@import "home_page.scss";
-@import "offer_page.scss";
-@import "jobs_page.scss";
+@use "global.scss";
+@use "home_page.scss";
+@use "offer_page.scss";
+@use "jobs_page.scss";

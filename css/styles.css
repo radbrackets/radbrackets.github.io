@@ -1,3 +1,8 @@
+/*!
+ * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2024 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
+ */
 body {
   overflow-x: hidden;
   font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,7 +30,7 @@ h6 {
 }
 
 ::selection {
-  background: #95959E;
+  background: #95959e;
   text-shadow: none;
 }
 
@@ -610,7 +615,7 @@ img::selection {
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(0deg, #161616, #1e1e1e 80%) no-repeat;
+  background: linear-gradient(0deg, #161616, rgb(29.65, 29.65, 29.65) 80%) no-repeat;
   padding-bottom: 3em;
 }
 .sectionTestimonials .sectionTitle {
@@ -998,5 +1003,3 @@ img::selection {
 .jobsPage .card-body {
   color: #495057;
 }
-
-/*# sourceMappingURL=styles.css.map */

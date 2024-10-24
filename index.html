@@ -3,13 +3,19 @@
   <head>
     <!-- Required meta tags -->
 
-
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T7VTZLS');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T7VTZLS");
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <title>RadBrackets</title>
@@ -19,8 +25,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -83,7 +87,7 @@
     />
 
     <!-- CSS -->
-    <link href="css/styles-v3.min.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -581,11 +585,11 @@
                   required
                 ></textarea>
               </div>
-                <button
-                        type="submit"
-                        class="btn btn-primary mr-1"
-                        id="submit-button"
-                >
+              <button
+                type="submit"
+                class="btn btn-primary mr-1"
+                id="submit-button"
+              >
                 Let's talk
               </button>
             </form>
@@ -623,7 +627,7 @@
             <li>RadBrackets Sp. z o.o.</li>
             <li>Al. Marcina Kromera 51A, 51-163 Wrocław, Poland</li>
             <li>NIP: PL 8982248940, REGON: 38272484500000, KRS: 774598</li>
-              <li>+48 453 260 653</li>
+            <li>+48 453 260 653</li>
           </ul>
           <!-- RadBrackets Sp. z o.o., Al. Marcina Kromera 51A, 51-163 Wrocław,
           Poland PL-NIP: 8982248940, REGON: 38272484500000, KRS: 774598 -->
@@ -661,6 +665,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="./contactForm.js"></script>.
+    <script src="./js/contactForm.min.js"></script>
   </body>
 </html>

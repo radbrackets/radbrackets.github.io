@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @mixin rotatedHeader($top) {
   position: absolute;
   left: 0;
