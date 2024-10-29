@@ -20,34 +20,24 @@ const banner = [
 
 // Copy third-party libraries from /node_modules into /vendor
 gulp.task("vendor", function () {
-  return (
-    // Bootstrap
-    gulp
-      .src([
-        "./node_modules/bootstrap/dist/**/*",
-        "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
-        "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
-      ])
-      .pipe(gulp.dest("./vendor/bootstrap"))
-      .on("end", function () {
-        // Font Awesome
-        gulp
-          .src([
-            "./node_modules/font-awesome/**/*",
-            "!./node_modules/font-awesome/{less,less/*}",
-            "!./node_modules/font-awesome/{scss,scss/*}",
-            "!./node_modules/font-awesome/.*",
-            "!./node_modules/font-awesome/*.{txt,json,md}",
-          ])
-          .pipe(gulp.dest("./vendor/font-awesome"));
-      })
-      .on("end", function () {
-        // jQuery Easing (optional, if you need it)
-        // gulp
-        //   .src(["./node_modules/jquery.easing/*.js"])
-        //   .pipe(gulp.dest("./vendor/jquery-easing"));
-      })
-  );
+  // Bootstrap
+  const bootstrap = gulp
+    .src([
+      "./node_modules/bootstrap/dist/**/*",
+      "!./node_modules/bootstrap/dist/css/bootstrap-grid*",
+      "!./node_modules/bootstrap/dist/css/bootstrap-reboot*",
+    ])
+    .pipe(gulp.dest("./vendor/bootstrap"));
+
+  // Font Awesome
+  const fontAwesome = gulp
+    .src([
+      "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+      "./node_modules/@fortawesome/fontawesome-free/webfonts/*",
+    ])
+    .pipe(gulp.dest("./vendor/font-awesome/css"));
+
+  return Promise.all([bootstrap, fontAwesome]);
 });
 
 // Compile SCSS

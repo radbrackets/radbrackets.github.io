@@ -2,11 +2,18 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T7VTZLS');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T7VTZLS");
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <title>RadBrackets</title>
@@ -67,12 +74,23 @@
       rel="stylesheet"
     />
     <!-- CSS -->
-    <link href="css/styles-v3.min.css" rel="stylesheet" />
+    <!-- Podgląd LIVE podczas edycji plikow -->
+    <!-- <link href="css/styles.css.map" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" /> -->
+
+    <!-- Style do umieszczenia na stronie po edycji -->
+    <link href="css/styles.min.css" rel="stylesheet" />
   </head>
   <body class="offerPage">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7VTZLS"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T7VTZLS"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="subpageHeader">
       <nav class="navbar container-fluid">
@@ -456,7 +474,109 @@
         </p>
       </div>
     </section>
-    <section class="sectionContact">
+    <div class="sectionContact" id="contact">
+      <div class="triangle"></div>
+      <div class="bgColorPageYellow">
+        <div class="logo">
+          <div class="bgImageLogoLight"></div>
+        </div>
+        <div class="formBox">
+          <form
+            id="contact-us"
+            action="https://hooks.zapier.com/hooks/catch/15191504/2yf7d59"
+          >
+            <div class="form-group">
+              <label for="email" class="textFont text-white"
+                >Drop us your e-mail</label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control form-control-lg"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="reason" class="textFont text-white"
+                >We are here to solve problems, write about yours</label
+              >
+              <textarea
+                id="reason"
+                name="reason"
+                type="email"
+                class="form-control form-control-lg"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary mr-1"
+              id="submit-button"
+            >
+              Let's talk
+            </button>
+          </form>
+          <div class="orTitle">Or</div>
+          <div class="flex-col">
+            <div class="contactUsTitle">Catch us by</div>
+            <div class="contactIcons">
+              <div class="icon">
+                <a
+                  href="https://linkedin.com/company/radbrackets"
+                  target="_blank"
+                >
+                  <div class="iconLinkedin"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="https://twitter.com/radbrackets" target="_blank">
+                  <div class="iconTwitter"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="mailto:contact@radbrackets.com" target="_blank">
+                  <div class="iconMail"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <span class="logoFooter"></span>
+        <div class="address">
+          <ul>
+            <li>RadBrackets Sp. z o.o.</li>
+            <li>Al. Marcina Kromera 51A, 51-163 Wrocław, Poland</li>
+            <li>NIP: PL 8982248940, REGON: 38272484500000, KRS: 774598</li>
+            <li>+48 453 260 653</li>
+          </ul>
+          <!-- RadBrackets Sp. z o.o., Al. Marcina Kromera 51A, 51-163 Wrocław,
+          Poland PL-NIP: 8982248940, REGON: 38272484500000, KRS: 774598 -->
+        </div>
+
+        <div class="social">
+          <div class="social-icon">
+            <a href="https://linkedin.com/company/radbrackets" target="_blank">
+              <img src="./img/icons/linkedin-light.svg" alt="linkedin" />
+            </a>
+          </div>
+          <div class="social-icon">
+            <a href="https://twitter.com/radbrackets" target="_blank">
+              <img src="./img/icons/twitter-light.svg" alt="linkedin" />
+            </a>
+          </div>
+          <div class="social-icon">
+            <a href="mailto:contact@radbrackets.com" target="_blank">
+              <img src="./img/icons/mail-light.svg" alt="linkedin" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- <section class="sectionContact">
       <div class="container-fluid text-center fontStyleBold"></div>
       <div class="infoBox text-center">
         <div class="container-fluid">
@@ -468,8 +588,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="index.js"></script>
+    <script src="./js/contactForm.min.js"></script>
   </body>
 </html>

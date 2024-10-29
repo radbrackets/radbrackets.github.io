@@ -11,7 +11,7 @@ $sections: (
   .subpageHeader {
     .navbarListItemLink {
       &.offerPage {
-        text-decoration: underline;
+        color: #ecc100;
       }
     }
   }
@@ -80,16 +80,16 @@ $sections: (
     }
   }
 
-  .sectionContact {
-    color: $black;
-    font-size: 20px;
-    @media (min-width: 992px) {
-      * {
-        font-size: 40px;
-      }
-      .contactInfo {
-        line-height: 1.5;
-      }
-    }
-  }
+  // .sectionContact {
+  //   color: $black;
+  //   font-size: 20px;
+  //   @media (min-width: 992px) {
+  //     * {
+  //       font-size: 40px;
+  //     }
+  //     .contactInfo {
+  //       line-height: 1.5;
+  //     }
+  //   }
+  // }
 }
