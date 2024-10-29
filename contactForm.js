@@ -1,8 +1,18 @@
 let contactForm = document.getElementById("contact-us");
+let textareaInput = document.querySelector("#reason");
+const submitButton = document.getElementById("submit-button");
+textareaInput.addEventListener("input", () => {
+  if (String(textareaInput.value).trim().length > 9) {
+    submitButton.removeAttribute("disabled");
+  } else if (
+    String(textareaInput.value).trim().length <= 9 &&
+    submitButton.getAttribute("disabled") === null
+  ) {
+    submitButton.setAttribute("disabled", "");
+  }
+});
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let submitButton = document.getElementById("submit-button");
-  let labelReason = document.getElementById("reason-label");
   let formData = new FormData(contactForm);
   let textareaInput = document.getElementById("reason").value;
   if (String(textareaInput).trim().length > 9) {
@@ -37,19 +47,5 @@ contactForm.addEventListener("submit", (e) => {
           submitButton.style.border = "#000";
         }, 3000);
       });
-  } else {
-    labelReason.style.color = "red";
-    labelReason.innerText = "Message is too short!";
-    submitButton.innerText = "Failed!";
-    submitButton.style.backgroundColor = "red";
-    submitButton.style.border = "red";
-    setTimeout(() => {
-      labelReason.innerText =
-        "We are here to solve problems, write about yours";
-      labelReason.style.color = "#fff";
-      submitButton.innerText = "Let's talk";
-      submitButton.style.backgroundColor = "#000";
-      submitButton.style.border = "#000";
-    }, 3000);
   }
 });
