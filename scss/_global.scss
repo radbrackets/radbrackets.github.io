@@ -1,3 +1,4 @@
+@use "./variables" as *;
 body {
   overflow-x: hidden;
   font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial,
@@ -42,7 +43,7 @@ img::selection {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   padding: 20px 0;
   width: 100%;
   background: $darkGrey;
@@ -68,6 +69,11 @@ img::selection {
       .navbarListItemLink {
         padding-left: 16px;
         color: $white;
+        text-decoration: none;
+        transition: color 0.5s;
+        &:hover {
+          color: #ecc100;
+        }
       }
     }
   }
@@ -224,6 +230,78 @@ img::selection {
         img {
           width: 40px;
           height: 40px;
+        }
+      }
+    }
+  }
+}
+.formBox {
+  padding: 5%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+  .icon {
+    width: 20% !important;
+    display: inline-block;
+    padding: 1%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    input#email {
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 25%) !important;
+        border-color: #ffffff;
+      }
+    }
+    label {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    textarea {
+      resize: none;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 25%) !important;
+        border-color: #ffffff;
+      }
+    }
+    button {
+      width: fit-content;
+      background-color: $black;
+      border: 1px solid $black;
+      &:hover,
+      &:active {
+        border: 1px solid white !important;
+        background-color: white !important;
+        color: $black !important;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .sectionContact {
+    .contactUsTitle {
+      font-size: 2rem;
+    }
+    .orTitle {
+      font-size: 1.5rem;
+    }
+    .formBox {
+      flex-direction: column;
+      gap: 1rem;
+      form {
+        width: 100%;
+        label {
+          font-size: 1rem;
         }
       }
     }

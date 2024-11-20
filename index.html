@@ -16,6 +16,18 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-T7VTZLS");
     </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T7VTZLS");
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <title>RadBrackets</title>
@@ -69,6 +81,11 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="vendor/font-awesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -87,8 +104,12 @@
     />
 
     <!-- CSS -->
-    <link href="css/styles-v3.min.css" rel="stylesheet" />
+    <!-- Podgląd LIVE podczas edycji plikow -->
+    <!-- <link href="css/styles.css.map" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" /> -->
 
+    <!-- Style do umieszczenia na stronie po edycji -->
+    <link href="css/styles.min.css" rel="stylesheet" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -116,35 +137,25 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- section: header -->
-    <div class="sectionHeader bgImageHeader">
+    <div class="sectionHeader bgImageHeader d-flex flex-col">
       <!-- top menu -->
-      <div class="container-fluid">
-        <div class="row justify-content-end">
-          <div class="col-6">
-            <nav class="topMenu">
-              <a href="#traits">Traits</a>
-              <a href="#team">Founders</a>
-              <a href="#contact">Contact</a>
-              <a href="offer.html">Offer</a>
-              <a href="jobs.html">Join us</a>
-            </nav>
-          </div>
-        </div>
+      <nav class="topMenu">
+        <a href="#traits">Traits</a>
+        <a href="#team">Founders</a>
+        <a href="#contact">Contact</a>
+        <a href="offer.html">Offer</a>
+        <a href="jobs.html">Join us</a>
+      </nav>
 
-        <div class="row justify-content-end">
-          <div class="col-6">
-            <nav class="rightMenu">
-              <ul>
-                <li><a href="#" class="fontStyleBold">Listen</a></li>
-                <li><a href="#">Learn</a></li>
-                <li><a href="#" class="fontStyleItalic">Design</a></li>
-                <li><a href="#">Draw conclusions</a></li>
-                <li><a href="#">Start over</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
+      <nav class="rightMenu">
+        <ul>
+          <li class="fontStyleBold">Listen</li>
+          <li>Learn</li>
+          <li class="fontStyleItalic">Design</li>
+          <li>Draw conclusions</li>
+          <li>Start over</li>
+        </ul>
+      </nav>
 
       <!-- Chrome SVG as backgroung display bug fix -->
       <div style="width: 1px; height: 1px">
@@ -216,37 +227,28 @@
     <!-- section: lead -->
     <div class="sectionLead bgImageLead">
       <div class="triangle"></div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-3">
-            <div class="logo">
-              <div class="bgImageLogo"></div>
-            </div>
-          </div>
-          <div class="col-9">
-            <div>
-              <ul class="lead">
-                <li>These are people</li>
-                <li>and relations</li>
-                <li>that make</li>
-                <li>software</li>
-                <li class="huge">GREAT</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+      <div class="logo">
+        <div class="bgImageLogo"></div>
+      </div>
+      <div>
+        <ul class="lead">
+          <li>These are people</li>
+          <li>and relations</li>
+          <li>that make</li>
+          <li>software</li>
+          <li class="huge">GREAT</li>
+        </ul>
       </div>
     </div>
 
     <!-- section: traits -->
     <div class="sectionTraits bgColorPageYellow">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <h2 class="sectionFont sectionTitle" id="traits">
-            Let us help you grow your business.
-          </h2>
-        </div>
-        <div class="row">
+      <div class="d-flex flex-column">
+        <h2 class="sectionFont sectionTitle" id="traits">
+          Let us help you grow your business.
+        </h2>
+        <div class="d-flex flex-row">
           <div class="col">
             <div class="customSoftware">
               <div class="sectionFont subsectionFont subsectionTitle">
@@ -306,20 +308,17 @@
     <div class="sectionTeam bgImageTeam" id="team">
       <div class="triangle"></div>
       <div class="container-fluid">
-        <div class="row teamHeader">
-          <div class="col-5">
-            <div class="member1">
-              <div class="memberNameFont">Patryk Zieliński</div>
+        <div class="teamHeader">
+          <div class="member1">
+            <div class="memberNameFont">Patryk Zieliński</div>
+          </div>
+
+          <div class="member2">
+            <div class="memberNameFont memberNameFontBlack">
+              Rafał Piotrowski
             </div>
           </div>
-          <div class="col-4">
-            <div class="member2">
-              <div class="memberNameFont memberNameFontBlack">
-                Rafał Piotrowski
-              </div>
-            </div>
-          </div>
-          <div class="col-3 membersLabelContainer">
+          <div class="membersLabelContainer">
             <div class="memberNameFont membersLabel">Founders</div>
           </div>
         </div>
@@ -377,249 +376,218 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="d-flex justify-content-center">
           <div class="goodFriends">Good friends, excellent developers.</div>
         </div>
       </div>
     </div>
 
     <!-- section: about -->
-    <div class="sectionAbout bgColorPageDarkGray">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-2">
-            <div class="aboutUsHeader">About us</div>
-          </div>
-          <div class="col">
-            <div class="aboutUsText">
-              <p class="textFont">
-                We are a <span>good pack of friends</span>, who were joined by
-                the same
-                <span>values and views about software development</span>. We
-                know that an excellent team is nearly half the story.<br />
-                We originate from <span>Java backend</span> and focus on
-                <span>well designed, tested, and clean solutions</span>.
-              </p>
-              <p class="textFont">
-                Software craftsmanship is where we deliver the most value. At
-                the same time, we trust that thorough
-                <span>understanding of business needs</span> and
-                <span>agile delivery</span> are crucial for successful IT
-                projects. We concentrate more on
-                <span>proper architecture</span> rather than frameworks or
-                languages.
-              </p>
-              <p class="textFont">
-                What we value in our day to day work is
-                <span>knowledge exchange</span>. Pair programming and code
-                review are must - do practices. We rely on
-                <span>test driven development</span>, as it provides
-                <span>higher productivity</span> and makes the
-                <span>code more readable</span>.
-              </p>
-              <p class="textFont">
-                We also believe that a few tests are more valuable than often
-                outdated documentation. Moreover,
-                <span
-                  >we find complicated business rules really interesting</span
-                >
-                as they create a small unknown world that can be implemented in
-                domain driven design.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div class="sectionAbout bgColorPageDarkGray d-flex flex-row">
+      <div class="aboutUsHeader">About us</div>
+
+      <div class="aboutUsText">
+        <p class="textFont">
+          We are a <span>good pack of friends</span>, who were joined by the
+          same <span>values and views about software development</span>. We know
+          that an excellent team is nearly half the story.<br />
+          We originate from <span>Java backend</span> and focus on
+          <span>well designed, tested, and clean solutions</span>.
+        </p>
+        <p class="textFont">
+          Software craftsmanship is where we deliver the most value. At the same
+          time, we trust that thorough
+          <span>understanding of business needs</span> and
+          <span>agile delivery</span> are crucial for successful IT projects. We
+          concentrate more on <span>proper architecture</span> rather than
+          frameworks or languages.
+        </p>
+        <p class="textFont">
+          What we value in our day to day work is
+          <span>knowledge exchange</span>. Pair programming and code review are
+          must - do practices. We rely on <span>test driven development</span>,
+          as it provides <span>higher productivity</span> and makes the
+          <span>code more readable</span>.
+        </p>
+        <p class="textFont">
+          We also believe that a few tests are more valuable than often outdated
+          documentation. Moreover,
+          <span>we find complicated business rules really interesting</span>
+          as they create a small unknown world that can be implemented in domain
+          driven design.
+        </p>
       </div>
     </div>
 
     <!-- section: testimonials -->
     <div class="sectionTestimonials">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <h2 class="sectionFont sectionTitle fontStyleBold">People say...</h2>
+      <div class="row justify-content-center">
+        <h2 class="sectionFont sectionTitle fontStyleBold">People say...</h2>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <div class="testimonialsHeader">testimonials</div>
         </div>
-        <div class="row">
-          <div class="col-2">
-            <div class="testimonialsHeader">testimonials</div>
-          </div>
-          <div class="col">
-            <div
-              id="testimonialsCarousel"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="carousel-content">
-                    <div>
-                      <i class="quotationMark fa fa-quote-right"></i>
-                      <p class="textFont">
-                        RadBrackets team helped us with gathering requirements
-                        and designing architecture for our flag project OLAF
-                        (Assistent of Smart Treatment). They were part of our
-                        core team and
-                        <span class="fontColorAccent"
-                          >mentored other team members</span
-                        >. I can recommend RadBrackets to anyone who needs
-                        <span class="fontColorAccent"
-                          >professional custom development service</span
-                        >.
-                      </p>
-                      <p class="textFont fontStyleBold">
-                        Łukasz Zontek, IT Director, Vice President, Lideo
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="carousel-content">
-                    <div>
-                      <i class="quotationMark fa fa-quote-right"></i>
-                      <p class="textFont">
-                        Patryk and Rafal
-                        <span class="fontColorAccent"
-                          >changed my perspective on software agencies</span
-                        >. They
-                        <span class="fontColorAccent"
-                          >care about building the product</span
-                        >
-                        that the business needs. Their domain-oriented approach
-                        avoids the usual feeling that you can’t take your eyes
-                        from the project for a second or everything will go
-                        wrong.
-                      </p>
-                      <p class="textFont fontStyleBold">
-                        Fabio Carneiro, Architect, CTO
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="carousel-content">
-                    <div>
-                      <i class="quotationMark fa fa-quote-right"></i>
-                      <p class="textFont">
-                        Audibene engaged Radbrackets to provide consulting for
-                        java engineering, ranging from architectural design to
-                        development capacity.
-                        <span class="fontColorAccent"
-                          >The quality of work, execution and delivery</span
-                        >
-                        within tight deadlines
-                        <span class="fontColorAccent"
-                          >has been exceptional.</span
-                        >
-                        We continue to partner with Radbrackets to increase the
-                        potential of our engineering organization. Thank you!!.
-                      </p>
-                      <p class="textFont fontStyleBold">
-                        Tom Green, Audibene, Product Operations
-                      </p>
-                    </div>
-                  </div>
+        <div class="col">
+          <div
+            id="testimonialsCarousel"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-content">
+                  <i class="quotationMark fas fa-quote-right"></i>
+                  <p class="textFont">
+                    RadBrackets team helped us with gathering requirements and
+                    designing architecture for our flag project OLAF (Assistent
+                    of Smart Treatment). They were part of our core team and
+                    <span class="fontColorAccent"
+                      >mentored other team members</span
+                    >. I can recommend RadBrackets to anyone who needs
+                    <span class="fontColorAccent"
+                      >professional custom development service</span
+                    >.
+                  </p>
+                  <p class="textFont fontStyleBold">
+                    Łukasz Zontek, IT Director, Vice President, Lideo
+                  </p>
                 </div>
               </div>
-              <a
-                class="carousel-control-prev"
-                href="#testimonialsCarousel"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#testimonialsCarousel"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
+              <div class="carousel-item">
+                <div class="carousel-content">
+                  <i class="quotationMark fas fa-quote-right"></i>
+                  <p class="textFont">
+                    Patryk and Rafal
+                    <span class="fontColorAccent"
+                      >changed my perspective on software agencies</span
+                    >. They
+                    <span class="fontColorAccent"
+                      >care about building the product</span
+                    >
+                    that the business needs. Their domain-oriented approach
+                    avoids the usual feeling that you can’t take your eyes from
+                    the project for a second or everything will go wrong.
+                  </p>
+                  <p class="textFont fontStyleBold">
+                    Fabio Carneiro, Architect, CTO
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-content">
+                  <i class="quotationMark fas fa-quote-right"></i>
+                  <p class="textFont">
+                    Audibene engaged Radbrackets to provide consulting for java
+                    engineering, ranging from architectural design to
+                    development capacity.
+                    <span class="fontColorAccent"
+                      >The quality of work, execution and delivery</span
+                    >
+                    within tight deadlines
+                    <span class="fontColorAccent">has been exceptional.</span>
+                    We continue to partner with Radbrackets to increase the
+                    potential of our engineering organization. Thank you!!.
+                  </p>
+                  <p class="textFont fontStyleBold">
+                    Tom Green, Audibene, Product Operations
+                  </p>
+                </div>
+              </div>
             </div>
+            <button
+              class="carousel-control-prev"
+              data-bs-target="#testimonialsCarousel"
+              type="button"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              data-bs-target="#testimonialsCarousel"
+              type="button"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
     <div class="sectionContact" id="contact">
       <div class="triangle"></div>
-      <div class="container-fluid bgColorPageYellow">
-        <div class="col gap-2">
-          <div class="logo">
-            <div class="bgImageLogoLight"></div>
-          </div>
-          <div class="formBox">
-            <form
-              id="contact-us"
-              action="https://hooks.zapier.com/hooks/catch/15191504/2yf7d59"
-            >
-              <div class="form-group">
-                <label for="email" class="textFont text-white"
-                  >Drop us your e-mail</label
-                >
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  class="form-control form-control-lg"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label
-                  for="reason"
-                  id="reason-label"
-                  class="textFont"
-                  style="color: white"
-                  >We are here to solve problems, write about yours</label
-                >
-                <textarea
-                  id="reason"
-                  name="reason"
-                  type="email"
-                  class="form-control form-control-lg"
-                  rows="6"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="btn btn-primary mr-1"
-                id="submit-button"
-                disabled
+      <div class="bgColorPageYellow">
+        <div class="logo">
+          <div class="bgImageLogoLight"></div>
+        </div>
+        <div class="formBox">
+          <form
+            id="contact-us"
+            action="https://hooks.zapier.com/hooks/catch/15191504/2yf7d59"
+          >
+            <div class="form-group">
+              <label for="email" class="textFont text-white"
+                >Drop us your e-mail</label
               >
-                Let's talk
-              </button>
-            </form>
-            <div class="orTitle">Or</div>
-            <div class="flex-col">
-              <div class="contactUsTitle">Catch us by</div>
-              <div class="contactIcons">
-                <div class="icon">
-                  <a
-                    href="https://linkedin.com/company/radbrackets"
-                    target="_blank"
-                  >
-                    <div class="iconLinkedin"></div>
-                  </a>
-                </div>
-                <div class="icon">
-                  <a href="https://twitter.com/radbrackets" target="_blank">
-                    <div class="iconTwitter"></div>
-                  </a>
-                </div>
-                <div class="icon">
-                  <a href="mailto:contact@radbrackets.com" target="_blank">
-                    <div class="iconMail"></div>
-                  </a>
-                </div>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control form-control-lg"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="reason" class="textFont text-white"
+                >We are here to solve problems, write about yours</label
+              >
+              <textarea
+                id="reason"
+                name="reason"
+                type="email"
+                class="form-control form-control-lg"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary mr-1"
+              id="submit-button"
+            >
+              Let's talk
+            </button>
+          </form>
+          <div class="orTitle">Or</div>
+          <div class="flex-col">
+            <div class="contactUsTitle">Catch us by</div>
+            <div class="contactIcons">
+              <div class="icon">
+                <a
+                  href="https://linkedin.com/company/radbrackets"
+                  target="_blank"
+                >
+                  <div class="iconLinkedin"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="https://twitter.com/radbrackets" target="_blank">
+                  <div class="iconTwitter"></div>
+                </a>
+              </div>
+              <div class="icon">
+                <a href="mailto:contact@radbrackets.com" target="_blank">
+                  <div class="iconMail"></div>
+                </a>
               </div>
             </div>
           </div>
@@ -670,6 +638,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="./contactForm.js"></script>
+    <script src="./js/contactForm.min.js"></script>
   </body>
 </html>
