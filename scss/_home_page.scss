@@ -59,10 +59,26 @@
 .bgImageTeam {
   background-image: url("/img/bg/our-team.jpg");
   background-size: cover;
-  padding-bottom: 65%;
+  // padding-bottom: 65%;
+  background-position: 18% 0%;
   //padding-bottom: 70.83%; // 1360 / 1920
 }
-
+@media (max-width: 1000px) {
+  .bgImageTeam {
+    background-image: url("/img/bg/our-team.jpg");
+    background-size: cover;
+    background-position: 33% 0%;
+    //padding-bottom: 70.83%; // 1360 / 1920
+  }
+}
+@media (max-width: 800px) {
+  .bgImageTeam {
+    background-position: 33% 14%;
+    background-image: url("/img/bg/our-team-mobile.jpg");
+    background-size: cover;
+    //padding-bottom: 70.83%; // 1360 / 1920
+  }
+}
 .bgImageLogo {
   background-image: url("/img/logo/logo-radbrackets.svg");
   background-size: cover;
@@ -363,6 +379,7 @@
     }
   }
 }
+
 @media (max-width: 500px) {
   .sectionTraits {
     .subsectionFont {
@@ -372,28 +389,35 @@
   }
 }
 .sectionTeam {
+  min-height: 120vh;
   position: relative;
   overflow: hidden;
   .memberNameFont {
     font-weight: 800;
     text-transform: uppercase;
     color: $white;
-    font-size: calc(1.7vw);
+    font-size: 1.4rem;
+    // font-size: calc(1.7vw);
   }
   .memberNameFontBlack {
     color: $black;
   }
   .membersLabel {
     font-weight: bold;
-    font-size: calc(2.6vw);
+    font-size: 3.5rem;
+    // font-size: calc(2.6vw);
     transform: rotate(90deg);
   }
   .textFont {
     font-weight: bold;
     color: $white;
-    font-size: calc(1.3vw);
+    font-size: 1.2rem;
+    // font-size: calc(1.3vw);
   }
   .teamHeader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
     .member1 {
       position: absolute;
       top: 7%;
@@ -401,18 +425,20 @@
     }
     .member2 {
       position: absolute;
-      top: 39%;
+      top: 2%;
       left: 53%;
     }
     .membersLabel {
       position: absolute;
-      top: 20%;
-      right: 7%;
+      top: 59%;
+      right: -3%;
     }
   }
   .teamInfo {
     position: absolute;
-    margin-top: 30%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     .social {
       .icon {
         width: 1.3em;
@@ -421,31 +447,46 @@
       }
     }
     .member1 {
-      .social {
-        padding-left: 10%;
-      }
-      p {
-        padding-left: 10%;
-      }
+      width: 600px;
+      left: 5%;
+      bottom: 27%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      // .social {
+      //   padding-left: 10%;
+      // }
+      // p {
+      //   padding-left: 10%;
+      // }
     }
     .member2 {
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      bottom: 55%;
+      position: absolute;
+      right: 5%;
       .social {
         text-align: right;
-        padding-right: 20%;
+        // padding-right: 20%;
       }
       p {
-        padding-right: 20%;
-        padding-left: 20%;
+        // padding-right: 20%;
+        // padding-left: 20%;
         text-align: right;
       }
     }
   }
   .goodFriends {
     position: absolute;
-    margin-top: 56%;
+    bottom: 15%;
+    width: 100%;
+    text-align: center;
     font-weight: bold;
     color: $white;
-    font-size: calc(4vw);
+    font-size: 3rem;
+    // font-size: calc(4vw);
   }
   .triangle {
     position: absolute;
@@ -460,7 +501,32 @@
     background: rgb(22, 22, 22);
   }
 }
-
+@media (max-width: 1000px) {
+  .sectionTeam {
+    .goodFriends {
+      font-size: 2.5rem;
+    }
+    .membersLabel {
+      font-size: 2.5rem;
+    }
+    .textFont {
+      font-size: 1rem;
+    }
+    .teamHeader {
+      .membersLabel {
+        right: -5%;
+      }
+    }
+    .teamInfo {
+      .member1 {
+        width: 400px;
+      }
+      .member2 {
+        width: 400px;
+      }
+    }
+  }
+}
 .sectionAbout {
   position: relative;
   overflow: hidden;
