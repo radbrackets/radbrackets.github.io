@@ -331,13 +331,37 @@ img::selection {
 .bgImageHeader {
   background-image: url("/img/bg/header.jpg");
   background-size: cover;
-  padding-bottom: 56.25%;
+  background-position: 15%;
+}
+.bgImageHeader__logo-mobile {
+  display: none;
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  width: 30vw;
+  height: auto;
 }
 
+@media (max-width: 1030px) {
+  .bgImageHeader {
+    background-position: 0%;
+    background-image: url("/img/bg/laptop-brackets.jpeg");
+  }
+  .bgImageHeader__logo-mobile {
+    display: flex;
+  }
+}
+@media (max-width: 730px) {
+  .bgImageHeader__logo-mobile {
+    bottom: 10%;
+    left: 10%;
+    width: 50vw;
+  }
+}
 .bgImageLead {
+  height: 100vh;
   background-image: url("/img/bg/these-people.jpg");
   background-size: cover;
-  padding-bottom: 56.25%;
 }
 
 .bgImageTeam {
@@ -438,6 +462,23 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
+.sectionHeader .hamburger-button {
+  display: none !important;
+  position: absolute;
+  border: 1px solid #ecc100;
+  top: 5%;
+  right: 5%;
+  width: 80px;
+  height: 80px;
+  background-color: #ecc100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionHeader .hamburger-button i {
+  font-size: 2rem;
+  color: white;
+}
 .sectionHeader .topMenu {
   position: absolute;
   right: 0;
@@ -445,7 +486,7 @@ img::selection {
   right: 5%;
   top: 10%;
   width: 100%;
-  font-size: 1.5vw;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 .sectionHeader .topMenu a {
@@ -457,25 +498,34 @@ img::selection {
 .sectionHeader .topMenu a:hover {
   color: #ecc100;
 }
-@media (min-width: 992px) {
-  .sectionHeader .topMenu {
-    font-size: 1.1vw;
-  }
-}
 .sectionHeader .rightMenu {
   position: absolute;
   right: 5%;
-  bottom: 10%;
+  bottom: 5%;
   width: 100%;
 }
 .sectionHeader .rightMenu ul {
   list-style-type: none;
   text-align: right;
-  font-size: 2.7vw;
+  font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
 }
 
+@media (max-width: 992px) {
+  .sectionHeader .topMenu {
+    font-size: 1rem;
+    display: none;
+  }
+  .sectionHeader .hamburger-button {
+    display: flex !important;
+  }
+}
+@media (max-width: 730px) {
+  .sectionHeader .rightMenu {
+    display: none;
+  }
+}
 .sectionLead {
   position: relative;
   overflow: hidden;
@@ -511,17 +561,39 @@ img::selection {
 }
 .sectionLead .triangle {
   position: absolute;
+  clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
   display: block;
   height: 100%;
   width: 100%;
-  -webkit-transform: rotate(53deg);
-  -moz-transform: rotate(53deg);
-  transform: rotate(53deg);
-  top: -10%;
-  right: -46%;
+  top: 0;
+  right: 0;
   background: #ecc100;
 }
 
+@media (max-width: 1000px) {
+  .sectionLead ul.lead {
+    font-size: 2rem;
+    margin: 0;
+    top: 5%;
+    right: 5%;
+  }
+  .sectionLead .logo {
+    width: 30%;
+  }
+  .sectionLead .triangle {
+    clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
+  }
+}
+@media (max-width: 700px) {
+  .sectionLead ul.lead {
+    top: 12%;
+  }
+}
+@media (max-width: 500px) {
+  .sectionLead ul.lead {
+    font-size: 1.5rem;
+  }
+}
 .sectionTraits {
   position: relative;
   overflow: hidden;
@@ -531,10 +603,10 @@ img::selection {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  font-size: 2.6vw;
+  font-size: 3rem;
 }
 .sectionTraits .subsectionFont {
-  font-size: 2.3vw;
+  font-size: 2.7rem;
 }
 .sectionTraits .sectionTitle {
   padding-top: 2em;
@@ -542,7 +614,7 @@ img::selection {
   text-align: center;
 }
 .sectionTraits .textFont {
-  font-size: 1.2vw;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 .sectionTraits .customSoftware ul {
@@ -550,6 +622,8 @@ img::selection {
   padding-bottom: 0em;
   list-style-type: none;
   text-align: right;
+  padding-left: 0;
+  margin-left: 0;
 }
 .sectionTraits .customSoftware ul li {
   padding-bottom: 0.5em;
@@ -571,10 +645,15 @@ img::selection {
   margin-right: 10%;
 }
 .sectionTraits .feedback .subsectionTitle {
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 3em;
 }
 
+@media (max-width: 500px) {
+  .sectionTraits .subsectionFont {
+    font-size: 1.7rem;
+  }
+}
 .sectionTeam {
   position: relative;
   overflow: hidden;

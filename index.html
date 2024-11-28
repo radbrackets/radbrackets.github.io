@@ -137,8 +137,15 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- section: header -->
-    <div class="sectionHeader bgImageHeader d-flex flex-col">
+    <section class="sectionHeader bgImageHeader d-flex flex-col w-100 vh-100">
+      <img
+        src="/img/logo/logo-yellow-white.png"
+        class="bgImageHeader__logo-mobile"
+      />
       <!-- top menu -->
+      <button class="hamburger-button">
+        <i class="fas fa-bars" style="width: 70px"></i>
+      </button>
       <nav class="topMenu">
         <a href="#traits">Traits</a>
         <a href="#team">Founders</a>
@@ -222,7 +229,7 @@
           height="1"
         ></object>
       </div>
-    </div>
+    </section>
 
     <!-- section: lead -->
     <div class="sectionLead bgImageLead">
@@ -243,21 +250,21 @@
     </div>
 
     <!-- section: traits -->
-    <div class="sectionTraits bgColorPageYellow">
-      <div class="d-flex flex-column">
+    <div class="sectionTraits bgColorPageYellow pb-5">
+      <div class="d-flex flex-column px-4 px-lg-2">
         <h2 class="sectionFont sectionTitle" id="traits">
           Let us help you grow your business.
         </h2>
-        <div class="d-flex flex-row">
+        <div class="d-flex flex-column flex-lg-row">
           <div class="col">
             <div class="customSoftware">
               <div class="sectionFont subsectionFont subsectionTitle">
-                <ul>
+                <ul class="text-center text-lg-end pt-0 pt-lg-4">
                   <li>Custom</li>
                   <li>software</li>
                 </ul>
               </div>
-              <p class="textFont">
+              <p class="textFont text-center text-lg-end">
                 We are a small software house that implements tailor-made
                 software.<br />
                 We believe that the best applications have their source in
@@ -266,15 +273,17 @@
               </p>
             </div>
           </div>
-          <div class="col-5">
-            <div class="pursuitOfKnowledge">
+          <div class="col-12 col-lg-5">
+            <div class="pursuitOfKnowledge pb-0 pb-lg-5">
               <div class="brackets">
                 <div class="bracket1"><div class="bracketBg"></div></div>
                 <div class="bracket2"><div class="bracketBg"></div></div>
                 <div class="bracket3"><div class="bracketBg"></div></div>
               </div>
 
-              <div class="sectionFont subsectionFont subsectionTitle">
+              <div
+                class="sectionFont subsectionFont subsectionTitle pb-3 pb-lg-4"
+              >
                 Pursuit of knowledge
               </div>
 
@@ -288,11 +297,13 @@
           </div>
           <div class="col">
             <div class="feedback">
-              <div class="sectionFont subsectionFont subsectionTitle">
+              <div
+                class="sectionFont subsectionFont subsectionTitle pb-3 pb-lg-5 text-lg-start text-center"
+              >
                 Feedback
               </div>
 
-              <p class="textFont">
+              <p class="textFont text-lg-start text-center">
                 We strongly believe that systematic client feedback, enabling us
                 to make project adjustments regularly, is a key to success.<br />
                 Therefore, Continuous Delivery and agile methodology are

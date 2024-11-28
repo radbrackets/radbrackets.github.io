@@ -22,12 +22,39 @@
 .bgImageHeader {
   background-image: url("/img/bg/header.jpg");
   background-size: cover;
-  padding-bottom: 56.25%; //  1080 / 1920
+  background-position: 15%;
+  &__logo-mobile {
+    display: none;
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    width: 30vw;
+    height: auto;
+  }
+}
+@media (max-width: 1030px) {
+  .bgImageHeader {
+    background-position: 0%;
+    background-image: url("/img/bg/laptop-brackets.jpeg");
+    &__logo-mobile {
+      display: flex;
+    }
+  }
+}
+@media (max-width: 730px) {
+  .bgImageHeader {
+    &__logo-mobile {
+      bottom: 10%;
+      left: 10%;
+      width: 50vw;
+    }
+  }
 }
 .bgImageLead {
+  height: 100vh;
   background-image: url("/img/bg/these-people.jpg");
   background-size: cover;
-  padding-bottom: 56.25%; // 1080 / 1920
+  // padding-bottom: 56.25%; // 1080 / 1920
 }
 .bgImageTeam {
   background-image: url("/img/bg/our-team.jpg");
@@ -125,6 +152,23 @@
 .sectionHeader {
   position: relative;
   overflow: hidden;
+  .hamburger-button {
+    display: none !important;
+    position: absolute;
+    border: 1px solid #ecc100;
+    top: 5%;
+    right: 5%;
+    width: 80px;
+    height: 80px;
+    background-color: #ecc100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 2rem;
+      color: white;
+    }
+  }
   .topMenu {
     position: absolute;
     right: 0;
@@ -132,7 +176,8 @@
     right: 5%;
     top: 10%;
     width: 100%;
-    font-size: calc(1.5vw);
+    font-size: 1.2rem;
+    // font-size: calc(1.5vw);
     text-transform: uppercase;
     a {
       padding: 0.5em;
@@ -144,25 +189,41 @@
         // text-decoration: underline;
       }
     }
-    @media (min-width: 992px) {
-      font-size: calc(1.1vw);
-    }
   }
   .rightMenu {
     position: absolute;
     right: 5%;
-    bottom: 10%;
+    bottom: 5%;
     width: 100%;
     ul {
       list-style-type: none;
       text-align: right;
-      font-size: calc(2.7vw);
+      font-size: 2rem;
+      // font-size: calc(2.7vw);
       text-transform: uppercase;
       color: $white;
     }
   }
 }
-
+@media (max-width: 992px) {
+  .sectionHeader {
+    .topMenu {
+      font-size: 1rem;
+      display: none;
+    }
+    .hamburger-button {
+      display: flex !important;
+    }
+  }
+  // font-size: calc(1.1vw);
+}
+@media (max-width: 730px) {
+  .sectionHeader {
+    .rightMenu {
+      display: none;
+    }
+  }
+}
 .sectionLead {
   position: relative;
   overflow: hidden;
@@ -197,18 +258,50 @@
   }
   .triangle {
     position: absolute;
+    clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
     display: block;
     height: 100%;
     width: 100%;
-    -webkit-transform: rotate(53deg);
-    -moz-transform: rotate(53deg);
-    transform: rotate(53deg);
-    top: -10%;
-    right: -46%;
+    // -webkit-transform: rotate(53deg);
+    // -moz-transform: rotate(53deg);
+    // transform: rotate(53deg);
+    // top: -10%;
+    // right: -46%;
+    top: 0;
+    right: 0;
     background: $accent;
   }
 }
-
+@media (max-width: 1000px) {
+  .sectionLead {
+    ul.lead {
+      font-size: 2rem;
+      margin: 0;
+      top: 5%;
+      right: 5%;
+    }
+    .logo {
+      width: 30%;
+    }
+    .triangle {
+      clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
+    }
+  }
+}
+@media (max-width: 700px) {
+  .sectionLead {
+    ul.lead {
+      top: 12%;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .sectionLead {
+    ul.lead {
+      font-size: 1.5rem;
+    }
+  }
+}
 .sectionTraits {
   position: relative;
   overflow: hidden;
@@ -217,10 +310,12 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $white;
-    font-size: calc(2.6vw);
+    font-size: 3rem;
+    // font-size: calc(2.6vw);
   }
   .subsectionFont {
-    font-size: calc(2.3vw);
+    // font-size: calc(2.3vw);
+    font-size: 2.7rem;
   }
   .sectionTitle {
     padding-top: 2em;
@@ -228,7 +323,8 @@
     text-align: center;
   }
   .textFont {
-    font-size: calc(1.2vw);
+    // font-size: calc(1.2vw);
+    font-size: 1.4rem;
     font-weight: 500;
   }
   .customSoftware {
@@ -237,6 +333,8 @@
       padding-bottom: 0em;
       list-style-type: none;
       text-align: right;
+      padding-left: 0;
+      margin-left: 0;
       li {
         padding-bottom: 0.5em;
       }
@@ -260,12 +358,19 @@
   }
   .feedback {
     .subsectionTitle {
-      padding-top: 2em;
+      padding-top: 1em;
       padding-bottom: 3em;
     }
   }
 }
-
+@media (max-width: 500px) {
+  .sectionTraits {
+    .subsectionFont {
+      // font-size: calc(2.3vw);
+      font-size: 1.7rem;
+    }
+  }
+}
 .sectionTeam {
   position: relative;
   overflow: hidden;
