@@ -663,9 +663,21 @@ img::selection {
   padding-bottom: 3em;
 }
 
+@media (max-width: 1000px) {
+  .sectionTraits .textFont {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 500px) {
+  .sectionTraits .sectionTitle {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+  }
   .sectionTraits .subsectionFont {
     font-size: 1.7rem;
+  }
+  .sectionTraits .textFont {
+    font-size: 1rem;
   }
 }
 .sectionTeam {
@@ -714,6 +726,8 @@ img::selection {
 }
 .sectionTeam .teamInfo {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -754,6 +768,10 @@ img::selection {
   color: #fff;
   font-size: 3rem;
 }
+.sectionTeam .goodFriends .founders {
+  display: none;
+  justify-content: center;
+}
 .sectionTeam .triangle {
   position: absolute;
   display: block;
@@ -787,6 +805,65 @@ img::selection {
     width: 400px;
   }
 }
+@media (max-width: 800px) {
+  .sectionTeam .goodFriends {
+    font-size: 2rem;
+    bottom: 2%;
+  }
+  .sectionTeam .goodFriends .founders {
+    display: flex;
+  }
+  .sectionTeam .membersLabel {
+    font-size: 2rem;
+  }
+  .sectionTeam .textFont {
+    font-size: 0.7rem;
+  }
+  .sectionTeam .teamHeader .membersLabel {
+    display: none;
+  }
+  .sectionTeam .teamHeader .member1 {
+    bottom: 47%;
+    left: 42%;
+    top: auto;
+  }
+  .sectionTeam .teamHeader .member2 {
+    top: 1%;
+    left: 15%;
+  }
+  .sectionTeam .teamInfo .member1 {
+    width: 200px;
+    left: 5%;
+    bottom: 20%;
+  }
+  .sectionTeam .teamInfo .member2 {
+    width: 200px;
+    bottom: 66%;
+    right: 5%;
+  }
+}
+@media (max-width: 700px) {
+  .sectionTeam .teamHeader .member1 {
+    bottom: 53%;
+    left: 41%;
+  }
+}
+@media (max-width: 500px) {
+  .sectionTeam .memberNameFont {
+    font-size: 1.2rem;
+  }
+  .sectionTeam .teamHeader .member1 {
+    left: 29%;
+    bottom: 54%;
+  }
+  .sectionTeam .goodFriends {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .sectionTeam .teamInfo .member1 {
+    bottom: 15%;
+  }
+}
 .sectionAbout {
   position: relative;
   overflow: hidden;
@@ -794,7 +871,7 @@ img::selection {
 .sectionAbout .textFont {
   font-weight: 500;
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 1.4rem;
 }
 .sectionAbout .textFont span {
   color: #ecc100;
@@ -820,6 +897,35 @@ img::selection {
   padding-right: 10%;
 }
 
+@media (max-width: 1000px) {
+  .sectionAbout .aboutUsHeader {
+    left: 0%;
+    top: 0%;
+    font-size: 2.7rem;
+    padding: 2rem;
+    text-align: center;
+    transform: none;
+    width: 100%;
+  }
+  .sectionAbout .aboutUsText {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .sectionAbout .textFont {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .sectionAbout .aboutUsHeader {
+    font-size: 1.7rem;
+  }
+  .sectionAbout .textFont {
+    font-size: 1rem;
+  }
+}
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
@@ -830,15 +936,21 @@ img::selection {
   padding-top: 2em;
   padding-bottom: 1em;
 }
+.sectionTestimonials .sectionTitle__testimonials {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
 .sectionTestimonials .sectionFont {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  font-size: 2.6vw;
+  font-size: 2.7rem;
 }
 .sectionTestimonials .textFont {
-  font-size: 1.5vw;
+  font-size: 1.4rem;
   color: #fff;
   margin-top: 1em;
 }
@@ -888,6 +1000,43 @@ img::selection {
   color: #fff;
 }
 
+@media (max-width: 1000px) {
+  .sectionTestimonials .sectionTitle {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+  .sectionTestimonials .sectionTitle__testimonials {
+    display: flex;
+  }
+  .sectionTestimonials .textFont {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .sectionTestimonials .carousel-control-prev {
+    left: 5%;
+    width: auto;
+  }
+  .sectionTestimonials .carousel-control-next {
+    right: 5%;
+    width: auto;
+  }
+  .sectionTestimonials .carousel {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .sectionTestimonials .carousel-content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .sectionTestimonials .textFont {
+    font-size: 1rem;
+  }
+  .sectionTestimonials .sectionFont {
+    font-size: 1.7rem;
+  }
+}
 .sectionContact {
   position: relative;
   overflow: hidden;
@@ -934,6 +1083,14 @@ img::selection {
   font-size: 2.5rem;
 }
 
+@media (max-width: 1000px) {
+  .bgColorPageYellow {
+    padding: 2rem 0;
+  }
+  .sectionContact .contactUsTitle {
+    font-size: 1.7rem;
+  }
+}
 .offerPage .subpageHeader .navbarListItemLink.offerPage {
   color: #ecc100;
 }

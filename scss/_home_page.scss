@@ -380,11 +380,26 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .sectionTraits {
+    .textFont {
+      // font-size: calc(2.3vw);
+      font-size: 1.2rem;
+    }
+  }
+}
 @media (max-width: 500px) {
   .sectionTraits {
+    .sectionTitle {
+      font-size: 2.5rem;
+      padding-bottom: 1rem;
+    }
     .subsectionFont {
       // font-size: calc(2.3vw);
       font-size: 1.7rem;
+    }
+    .textFont {
+      font-size: 1rem;
     }
   }
 }
@@ -436,6 +451,8 @@
   }
   .teamInfo {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -486,6 +503,11 @@
     font-weight: bold;
     color: $white;
     font-size: 3rem;
+    .founders {
+      display: none;
+
+      justify-content: center;
+    }
     // font-size: calc(4vw);
   }
   .triangle {
@@ -527,13 +549,94 @@
     }
   }
 }
+@media (max-width: 800px) {
+  .sectionTeam {
+    .goodFriends {
+      font-size: 2rem;
+      bottom: 2%;
+      .founders {
+        display: flex;
+      }
+    }
+    .membersLabel {
+      font-size: 2rem;
+    }
+    .textFont {
+      font-size: 0.7rem;
+    }
+    .teamHeader {
+      .membersLabel {
+        // right: auto;
+        // left: -5%;
+        // top: 36%;
+        // transform: rotate(270deg);
+        display: none;
+      }
+      .member1 {
+        bottom: 47%;
+        left: 42%;
+        top: auto;
+      }
+      .member2 {
+        top: 1%;
+        left: 15%;
+      }
+    }
+    .teamInfo {
+      .member1 {
+        width: 200px;
+        left: 5%;
+        bottom: 20%;
+      }
+      .member2 {
+        width: 200px;
+        bottom: 66%;
+        right: 5%;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .sectionTeam {
+    .teamHeader {
+      .member1 {
+        bottom: 53%;
+        left: 41%;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .sectionTeam {
+    .memberNameFont {
+      font-size: 1.2rem;
+    }
+    .teamHeader {
+      .member1 {
+        left: 29%;
+        bottom: 54%;
+      }
+    }
+
+    .goodFriends {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+    .teamInfo {
+      .member1 {
+        bottom: 15%;
+      }
+    }
+  }
+}
 .sectionAbout {
   position: relative;
   overflow: hidden;
   .textFont {
     font-weight: 500;
     color: $white;
-    font-size: calc(1.5vw);
+    font-size: 1.4rem;
+    // font-size: calc(1.5vw);
     span {
       color: $accent;
     }
@@ -551,7 +654,40 @@
     padding-right: 10%;
   }
 }
+@media (max-width: 1000px) {
+  .sectionAbout {
+    .aboutUsHeader {
+      left: 0%;
+      top: 0%;
+      font-size: 2.7rem;
+      padding: 2rem;
+      text-align: center;
+      transform: none;
+      width: 100%;
+    }
+    .aboutUsText {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .textFont {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .sectionAbout {
+    .aboutUsHeader {
+      font-size: 1.7rem;
+    }
 
+    .textFont {
+      font-size: 1rem;
+    }
+  }
+}
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
@@ -565,16 +701,24 @@
   .sectionTitle {
     padding-top: 2em;
     padding-bottom: 1em;
+    &__testimonials {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 2rem;
+    }
   }
   .sectionFont {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     color: $white;
-    font-size: calc(2.6vw);
+    font-size: 2.7rem;
+    // font-size: calc(2.6vw);
   }
   .textFont {
-    font-size: calc(1.5vw);
+    // font-size: calc(1.5vw);
+    font-size: 1.4rem;
     color: $white;
     margin-top: 1em;
   }
@@ -618,6 +762,47 @@
   .quotationMark {
     font-size: calc(4vw);
     color: $white;
+  }
+}
+@media (max-width: 1000px) {
+  .sectionTestimonials {
+    .sectionTitle {
+      padding-top: 2em;
+      padding-bottom: 1em;
+      &__testimonials {
+        display: flex;
+      }
+    }
+    .textFont {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .carousel-control-prev {
+      left: 5%;
+      width: auto;
+    }
+    .carousel-control-next {
+      right: 5%;
+      width: auto;
+    }
+    .carousel {
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+    .carousel-content {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .sectionTestimonials {
+    .textFont {
+      font-size: 1rem;
+    }
+    .sectionFont {
+      font-size: 1.7rem;
+    }
   }
 }
 .sectionContact {
@@ -670,5 +855,15 @@
     color: #000;
     // font-size: 2vw;
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .bgColorPageYellow {
+    padding: 2rem 0;
+  }
+  .sectionContact {
+    .contactUsTitle {
+      font-size: 1.7rem;
+    }
   }
 }
