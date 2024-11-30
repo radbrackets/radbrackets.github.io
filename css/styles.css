@@ -42,6 +42,106 @@ img::selection {
   max-width: 1200px;
 }
 
+.navigation {
+  background: #161616;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 5%;
+  z-index: 3;
+}
+.navigation .logo {
+  background-repeat: no-repeat;
+  height: 60%;
+  width: 300px;
+  background-size: contain;
+  background-image: url(/img/logo/logo-radbrackets-light.svg);
+}
+.navigation .hamburger-menu {
+  box-sizing: border-box;
+  padding-top: 5vh;
+  padding: 5vh 5%;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  background-color: #ecc100;
+}
+.navigation .hamburger-menu a {
+  font-size: 2rem;
+  padding: 0.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.navigation .hamburger-menu a:hover {
+  color: #161616;
+}
+.navigation .hamburger-menu .close-button {
+  align-self: flex-end;
+}
+.navigation .topMenu {
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  flex-direction: row;
+  display: flex;
+  text-align: right;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.navigation .topMenu a {
+  padding: 0.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.navigation .topMenu a:hover {
+  color: #ecc100;
+}
+.navigation .hamburger-button {
+  display: none !important;
+  border: 1px solid #ecc100;
+  width: 60px;
+  height: 60px;
+  background-color: #ecc100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation .hamburger-button i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    background: transparent;
+    justify-content: flex-end;
+  }
+  .navigation .logo {
+    display: none;
+  }
+  .navigation .topMenu {
+    font-size: 1rem;
+    display: none;
+  }
+  .navigation .hamburger-button {
+    display: flex !important;
+  }
+}
 .subpageHeader {
   position: fixed;
   top: 0;
@@ -331,7 +431,7 @@ img::selection {
 .bgImageHeader {
   background-image: url("/img/bg/header.jpg");
   background-size: cover;
-  background-position: 15%;
+  background-position: 15% 20%;
 }
 .bgImageHeader__logo-mobile {
   display: none;
@@ -476,42 +576,6 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-.sectionHeader .hamburger-button {
-  display: none !important;
-  position: absolute;
-  border: 1px solid #ecc100;
-  top: 5%;
-  right: 5%;
-  width: 80px;
-  height: 80px;
-  background-color: #ecc100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sectionHeader .hamburger-button i {
-  font-size: 2rem;
-  color: white;
-}
-.sectionHeader .topMenu {
-  position: absolute;
-  right: 0;
-  text-align: right;
-  right: 5%;
-  top: 10%;
-  width: 100%;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-.sectionHeader .topMenu a {
-  padding: 0.5em;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.5s;
-}
-.sectionHeader .topMenu a:hover {
-  color: #ecc100;
-}
 .sectionHeader .rightMenu {
   position: absolute;
   right: 5%;
@@ -526,15 +590,6 @@ img::selection {
   color: #fff;
 }
 
-@media (max-width: 992px) {
-  .sectionHeader .topMenu {
-    font-size: 1rem;
-    display: none;
-  }
-  .sectionHeader .hamburger-button {
-    display: flex !important;
-  }
-}
 @media (max-width: 730px) {
   .sectionHeader .rightMenu {
     display: none;

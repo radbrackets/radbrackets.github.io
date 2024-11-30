@@ -37,7 +37,112 @@ img::selection {
 .container-fluid {
   max-width: 1200px;
 }
+.navigation {
+  background: #161616;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 5%;
+  z-index: 3;
+  .logo {
+    background-repeat: no-repeat;
+    height: 60%;
+    width: 300px;
+    background-size: contain;
 
+    background-image: url(/img/logo/logo-radbrackets-light.svg);
+  }
+  .hamburger-menu {
+    box-sizing: border-box;
+    padding-top: 5vh;
+    padding: 5vh 5%;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background-color: #ecc100;
+    a {
+      font-size: 2rem;
+      padding: 0.5em;
+      color: $white;
+      text-decoration: none;
+      transition: color 0.5s;
+      &:hover {
+        color: #161616;
+        // text-decoration: underline;
+      }
+    }
+    .close-button {
+      align-self: flex-end;
+    }
+  }
+  .topMenu {
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    flex-direction: row;
+    display: flex;
+    text-align: right;
+    font-size: 1.2rem;
+    // font-size: calc(1.5vw);
+    text-transform: uppercase;
+    a {
+      padding: 0.5em;
+      color: $white;
+      text-decoration: none;
+      transition: color 0.5s;
+      &:hover {
+        color: #ecc100;
+        // text-decoration: underline;
+      }
+    }
+  }
+  .hamburger-button {
+    display: none !important;
+    border: 1px solid #ecc100;
+    width: 60px;
+    height: 60px;
+    background-color: #ecc100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    background: transparent;
+    justify-content: flex-end;
+    .logo {
+      display: none;
+    }
+    .topMenu {
+      font-size: 1rem;
+      display: none;
+    }
+    .hamburger-button {
+      display: flex !important;
+    }
+  }
+  // font-size: calc(1.1vw);
+}
 .subpageHeader {
   position: fixed;
   top: 0;
