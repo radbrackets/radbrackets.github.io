@@ -64,11 +64,12 @@ img::selection {
   background-image: url(/img/logo/logo-radbrackets-light.svg);
 }
 .navigation .hamburger-menu {
+  display: flex;
   box-sizing: border-box;
-  padding-top: 5vh;
-  padding: 5vh 5%;
+  padding-top: 5vv;
+  padding: 5vh 0%;
   position: fixed;
-  display: none;
+  visibility: hidden;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -76,21 +77,56 @@ img::selection {
   left: 0;
   z-index: 3;
   width: 100%;
+  height: 0vh;
+  background-color: #161616;
+  transition: height 0.5s;
+}
+.navigation .hamburger-menu__open {
+  visibility: visible;
+  width: 100%;
   height: 100vh;
-  background-color: #ecc100;
+}
+.navigation .hamburger-menu a.active {
+  border-bottom-color: #161616;
+  background: #ecc100;
+  color: #161616;
+  font-weight: 500;
 }
 .navigation .hamburger-menu a {
+  text-align: center;
+  width: 100%;
   font-size: 2rem;
   padding: 0.5em;
   color: #fff;
   text-decoration: none;
-  transition: color 0.5s;
+  transition: background 0.5s;
+  border-bottom: 2px solid white;
+}
+.navigation .hamburger-menu a:active {
+  border-bottom-color: #161616;
+  background: #ecc100;
+  color: #161616;
 }
 .navigation .hamburger-menu a:hover {
+  border-bottom-color: #161616;
+  background: #ecc100;
   color: #161616;
 }
 .navigation .hamburger-menu .close-button {
+  padding-right: 5%;
+  justify-content: flex-end;
+  display: flex;
   align-self: flex-end;
+  border: 0;
+  background: transparent;
+  width: 30%;
+}
+.navigation .hamburger-menu .close-button .fa-solid {
+  font-family: "Font Awesome 5 Free" !important;
+}
+.navigation .hamburger-menu .close-button i {
+  font-size: 35px;
+  color: white;
 }
 .navigation .topMenu {
   align-items: center;
@@ -101,6 +137,10 @@ img::selection {
   text-align: right;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+.navigation .topMenu a.active {
+  color: #ecc100 !important;
+  font-weight: 500;
 }
 .navigation .topMenu a {
   padding: 0.5em;
@@ -140,6 +180,12 @@ img::selection {
   }
   .navigation .hamburger-button {
     display: flex !important;
+  }
+}
+@media (max-width: 500px) {
+  .navigation {
+    height: fit-content;
+    padding: 2vw;
   }
 }
 .subpageHeader {

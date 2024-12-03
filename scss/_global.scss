@@ -59,11 +59,12 @@ img::selection {
     background-image: url(/img/logo/logo-radbrackets-light.svg);
   }
   .hamburger-menu {
+    display: flex;
     box-sizing: border-box;
-    padding-top: 5vh;
-    padding: 5vh 5%;
+    padding-top: 5vv;
+    padding: 5vh 0%;
     position: fixed;
-    display: none;
+    visibility: hidden;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -71,21 +72,56 @@ img::selection {
     left: 0;
     z-index: 3;
     width: 100%;
-    height: 100vh;
-    background-color: #ecc100;
+    height: 0vh;
+    background-color: #161616;
+    transition: height 0.5s;
+    &__open {
+      visibility: visible;
+      width: 100%;
+      height: 100vh;
+    }
+    a.active {
+      border-bottom-color: #161616;
+      background: #ecc100;
+      color: #161616;
+      font-weight: 500;
+    }
     a {
+      text-align: center;
+      width: 100%;
       font-size: 2rem;
       padding: 0.5em;
       color: $white;
       text-decoration: none;
-      transition: color 0.5s;
-      &:hover {
+      transition: background 0.5s;
+      border-bottom: 2px solid white;
+      &:active {
+        border-bottom-color: #161616;
+        background: #ecc100;
         color: #161616;
-        // text-decoration: underline;
+      }
+      &:hover {
+        border-bottom-color: #161616;
+        background: #ecc100;
+        color: #161616;
       }
     }
     .close-button {
+      padding-right: 5%;
+      justify-content: flex-end;
+      display: flex;
       align-self: flex-end;
+      border: 0;
+      background: transparent;
+      width: 30%;
+
+      .fa-solid {
+        font-family: "Font Awesome 5 Free" !important;
+      }
+      i {
+        font-size: 35px;
+        color: white;
+      }
     }
   }
   .topMenu {
@@ -98,11 +134,16 @@ img::selection {
     font-size: 1.2rem;
     // font-size: calc(1.5vw);
     text-transform: uppercase;
+    a.active {
+      color: #ecc100 !important;
+      font-weight: 500;
+    }
     a {
       padding: 0.5em;
       color: $white;
       text-decoration: none;
       transition: color 0.5s;
+
       &:hover {
         color: #ecc100;
         // text-decoration: underline;
@@ -142,6 +183,12 @@ img::selection {
     }
   }
   // font-size: calc(1.1vw);
+}
+@media (max-width: 500px) {
+  .navigation {
+    height: fit-content;
+    padding: 2vw;
+  }
 }
 .subpageHeader {
   position: fixed;
