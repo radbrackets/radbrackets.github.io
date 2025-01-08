@@ -42,6 +42,152 @@ img::selection {
   max-width: 1200px;
 }
 
+.navigation {
+  background: #161616;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 5%;
+  z-index: 3;
+}
+.navigation .logo {
+  background-repeat: no-repeat;
+  height: 60%;
+  width: 300px;
+  background-size: contain;
+  background-image: url(/img/logo/logo-radbrackets-light.svg);
+}
+.navigation .hamburger-menu {
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 5vv;
+  padding: 5vh 0%;
+  position: fixed;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 0vh;
+  background-color: #161616;
+  transition: height 0.5s;
+}
+.navigation .hamburger-menu__open {
+  visibility: visible;
+  width: 100%;
+  height: 100vh;
+}
+.navigation .hamburger-menu a.active {
+  border-bottom-color: #161616;
+  background: #ecc100;
+  color: #161616;
+  font-weight: 500;
+}
+.navigation .hamburger-menu a {
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.5s;
+  border-bottom: 2px solid white;
+}
+.navigation .hamburger-menu a:active {
+  border-bottom-color: #161616;
+  background: #ecc100;
+  color: #161616;
+}
+.navigation .hamburger-menu a:hover {
+  border-bottom-color: #161616;
+  background: #ecc100;
+  color: #161616;
+}
+.navigation .hamburger-menu .close-button {
+  padding-right: 5%;
+  justify-content: flex-end;
+  display: flex;
+  align-self: flex-end;
+  border: 0;
+  background: transparent;
+  width: 30%;
+}
+.navigation .hamburger-menu .close-button .fa-solid {
+  font-family: "Font Awesome 5 Free" !important;
+}
+.navigation .hamburger-menu .close-button i {
+  font-size: 35px;
+  color: white;
+}
+.navigation .topMenu {
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  flex-direction: row;
+  display: flex;
+  text-align: right;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.navigation .topMenu a.active {
+  color: #ecc100 !important;
+  font-weight: 500;
+}
+.navigation .topMenu a {
+  padding: 0.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.navigation .topMenu a:hover {
+  color: #ecc100;
+}
+.navigation .hamburger-button {
+  display: none !important;
+  border: 1px solid #ecc100;
+  width: 60px;
+  height: 60px;
+  background-color: #ecc100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation .hamburger-button i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    background: transparent;
+    justify-content: flex-end;
+  }
+  .navigation .logo {
+    display: none;
+  }
+  .navigation .topMenu {
+    font-size: 1rem;
+    display: none;
+  }
+  .navigation .hamburger-button {
+    display: flex !important;
+  }
+}
+@media (max-width: 500px) {
+  .navigation {
+    height: fit-content;
+    padding: 2vw;
+  }
+}
 .subpageHeader {
   position: fixed;
   top: 0;
@@ -331,21 +477,59 @@ img::selection {
 .bgImageHeader {
   background-image: url("/img/bg/header.jpg");
   background-size: cover;
-  padding-bottom: 56.25%;
+  background-position: 15% 20%;
+}
+.bgImageHeader__logo-mobile {
+  display: none;
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  width: 30vw;
+  height: auto;
 }
 
+@media (max-width: 1030px) {
+  .bgImageHeader {
+    background-position: 0%;
+    background-image: url("/img/bg/laptop-brackets.jpeg");
+  }
+  .bgImageHeader__logo-mobile {
+    display: flex;
+  }
+}
+@media (max-width: 730px) {
+  .bgImageHeader__logo-mobile {
+    bottom: 10%;
+    left: 10%;
+    width: 50vw;
+  }
+}
 .bgImageLead {
+  height: 100vh;
   background-image: url("/img/bg/these-people.jpg");
   background-size: cover;
-  padding-bottom: 56.25%;
 }
 
 .bgImageTeam {
   background-image: url("/img/bg/our-team.jpg");
   background-size: cover;
-  padding-bottom: 65%;
+  background-position: 18% 0%;
 }
 
+@media (max-width: 1000px) {
+  .bgImageTeam {
+    background-image: url("/img/bg/our-team.jpg");
+    background-size: cover;
+    background-position: 33% 0%;
+  }
+}
+@media (max-width: 800px) {
+  .bgImageTeam {
+    background-position: 33% 14%;
+    background-image: url("/img/bg/our-team-mobile.jpg");
+    background-size: cover;
+  }
+}
 .bgImageLogo {
   background-image: url("/img/logo/logo-radbrackets.svg");
   background-size: cover;
@@ -438,44 +622,25 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-.sectionHeader .topMenu {
-  position: absolute;
-  right: 0;
-  text-align: right;
-  right: 5%;
-  top: 10%;
-  width: 100%;
-  font-size: 1.5vw;
-  text-transform: uppercase;
-}
-.sectionHeader .topMenu a {
-  padding: 0.5em;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.5s;
-}
-.sectionHeader .topMenu a:hover {
-  color: #ecc100;
-}
-@media (min-width: 992px) {
-  .sectionHeader .topMenu {
-    font-size: 1.1vw;
-  }
-}
 .sectionHeader .rightMenu {
   position: absolute;
   right: 5%;
-  bottom: 10%;
+  bottom: 5%;
   width: 100%;
 }
 .sectionHeader .rightMenu ul {
   list-style-type: none;
   text-align: right;
-  font-size: 2.7vw;
+  font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
 }
 
+@media (max-width: 730px) {
+  .sectionHeader .rightMenu {
+    display: none;
+  }
+}
 .sectionLead {
   position: relative;
   overflow: hidden;
@@ -511,17 +676,39 @@ img::selection {
 }
 .sectionLead .triangle {
   position: absolute;
+  clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
   display: block;
   height: 100%;
   width: 100%;
-  -webkit-transform: rotate(53deg);
-  -moz-transform: rotate(53deg);
-  transform: rotate(53deg);
-  top: -10%;
-  right: -46%;
+  top: 0;
+  right: 0;
   background: #ecc100;
 }
 
+@media (max-width: 1000px) {
+  .sectionLead ul.lead {
+    font-size: 2rem;
+    margin: 0;
+    top: 5%;
+    right: 5%;
+  }
+  .sectionLead .logo {
+    width: 30%;
+  }
+  .sectionLead .triangle {
+    clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
+  }
+}
+@media (max-width: 700px) {
+  .sectionLead ul.lead {
+    top: 12%;
+  }
+}
+@media (max-width: 500px) {
+  .sectionLead ul.lead {
+    font-size: 1.5rem;
+  }
+}
 .sectionTraits {
   position: relative;
   overflow: hidden;
@@ -531,10 +718,10 @@ img::selection {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  font-size: 2.6vw;
+  font-size: 3rem;
 }
 .sectionTraits .subsectionFont {
-  font-size: 2.3vw;
+  font-size: 2.7rem;
 }
 .sectionTraits .sectionTitle {
   padding-top: 2em;
@@ -542,7 +729,7 @@ img::selection {
   text-align: center;
 }
 .sectionTraits .textFont {
-  font-size: 1.2vw;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 .sectionTraits .customSoftware ul {
@@ -550,6 +737,8 @@ img::selection {
   padding-bottom: 0em;
   list-style-type: none;
   text-align: right;
+  padding-left: 0;
+  margin-left: 0;
 }
 .sectionTraits .customSoftware ul li {
   padding-bottom: 0.5em;
@@ -571,11 +760,29 @@ img::selection {
   margin-right: 10%;
 }
 .sectionTraits .feedback .subsectionTitle {
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 3em;
 }
 
+@media (max-width: 1000px) {
+  .sectionTraits .textFont {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .sectionTraits .sectionTitle {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+  }
+  .sectionTraits .subsectionFont {
+    font-size: 1.7rem;
+  }
+  .sectionTraits .textFont {
+    font-size: 1rem;
+  }
+}
 .sectionTeam {
+  min-height: 120vh;
   position: relative;
   overflow: hidden;
 }
@@ -583,20 +790,25 @@ img::selection {
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
-  font-size: 1.7vw;
+  font-size: 1.4rem;
 }
 .sectionTeam .memberNameFontBlack {
   color: #000;
 }
 .sectionTeam .membersLabel {
   font-weight: bold;
-  font-size: 2.6vw;
+  font-size: 3.5rem;
   transform: rotate(90deg);
 }
 .sectionTeam .textFont {
   font-weight: bold;
   color: #fff;
-  font-size: 1.3vw;
+  font-size: 1.2rem;
+}
+.sectionTeam .teamHeader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .sectionTeam .teamHeader .member1 {
   position: absolute;
@@ -605,44 +817,61 @@ img::selection {
 }
 .sectionTeam .teamHeader .member2 {
   position: absolute;
-  top: 39%;
+  top: 2%;
   left: 53%;
 }
 .sectionTeam .teamHeader .membersLabel {
   position: absolute;
-  top: 20%;
-  right: 7%;
+  top: 59%;
+  right: -3%;
 }
 .sectionTeam .teamInfo {
   position: absolute;
-  margin-top: 30%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .sectionTeam .teamInfo .social .icon {
   width: 1.3em;
   display: inline-block;
   overflow: visible;
 }
-.sectionTeam .teamInfo .member1 .social {
-  padding-left: 10%;
+.sectionTeam .teamInfo .member1 {
+  width: 600px;
+  left: 5%;
+  bottom: 27%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
-.sectionTeam .teamInfo .member1 p {
-  padding-left: 10%;
+.sectionTeam .teamInfo .member2 {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  bottom: 55%;
+  position: absolute;
+  right: 5%;
 }
 .sectionTeam .teamInfo .member2 .social {
   text-align: right;
-  padding-right: 20%;
 }
 .sectionTeam .teamInfo .member2 p {
-  padding-right: 20%;
-  padding-left: 20%;
   text-align: right;
 }
 .sectionTeam .goodFriends {
   position: absolute;
-  margin-top: 56%;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
   font-weight: bold;
   color: #fff;
-  font-size: 4vw;
+  font-size: 3rem;
+}
+.sectionTeam .goodFriends .founders {
+  display: none;
+  justify-content: center;
 }
 .sectionTeam .triangle {
   position: absolute;
@@ -657,6 +886,85 @@ img::selection {
   background: rgb(22, 22, 22);
 }
 
+@media (max-width: 1000px) {
+  .sectionTeam .goodFriends {
+    font-size: 2.5rem;
+  }
+  .sectionTeam .membersLabel {
+    font-size: 2.5rem;
+  }
+  .sectionTeam .textFont {
+    font-size: 1rem;
+  }
+  .sectionTeam .teamHeader .membersLabel {
+    right: -5%;
+  }
+  .sectionTeam .teamInfo .member1 {
+    width: 400px;
+  }
+  .sectionTeam .teamInfo .member2 {
+    width: 400px;
+  }
+}
+@media (max-width: 800px) {
+  .sectionTeam .goodFriends {
+    font-size: 2rem;
+    bottom: 2%;
+  }
+  .sectionTeam .goodFriends .founders {
+    display: flex;
+  }
+  .sectionTeam .membersLabel {
+    font-size: 2rem;
+  }
+  .sectionTeam .textFont {
+    font-size: 0.7rem;
+  }
+  .sectionTeam .teamHeader .membersLabel {
+    display: none;
+  }
+  .sectionTeam .teamHeader .member1 {
+    bottom: 47%;
+    left: 42%;
+    top: auto;
+  }
+  .sectionTeam .teamHeader .member2 {
+    top: 1%;
+    left: 15%;
+  }
+  .sectionTeam .teamInfo .member1 {
+    width: 200px;
+    left: 5%;
+    bottom: 20%;
+  }
+  .sectionTeam .teamInfo .member2 {
+    width: 200px;
+    bottom: 66%;
+    right: 5%;
+  }
+}
+@media (max-width: 700px) {
+  .sectionTeam .teamHeader .member1 {
+    bottom: 53%;
+    left: 41%;
+  }
+}
+@media (max-width: 500px) {
+  .sectionTeam .memberNameFont {
+    font-size: 1.2rem;
+  }
+  .sectionTeam .teamHeader .member1 {
+    left: 29%;
+    bottom: 54%;
+  }
+  .sectionTeam .goodFriends {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .sectionTeam .teamInfo .member1 {
+    bottom: 15%;
+  }
+}
 .sectionAbout {
   position: relative;
   overflow: hidden;
@@ -664,7 +972,7 @@ img::selection {
 .sectionAbout .textFont {
   font-weight: 500;
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 1.4rem;
 }
 .sectionAbout .textFont span {
   color: #ecc100;
@@ -690,6 +998,35 @@ img::selection {
   padding-right: 10%;
 }
 
+@media (max-width: 1000px) {
+  .sectionAbout .aboutUsHeader {
+    left: 0%;
+    top: 0%;
+    font-size: 2.7rem;
+    padding: 2rem;
+    text-align: center;
+    transform: none;
+    width: 100%;
+  }
+  .sectionAbout .aboutUsText {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .sectionAbout .textFont {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .sectionAbout .aboutUsHeader {
+    font-size: 1.7rem;
+  }
+  .sectionAbout .textFont {
+    font-size: 1rem;
+  }
+}
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
@@ -700,15 +1037,21 @@ img::selection {
   padding-top: 2em;
   padding-bottom: 1em;
 }
+.sectionTestimonials .sectionTitle__testimonials {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
 .sectionTestimonials .sectionFont {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  font-size: 2.6vw;
+  font-size: 2.7rem;
 }
 .sectionTestimonials .textFont {
-  font-size: 1.5vw;
+  font-size: 1.4rem;
   color: #fff;
   margin-top: 1em;
 }
@@ -758,6 +1101,43 @@ img::selection {
   color: #fff;
 }
 
+@media (max-width: 1000px) {
+  .sectionTestimonials .sectionTitle {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+  .sectionTestimonials .sectionTitle__testimonials {
+    display: flex;
+  }
+  .sectionTestimonials .textFont {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .sectionTestimonials .carousel-control-prev {
+    left: 5%;
+    width: auto;
+  }
+  .sectionTestimonials .carousel-control-next {
+    right: 5%;
+    width: auto;
+  }
+  .sectionTestimonials .carousel {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .sectionTestimonials .carousel-content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .sectionTestimonials .textFont {
+    font-size: 1rem;
+  }
+  .sectionTestimonials .sectionFont {
+    font-size: 1.7rem;
+  }
+}
 .sectionContact {
   position: relative;
   overflow: hidden;
@@ -804,6 +1184,14 @@ img::selection {
   font-size: 2.5rem;
 }
 
+@media (max-width: 1000px) {
+  .bgColorPageYellow {
+    padding: 2rem 0;
+  }
+  .sectionContact .contactUsTitle {
+    font-size: 1.7rem;
+  }
+}
 .offerPage .subpageHeader .navbarListItemLink.offerPage {
   color: #ecc100;
 }
