@@ -1,8 +1,9 @@
 // Core variables and mixins
 @use "variables.scss";
-@use "mixins.scss";
+@use "mixin.scss";
 // Global CSS
 @use "global.scss";
 @use "home_page.scss";
 @use "offer_page.scss";
 @use "jobs_page.scss";
+@use "bootstrap_mixin";

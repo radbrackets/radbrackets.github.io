@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2024 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
- */
 body {
   overflow-x: hidden;
   font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -29,9 +24,18 @@ h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+::-moz-selection {
+  background: #95959e;
+  text-shadow: none;
+}
+
 ::selection {
   background: #95959e;
   text-shadow: none;
+}
+
+img::-moz-selection {
+  background: transparent;
 }
 
 img::selection {
@@ -131,6 +135,7 @@ img::selection {
 .navigation .topMenu {
   align-items: center;
   height: 100%;
+  width: -moz-fit-content;
   width: fit-content;
   flex-direction: row;
   display: flex;
@@ -184,6 +189,7 @@ img::selection {
 }
 @media (max-width: 500px) {
   .navigation {
+    height: -moz-fit-content;
     height: fit-content;
     padding: 2vw;
   }
@@ -419,6 +425,7 @@ img::selection {
   border-color: #ffffff;
 }
 .formBox form button {
+  width: -moz-fit-content;
   width: fit-content;
   background-color: #000;
   border: 1px solid #000;
@@ -474,42 +481,6 @@ img::selection {
   background-color: #161616;
 }
 
-.bgImageHeader {
-  background-image: url("/img/bg/header.jpg");
-  background-size: cover;
-  background-position: 15% 20%;
-}
-.bgImageHeader__logo-mobile {
-  display: none;
-  position: absolute;
-  bottom: 12%;
-  left: 10%;
-  width: 30vw;
-  height: auto;
-}
-
-@media (max-width: 1030px) {
-  .bgImageHeader {
-    background-position: 0%;
-    background-image: url("/img/bg/laptop-brackets.jpeg");
-  }
-  .bgImageHeader__logo-mobile {
-    display: flex;
-  }
-}
-@media (max-width: 730px) {
-  .bgImageHeader__logo-mobile {
-    bottom: 10%;
-    left: 10%;
-    width: 50vw;
-  }
-}
-.bgImageLead {
-  height: 100vh;
-  background-image: url("/img/bg/these-people.jpg");
-  background-size: cover;
-}
-
 .bgImageTeam {
   background-image: url("/img/bg/our-team.jpg");
   background-size: cover;
@@ -540,45 +511,6 @@ img::selection {
   background-image: url("/img/logo/logo-radbrackets-light.svg");
   background-size: cover;
   padding-bottom: 29.27%;
-}
-
-.brackets {
-  text-align: center;
-}
-.brackets .bracket1 {
-  width: 23%;
-  padding-left: 0%;
-  padding-right: 10%;
-  display: inline-block;
-}
-.brackets .bracket1 .bracketBg {
-  background-image: url("/img/logo/bracket-1.svg");
-  background-size: cover;
-  padding-bottom: 260%;
-}
-.brackets .bracket2 {
-  width: 23%;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  display: inline-block;
-}
-.brackets .bracket2 .bracketBg {
-  background-image: url("/img/logo/bracket-2.svg");
-  background-size: cover;
-  padding-bottom: 260%;
-}
-.brackets .bracket3 {
-  width: 23%;
-  padding-left: 10%;
-  padding-right: 0%;
-  display: inline-block;
-}
-.brackets .bracket3 .bracketBg {
-  background-image: url("/img/logo/bracket-3.svg");
-  background-size: cover;
-  padding-bottom: 260%;
 }
 
 .iconLinkedin {
@@ -618,17 +550,51 @@ img::selection {
   padding-bottom: 95.7%;
 }
 
-.sectionHeader {
+.sectionHero {
   position: relative;
   overflow: hidden;
+  background-image: url("/img/bg/header.jpg");
+  background-size: cover;
+  background-position: 15% 20%;
 }
-.sectionHeader .rightMenu {
+@media only screen and (max-width: 1030px) {
+  .sectionHero {
+    background-position: 0%;
+    background-image: url("/img/bg/laptop-brackets.jpeg");
+  }
+}
+.sectionHero__logoMobile {
+  display: none;
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  width: 30vw;
+  height: auto;
+}
+@media only screen and (max-width: 1030px) {
+  .sectionHero__logoMobile {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .sectionHero__logoMobile {
+    bottom: 10%;
+    left: 10%;
+    width: 50vw;
+  }
+}
+.sectionHero__rightMenu {
   position: absolute;
   right: 5%;
   bottom: 5%;
   width: 100%;
 }
-.sectionHeader .rightMenu ul {
+@media only screen and (max-width: 730px) {
+  .sectionHero__rightMenu {
+    display: none;
+  }
+}
+.sectionHero__rightMenu ul {
   list-style-type: none;
   text-align: right;
   font-size: 2rem;
@@ -636,33 +602,58 @@ img::selection {
   color: #fff;
 }
 
-@media (max-width: 730px) {
-  .sectionHeader .rightMenu {
-    display: none;
-  }
-}
 .sectionLead {
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  background-image: url("/img/bg/these-people.jpg");
+  background-size: cover;
 }
-.sectionLead .logo {
+.sectionLead__logo {
   position: absolute;
   top: 5%;
   left: 5%;
-  width: 15%;
+  width: 300px;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionLead__logo {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionLead__logo {
+    width: 100px;
+  }
 }
 .sectionLead ul.lead {
   position: absolute;
-  right: 0;
+  right: 5%;
   text-align: right;
-  margin-top: 5%;
-  margin-left: 0%;
-  margin-right: 4%;
+  top: 5%;
+  margin: 0;
   font-size: 4vw;
   font-weight: bold;
   list-style-type: none;
   text-align: right;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionLead ul.lead {
+    font-size: 2rem;
+    margin: 0;
+    top: 5%;
+    right: 5%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .sectionLead ul.lead {
+    top: 12%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionLead ul.lead {
+    font-size: 1.5rem;
+  }
 }
 .sectionLead ul.lead li {
   color: #000;
@@ -674,9 +665,10 @@ img::selection {
   font-weight: bold;
   color: #fff;
 }
-.sectionLead .triangle {
+.sectionLead__triangle {
   position: absolute;
-  clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
+  -webkit-clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
+          clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
   display: block;
   height: 100%;
   width: 100%;
@@ -684,103 +676,76 @@ img::selection {
   right: 0;
   background: #ecc100;
 }
+@media only screen and (max-width: 1000px) {
+  .sectionLead__triangle {
+    -webkit-clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
+            clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
+  }
+}
 
-@media (max-width: 1000px) {
-  .sectionLead ul.lead {
-    font-size: 2rem;
-    margin: 0;
-    top: 5%;
-    right: 5%;
-  }
-  .sectionLead .logo {
-    width: 30%;
-  }
-  .sectionLead .triangle {
-    clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
-  }
-}
-@media (max-width: 700px) {
-  .sectionLead ul.lead {
-    top: 12%;
-  }
-}
-@media (max-width: 500px) {
-  .sectionLead ul.lead {
-    font-size: 1.5rem;
-  }
-}
 .sectionTraits {
   position: relative;
   overflow: hidden;
   padding: 1%;
 }
-.sectionTraits .sectionFont {
+.sectionTraits h2 {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
   font-size: 3rem;
-}
-.sectionTraits .subsectionFont {
-  font-size: 2.7rem;
-}
-.sectionTraits .sectionTitle {
   padding-top: 2em;
   padding-bottom: 2em;
   text-align: center;
 }
-.sectionTraits .textFont {
-  font-size: 1.4rem;
-  font-weight: 500;
+@media only screen and (max-width: 500px) {
+  .sectionTraits h2 {
+    font-size: 2.5rem;
+  }
 }
-.sectionTraits .customSoftware ul {
-  padding-top: 2em;
-  padding-bottom: 0em;
+.sectionTraits h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+}
+@media only screen and (max-width: 500px) {
+  .sectionTraits h3 {
+    font-size: 1.5rem;
+  }
+}
+.sectionTraits ul {
   list-style-type: none;
   text-align: right;
   padding-left: 0;
   margin-left: 0;
 }
-.sectionTraits .customSoftware ul li {
+.sectionTraits ul li {
   padding-bottom: 0.5em;
 }
-.sectionTraits .customSoftware p {
+.sectionTraits p {
+  font-size: 1.4rem;
+  font-weight: 500;
   text-align: right;
 }
-.sectionTraits .pursuitOfKnowledge {
-  text-align: center;
-  padding-bottom: 10%;
-}
-.sectionTraits .pursuitOfKnowledge .subsectionTitle {
-  padding-top: 1em;
-  padding-bottom: 2em;
-}
-.sectionTraits .pursuitOfKnowledge .lessWide {
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.sectionTraits .feedback .subsectionTitle {
-  padding-top: 1em;
-  padding-bottom: 3em;
-}
-
-@media (max-width: 1000px) {
-  .sectionTraits .textFont {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 500px) {
-  .sectionTraits .sectionTitle {
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
-  }
-  .sectionTraits .subsectionFont {
-    font-size: 1.7rem;
-  }
-  .sectionTraits .textFont {
+@media only screen and (max-width: 1000px) {
+  .sectionTraits p {
     font-size: 1rem;
   }
 }
+.sectionTraits .bracket {
+  width: 150px;
+}
+@media only screen and (max-width: 1300px) {
+  .sectionTraits .bracket {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTraits .bracket {
+    width: 50px;
+  }
+}
+
 .sectionTeam {
   min-height: 120vh;
   position: relative;
@@ -878,8 +843,6 @@ img::selection {
   display: block;
   height: 100%;
   width: 100%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 50%;
   left: -58%;
@@ -1030,7 +993,7 @@ img::selection {
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(0deg, #161616, rgb(29.65, 29.65, 29.65) 80%) no-repeat;
+  background: linear-gradient(0deg, #161616, #1e1e1e 80%) no-repeat;
   padding-bottom: 3em;
 }
 .sectionTestimonials .sectionTitle {
@@ -1064,6 +1027,7 @@ img::selection {
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
+  height: -moz-fit-content;
   height: fit-content;
 }
 @media (min-width: 1400px) {
@@ -1169,8 +1133,6 @@ img::selection {
   display: block;
   height: 100%;
   width: 100%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
   transform: rotate(45deg);
   top: -90%;
   left: -68%;
@@ -1191,9 +1153,6 @@ img::selection {
   .sectionContact .contactUsTitle {
     font-size: 1.7rem;
   }
-}
-.offerPage .subpageHeader .navbarListItemLink.offerPage {
-  color: #ecc100;
 }
 .offerPage .offerSectionPadding {
   padding-top: 90px;
@@ -1270,9 +1229,6 @@ img::selection {
   }
 }
 
-.jobsPage .subpageHeader .navbarListItemLink.jobsPage {
-  text-decoration: underline;
-}
 .jobsPage .jobsSectionPadding {
   padding-top: 5px;
 }
@@ -1393,4 +1349,4 @@ img::selection {
 }
 .jobsPage .card-body {
   color: #495057;
-}
+}/*# sourceMappingURL=styles.css.map */

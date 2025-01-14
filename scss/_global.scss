@@ -1,3 +1,4 @@
+@use "./colors" as colors;
 @use "./variables" as *;
 body {
   overflow-x: hidden;
@@ -10,9 +11,9 @@ p {
 }
 
 a {
-  color: $black;
+  color: colors.$black;
   &:hover {
-    color: $black;
+    color: colors.$black;
   }
 }
 
@@ -27,7 +28,7 @@ h6 {
 }
 
 ::selection {
-  background: $primary;
+  background: colors.$primary;
   text-shadow: none;
 }
 img::selection {
@@ -91,7 +92,7 @@ img::selection {
       width: 100%;
       font-size: 2rem;
       padding: 0.5em;
-      color: $white;
+      color: colors.$white;
       text-decoration: none;
       transition: background 0.5s;
       border-bottom: 2px solid white;
@@ -140,7 +141,7 @@ img::selection {
     }
     a {
       padding: 0.5em;
-      color: $white;
+      color: colors.$white;
       text-decoration: none;
       transition: color 0.5s;
 
@@ -198,7 +199,7 @@ img::selection {
   z-index: 3;
   padding: 20px 0;
   width: 100%;
-  background: $darkGrey;
+  background: colors.$darkGrey;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
   text-transform: uppercase;
   transition: padding 0.4s;
@@ -220,7 +221,7 @@ img::selection {
     .navbarListItem {
       .navbarListItemLink {
         padding-left: 16px;
-        color: $white;
+        color: colors.$white;
         text-decoration: none;
         transition: color 0.5s;
         &:hover {
@@ -274,7 +275,7 @@ img::selection {
     z-index: -1;
     width: 300px;
     height: 20px;
-    background: $accent;
+    background: colors.$accent;
 
     @media (min-width: 992px) {
       bottom: -4px;
@@ -289,7 +290,7 @@ img::selection {
 }
 
 .highlightedSubheading {
-  color: $darkGrey;
+  color: colors.$darkGrey;
   font-size: 20px;
   position: relative;
   padding-left: 28px;
@@ -302,7 +303,7 @@ img::selection {
     z-index: -1;
     width: 62px;
     height: 20px;
-    background: $accent;
+    background: colors.$accent;
     @media (min-width: 992px) {
       top: 2px;
     }
@@ -334,7 +335,7 @@ img::selection {
   flex-direction: row;
   justify-content: space-between;
   padding: 3% 5%;
-  background-color: $black;
+  background-color: colors.$black;
   .logoFooter {
     background-image: url(/img/logo/logo-radbrackets-light.svg);
     background-size: contain;
@@ -424,13 +425,13 @@ img::selection {
     }
     button {
       width: fit-content;
-      background-color: $black;
-      border: 1px solid $black;
+      background-color: colors.$black;
+      border: 1px solid colors.$black;
       &:hover,
       &:active {
         border: 1px solid white !important;
         background-color: white !important;
-        color: $black !important;
+        color: colors.$black !important;
       }
       &:focus {
         box-shadow: none;

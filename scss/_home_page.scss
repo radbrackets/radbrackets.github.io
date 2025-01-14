@@ -1,5 +1,5 @@
 @use "./variables" as *;
-@use "./mixins" as *;
+@use "./mixin" as mixin;
 @use "sass:color";
 .homepage .container-fluid {
   max-width: none;
@@ -19,43 +19,13 @@
 .bgColorPageDarkGray {
   background-color: $darkGrey;
 }
-.bgImageHeader {
-  background-image: url("/img/bg/header.jpg");
-  background-size: cover;
-  background-position: 15% 20%;
-  &__logo-mobile {
-    display: none;
-    position: absolute;
-    bottom: 12%;
-    left: 10%;
-    width: 30vw;
-    height: auto;
-  }
-}
-@media (max-width: 1030px) {
-  .bgImageHeader {
-    background-position: 0%;
-    background-image: url("/img/bg/laptop-brackets.jpeg");
-    &__logo-mobile {
-      display: flex;
-    }
-  }
-}
-@media (max-width: 730px) {
-  .bgImageHeader {
-    &__logo-mobile {
-      bottom: 10%;
-      left: 10%;
-      width: 50vw;
-    }
-  }
-}
-.bgImageLead {
-  height: 100vh;
-  background-image: url("/img/bg/these-people.jpg");
-  background-size: cover;
-  // padding-bottom: 56.25%; // 1080 / 1920
-}
+
+// .bgImageLead {
+//   height: 100vh;
+//   background-image: url("/img/bg/these-people.jpg");
+//   background-size: cover;
+//   // padding-bottom: 56.25%; // 1080 / 1920
+// }
 .bgImageTeam {
   background-image: url("/img/bg/our-team.jpg");
   background-size: cover;
@@ -89,44 +59,7 @@
   background-size: cover;
   padding-bottom: 29.27%; // 260 / 888
 }
-.brackets {
-  text-align: center;
-  .bracket1 {
-    width: 23%;
-    padding-left: 0%;
-    padding-right: 10%;
-    display: inline-block;
-    .bracketBg {
-      background-image: url("/img/logo/bracket-1.svg");
-      background-size: cover;
-      padding-bottom: 260%;
-    }
-  }
-  .bracket2 {
-    width: 23%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: inline-block;
-    .bracketBg {
-      background-image: url("/img/logo/bracket-2.svg");
-      background-size: cover;
-      padding-bottom: 260%;
-    }
-  }
-  .bracket3 {
-    width: 23%;
-    padding-left: 10%;
-    padding-right: 0%;
-    display: inline-block;
-    .bracketBg {
-      background-image: url("/img/logo/bracket-3.svg");
-      background-size: cover;
-      padding-bottom: 260%;
-    }
-  }
-}
+
 .iconLinkedin {
   background-image: url("/img/icons/linkedin.svg");
   background-size: contain;
@@ -165,102 +98,91 @@
   // padding-bottom: 42.10%; // 40 / 95
 }
 
-.sectionHeader {
+.sectionHero {
   position: relative;
   overflow: hidden;
-  // .hamburger-button {
-  //   display: none !important;
-  //   position: absolute;
-  //   border: 1px solid #ecc100;
-  //   top: 5%;
-  //   right: 5%;
-  //   width: 80px;
-  //   height: 80px;
-  //   background-color: #ecc100;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   i {
-  //     font-size: 2rem;
-  //     color: white;
-  //   }
-  // }
-  // .topMenu {
-  //   position: absolute;
-  //   right: 0;
-  //   text-align: right;
-  //   right: 5%;
-  //   top: 10%;
-  //   width: 100%;
-  //   font-size: 1.2rem;
-  //   // font-size: calc(1.5vw);
-  //   text-transform: uppercase;
-  //   a {
-  //     padding: 0.5em;
-  //     color: $white;
-  //     text-decoration: none;
-  //     transition: color 0.5s;
-  //     &:hover {
-  //       color: #ecc100;
-  //       // text-decoration: underline;
-  //     }
-  //   }
-  // }
-  .rightMenu {
+  background-image: url("/img/bg/header.jpg");
+  background-size: cover;
+  background-position: 15% 20%;
+  @include mixin.pc1030px{
+    background-position: 0%;
+    background-image: url("/img/bg/laptop-brackets.jpeg");
+  }
+  &__logoMobile {
+    display: none;
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    width: 30vw;
+    height: auto;
+    @include mixin.pc1030px{
+      display: flex;
+    }
+    @include mixin.phone730px{
+      bottom: 10%;
+      left: 10%;
+      width: 50vw;
+    }
+  }
+  &__rightMenu {
     position: absolute;
     right: 5%;
     bottom: 5%;
     width: 100%;
+    @include mixin.phone730px{
+      display: none;
+    }
     ul {
       list-style-type: none;
       text-align: right;
       font-size: 2rem;
-      // font-size: calc(2.7vw);
       text-transform: uppercase;
       color: $white;
     }
   }
 }
-// @media (max-width: 992px) {
-//   .sectionHeader {
-//     .topMenu {
-//       font-size: 1rem;
-//       display: none;
-//     }
-//     .hamburger-button {
-//       display: flex !important;
-//     }
-//   }
-//   // font-size: calc(1.1vw);
-// }
-@media (max-width: 730px) {
-  .sectionHeader {
-    .rightMenu {
-      display: none;
-    }
-  }
-}
+
 .sectionLead {
   position: relative;
   overflow: hidden;
-  .logo {
+  height: 100vh;
+  background-image: url("/img/bg/these-people.jpg");
+  background-size: cover;
+  &__logo {
     position: absolute;
     top: 5%;
     left: 5%;
-    width: 15%;
+    width: 300px;
+    @include mixin.pc1000px{
+      width: 150px;
+    }
+    @include mixin.phone500px{
+      width: 100px;
+    }
   }
   ul.lead {
     position: absolute;
-    right: 0;
+    right: 5%;
     text-align: right;
-    margin-top: 5%;
-    margin-left: 0%;
-    margin-right: 4%;
+    top: 5%;
+    margin: 0;
     font-size: calc(4vw);
     font-weight: bold;
     list-style-type: none;
     text-align: right;
     text-transform: uppercase;
+    @include mixin.pc1000px{
+      font-size: 2rem;
+      margin: 0;
+      top: 5%;
+      right: 5%;
+    }
+    @include mixin.phone730px{
+      top: 12%;
+    }
+    @include mixin.phone500px{
+      font-size: 1.5rem;
+    }
     li {
       color: $black;
     }
@@ -272,81 +194,46 @@
       color: $white;
     }
   }
-  .triangle {
+  &__triangle {
     position: absolute;
     clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
     display: block;
     height: 100%;
     width: 100%;
-    // -webkit-transform: rotate(53deg);
-    // -moz-transform: rotate(53deg);
-    // transform: rotate(53deg);
-    // top: -10%;
-    // right: -46%;
     top: 0;
     right: 0;
     background: $accent;
-  }
-}
-@media (max-width: 1000px) {
-  .sectionLead {
-    ul.lead {
-      font-size: 2rem;
-      margin: 0;
-      top: 5%;
-      right: 5%;
-    }
-    .logo {
-      width: 30%;
-    }
-    .triangle {
+    @include mixin.pc1000px{
       clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
     }
   }
 }
-@media (max-width: 700px) {
-  .sectionLead {
-    ul.lead {
-      top: 12%;
-    }
-  }
-}
-@media (max-width: 500px) {
-  .sectionLead {
-    ul.lead {
-      font-size: 1.5rem;
-    }
-  }
-}
+
 .sectionTraits {
   position: relative;
   overflow: hidden;
   padding: 1%;
-  .sectionFont {
+  h2 {
     font-weight: bold;
     text-transform: uppercase;
     color: $white;
-    font-size: 3rem;
-    // font-size: calc(2.6vw);
-  }
-  .subsectionFont {
-    // font-size: calc(2.3vw);
-    font-size: 2.7rem;
-  }
-  .sectionTitle {
-    padding-top: 2em;
+    font-size: 3rem;padding-top: 2em;
     padding-bottom: 2em;
     text-align: center;
+    @include mixin.phone500px{
+      font-size: 2.5rem;
+    }
   }
-  .textFont {
-    // font-size: calc(1.2vw);
-    font-size: 1.4rem;
-    font-weight: 500;
+  h3{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    display: inline-block;
+    @include mixin.phone500px{
+      font-size: 1.5rem;
+    }
   }
-  .customSoftware {
     ul {
-      padding-top: 2em;
-      padding-bottom: 0em;
       list-style-type: none;
       text-align: right;
       padding-left: 0;
@@ -355,54 +242,26 @@
         padding-bottom: 0.5em;
       }
     }
-    p {
+    p { font-size: 1.4rem;
+      font-weight: 500;
       text-align: right;
+      @include mixin.pc1000px{
+        font-size: 1rem;
+      }
+    }
+  .bracket{
+    width: 150px;
+    @include mixin.pc1300px{
+      width: 100px;
+    }
+    @include mixin.phone500px{
+      width: 50px;
     }
   }
-  .pursuitOfKnowledge {
-    text-align: center;
-    padding-bottom: 10%;
-    .subsectionTitle {
-      padding-top: 1em;
-      padding-bottom: 2em;
-    }
-    .lessWide {
-      text-align: center;
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-  }
-  .feedback {
-    .subsectionTitle {
-      padding-top: 1em;
-      padding-bottom: 3em;
-    }
-  }
+ 
 }
 
-@media (max-width: 1000px) {
-  .sectionTraits {
-    .textFont {
-      // font-size: calc(2.3vw);
-      font-size: 1.2rem;
-    }
-  }
-}
-@media (max-width: 500px) {
-  .sectionTraits {
-    .sectionTitle {
-      font-size: 2.5rem;
-      padding-bottom: 1rem;
-    }
-    .subsectionFont {
-      // font-size: calc(2.3vw);
-      font-size: 1.7rem;
-    }
-    .textFont {
-      font-size: 1rem;
-    }
-  }
-}
+
 .sectionTeam {
   min-height: 120vh;
   position: relative;
@@ -642,7 +501,7 @@
     }
   }
   .aboutUsHeader {
-    @include rotatedHeader(30%);
+    @include mixin.rotatedHeader(30%);
     left: 2%;
     top: 38%;
     width: auto;
@@ -754,7 +613,7 @@
     height: calc(3vw);
   }
   .testimonialsHeader {
-    @include rotatedHeader(55%);
+    @include mixin.rotatedHeader(55%);
     left: 0%;
     top: 55%;
     width: auto;

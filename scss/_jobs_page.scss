@@ -1,12 +1,5 @@
 @use "./variables" as *;
 .jobsPage {
-  .subpageHeader {
-    .navbarListItemLink {
-      &.jobsPage {
-        text-decoration: underline;
-      }
-    }
-  }
   .jobsSectionPadding {
     padding-top: 5px;
     @media (min-width: 992px) {
