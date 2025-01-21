@@ -266,92 +266,120 @@
   min-height: 120vh;
   position: relative;
   overflow: hidden;
-  .memberNameFont {
+  h2{
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 3.5rem;
+    @include mixin.pc1000px{
+      font-size: 2.5rem;
+    }
+    @include mixin.phone800px{
+      font-size: 2rem;
+    }
+    @include mixin.phone500px{
+      font-size: 1.2rem;
+    }
+  }
+  .rotate90{
+    transform: rotate(90deg);
+    
+  }
+  .founders{
+    position: absolute;
+    top: 59%;
+    right: -3%;
+    @include mixin.pc1000px{
+      right: -5%;
+    }
+    @include mixin.phone800px{
+      display: none;
+    }
+  }
+  h3 {
     font-weight: 800;
     text-transform: uppercase;
     color: $white;
     font-size: 1.4rem;
-    // font-size: calc(1.7vw);
-  }
-  .memberNameFontBlack {
-    color: $black;
-  }
-  .membersLabel {
-    font-weight: bold;
-    font-size: 3.5rem;
-    // font-size: calc(2.6vw);
-    transform: rotate(90deg);
-  }
-  .textFont {
-    font-weight: bold;
-    color: $white;
-    font-size: 1.2rem;
-    // font-size: calc(1.3vw);
-  }
-  .teamHeader {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    .member1 {
+    &:nth-of-type(1){
       position: absolute;
-      top: 7%;
-      left: 15%;
+    top: 7%;
+    left: 15%;
+    @include mixin.phone800px{
+      bottom: 47%;
+      left: 42%;
+      top: auto;
     }
-    .member2 {
+    @include mixin.phone700px{
+      bottom: 53%;
+        left: 41%;
+    }
+    @include mixin.phone500px{
+      left: 29%;
+        bottom: 54%;
+    }
+    }
+    &:nth-of-type(2){
       position: absolute;
       top: 2%;
       left: 53%;
-    }
-    .membersLabel {
-      position: absolute;
-      top: 59%;
-      right: -3%;
+      @include mixin.phone800px{
+        top: 1%;
+        left: 15%;
+      }
     }
   }
-  .teamInfo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    .social {
-      .icon {
-        width: 1.3em;
-        display: inline-block;
-        overflow: visible;
-      }
+  .aboutText {
+    font-weight: bold;
+    color: $white;
+    font-size: 1.2rem;
+    @include mixin.pc1000px{
+      font-size: 1rem;
     }
-    .member1 {
-      width: 600px;
+    @include mixin.phone800px{
+      font-size: 0.7rem;
+    }
+  }
+  .icon {
+    width: 1.3rem;
+    display: inline-block;
+    overflow: visible;
+  }
+  .about {
+    width: 600px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    @include mixin.pc1000px{
+      width: 400px;
+    }
+    @include mixin.phone800px{
+      width: 200px;
+    }
+  }
+  .about-1{
+    left: 5%;
+    bottom: 27%;
+    @include mixin.phone800px{
       left: 5%;
-      bottom: 27%;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      // .social {
-      //   padding-left: 10%;
-      // }
-      // p {
-      //   padding-left: 10%;
-      // }
+      bottom: 20%;
     }
-    .member2 {
-      width: 600px;
-      display: flex;
-      flex-direction: column;
-      bottom: 55%;
-      position: absolute;
-      right: 5%;
-      .social {
-        text-align: right;
-        // padding-right: 20%;
-      }
-      p {
-        // padding-right: 20%;
-        // padding-left: 20%;
-        text-align: right;
-      }
+    @include mixin.phone500px{
+      bottom: 15%;
+    }
+  }
+  .about-2{
+    bottom: 55%;
+    right: 5%;
+    @include mixin.phone800px{
+      bottom: 66%;
+        right: 5%;
+    }
+    .social {
+      text-align: right;
+    }
+    .aboutText {
+      text-align: right;
     }
   }
   .goodFriends {
@@ -362,160 +390,54 @@
     font-weight: bold;
     color: $white;
     font-size: 3rem;
-    .founders {
-      display: none;
-
-      justify-content: center;
-    }
-    // font-size: calc(4vw);
-  }
-  .triangle {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: 50%;
-    left: -58%;
-    background: rgb(22, 22, 22);
-  }
-}
-@media (max-width: 1000px) {
-  .sectionTeam {
-    .goodFriends {
+    text-transform: lowercase;
+    @include mixin.pc1000px{
       font-size: 2.5rem;
     }
-    .membersLabel {
-      font-size: 2.5rem;
-    }
-    .textFont {
-      font-size: 1rem;
-    }
-    .teamHeader {
-      .membersLabel {
-        right: -5%;
-      }
-    }
-    .teamInfo {
-      .member1 {
-        width: 400px;
-      }
-      .member2 {
-        width: 400px;
-      }
-    }
-  }
-}
-@media (max-width: 800px) {
-  .sectionTeam {
-    .goodFriends {
+    @include mixin.phone800px{
       font-size: 2rem;
       bottom: 2%;
-      .founders {
-        display: flex;
-      }
     }
-    .membersLabel {
-      font-size: 2rem;
-    }
-    .textFont {
-      font-size: 0.7rem;
-    }
-    .teamHeader {
-      .membersLabel {
-        // right: auto;
-        // left: -5%;
-        // top: 36%;
-        // transform: rotate(270deg);
-        display: none;
-      }
-      .member1 {
-        bottom: 47%;
-        left: 42%;
-        top: auto;
-      }
-      .member2 {
-        top: 1%;
-        left: 15%;
-      }
-    }
-    .teamInfo {
-      .member1 {
-        width: 200px;
-        left: 5%;
-        bottom: 20%;
-      }
-      .member2 {
-        width: 200px;
-        bottom: 66%;
-        right: 5%;
-      }
-    }
-  }
-}
-@media (max-width: 700px) {
-  .sectionTeam {
-    .teamHeader {
-      .member1 {
-        bottom: 53%;
-        left: 41%;
-      }
-    }
-  }
-}
-@media (max-width: 500px) {
-  .sectionTeam {
-    .memberNameFont {
-      font-size: 1.2rem;
-    }
-    .teamHeader {
-      .member1 {
-        left: 29%;
-        bottom: 54%;
-      }
-    }
-
-    .goodFriends {
+    @include mixin.phone500px{
       font-size: 1.5rem;
       padding: 1rem;
     }
-    .teamInfo {
-      .member1 {
-        bottom: 15%;
+    .foundersMobile {
+      display: none;
+      justify-content: center;
+      text-transform: uppercase;
+      @include mixin.phone800px{
+        display: flex;
       }
     }
   }
+
 }
+
 .sectionAbout {
   position: relative;
   overflow: hidden;
-  .textFont {
+  p {
     font-weight: 500;
     color: $white;
     font-size: 1.4rem;
-    // font-size: calc(1.5vw);
-    span {
+    @include mixin.pc1000px{
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    @include mixin.phone500px{
+      font-size: 1rem;
+    }
+    .colorYellow {
       color: $accent;
     }
   }
-  .aboutUsHeader {
+  h2 {
     @include mixin.rotatedHeader(30%);
     left: 2%;
     top: 38%;
     width: auto;
-  }
-  .aboutUsText {
-    padding-top: 2em;
-    padding-bottom: 4em;
-    padding-left: 22%;
-    padding-right: 10%;
-  }
-}
-@media (max-width: 1000px) {
-  .sectionAbout {
-    .aboutUsHeader {
+    @include mixin.pc1000px{
       left: 0%;
       top: 0%;
       font-size: 2.7rem;
@@ -524,29 +446,25 @@
       transform: none;
       width: 100%;
     }
-    .aboutUsText {
+    @include mixin.phone500px{
+      font-size: 1.7rem;
+    }
+  }
+  .aboutContainer {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 22%;
+    padding-right: 10%;
+    @include mixin.pc1000px{
       padding-top: 8rem;
       padding-bottom: 4rem;
       padding-left: 5%;
       padding-right: 5%;
     }
-    .textFont {
-      font-size: 1.2rem;
-      text-align: center;
-    }
   }
 }
-@media (max-width: 500px) {
-  .sectionAbout {
-    .aboutUsHeader {
-      font-size: 1.7rem;
-    }
 
-    .textFont {
-      font-size: 1rem;
-    }
-  }
-}
+
 .sectionTestimonials {
   position: relative;
   overflow: hidden;

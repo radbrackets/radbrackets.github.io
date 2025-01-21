@@ -1,3 +1,8 @@
+/*!
+ * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2025 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
+ */
 body {
   overflow-x: hidden;
   font-family: "Montserrat", "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -24,18 +29,9 @@ h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-::-moz-selection {
-  background: #95959e;
-  text-shadow: none;
-}
-
 ::selection {
   background: #95959e;
   text-shadow: none;
-}
-
-img::-moz-selection {
-  background: transparent;
 }
 
 img::selection {
@@ -135,7 +131,6 @@ img::selection {
 .navigation .topMenu {
   align-items: center;
   height: 100%;
-  width: -moz-fit-content;
   width: fit-content;
   flex-direction: row;
   display: flex;
@@ -189,7 +184,6 @@ img::selection {
 }
 @media (max-width: 500px) {
   .navigation {
-    height: -moz-fit-content;
     height: fit-content;
     padding: 2vw;
   }
@@ -425,7 +419,6 @@ img::selection {
   border-color: #ffffff;
 }
 .formBox form button {
-  width: -moz-fit-content;
   width: fit-content;
   background-color: #000;
   border: 1px solid #000;
@@ -667,8 +660,7 @@ img::selection {
 }
 .sectionLead__triangle {
   position: absolute;
-  -webkit-clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
-          clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
+  clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
   display: block;
   height: 100%;
   width: 100%;
@@ -678,8 +670,7 @@ img::selection {
 }
 @media only screen and (max-width: 1000px) {
   .sectionLead__triangle {
-    -webkit-clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
-            clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
+    clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
   }
 }
 
@@ -751,78 +742,151 @@ img::selection {
   position: relative;
   overflow: hidden;
 }
-.sectionTeam .memberNameFont {
+.sectionTeam h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3.5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTeam h2 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTeam h2 {
+    font-size: 1.2rem;
+  }
+}
+.sectionTeam .rotate90 {
+  transform: rotate(90deg);
+}
+.sectionTeam .founders {
+  position: absolute;
+  top: 59%;
+  right: -3%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTeam .founders {
+    right: -5%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .founders {
+    display: none;
+  }
+}
+.sectionTeam h3 {
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
   font-size: 1.4rem;
 }
-.sectionTeam .memberNameFontBlack {
-  color: #000;
-}
-.sectionTeam .membersLabel {
-  font-weight: bold;
-  font-size: 3.5rem;
-  transform: rotate(90deg);
-}
-.sectionTeam .textFont {
-  font-weight: bold;
-  color: #fff;
-  font-size: 1.2rem;
-}
-.sectionTeam .teamHeader {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.sectionTeam .teamHeader .member1 {
+.sectionTeam h3:nth-of-type(1) {
   position: absolute;
   top: 7%;
   left: 15%;
 }
-.sectionTeam .teamHeader .member2 {
+@media only screen and (max-width: 800px) {
+  .sectionTeam h3:nth-of-type(1) {
+    bottom: 47%;
+    left: 42%;
+    top: auto;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .sectionTeam h3:nth-of-type(1) {
+    bottom: 53%;
+    left: 41%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTeam h3:nth-of-type(1) {
+    left: 29%;
+    bottom: 54%;
+  }
+}
+.sectionTeam h3:nth-of-type(2) {
   position: absolute;
   top: 2%;
   left: 53%;
 }
-.sectionTeam .teamHeader .membersLabel {
-  position: absolute;
-  top: 59%;
-  right: -3%;
+@media only screen and (max-width: 800px) {
+  .sectionTeam h3:nth-of-type(2) {
+    top: 1%;
+    left: 15%;
+  }
 }
-.sectionTeam .teamInfo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.sectionTeam .aboutText {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
 }
-.sectionTeam .teamInfo .social .icon {
-  width: 1.3em;
+@media only screen and (max-width: 1000px) {
+  .sectionTeam .aboutText {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .aboutText {
+    font-size: 0.7rem;
+  }
+}
+.sectionTeam .icon {
+  width: 1.3rem;
   display: inline-block;
   overflow: visible;
 }
-.sectionTeam .teamInfo .member1 {
+.sectionTeam .about {
   width: 600px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTeam .about {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .about {
+    width: 200px;
+  }
+}
+.sectionTeam .about-1 {
   left: 5%;
   bottom: 27%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
 }
-.sectionTeam .teamInfo .member2 {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
+@media only screen and (max-width: 800px) {
+  .sectionTeam .about-1 {
+    left: 5%;
+    bottom: 20%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTeam .about-1 {
+    bottom: 15%;
+  }
+}
+.sectionTeam .about-2 {
   bottom: 55%;
-  position: absolute;
   right: 5%;
 }
-.sectionTeam .teamInfo .member2 .social {
+@media only screen and (max-width: 800px) {
+  .sectionTeam .about-2 {
+    bottom: 66%;
+    right: 5%;
+  }
+}
+.sectionTeam .about-2 .social {
   text-align: right;
 }
-.sectionTeam .teamInfo .member2 p {
+.sectionTeam .about-2 .aboutText {
   text-align: right;
 }
 .sectionTeam .goodFriends {
@@ -833,114 +897,60 @@ img::selection {
   font-weight: bold;
   color: #fff;
   font-size: 3rem;
+  text-transform: lowercase;
 }
-.sectionTeam .goodFriends .founders {
-  display: none;
-  justify-content: center;
-}
-.sectionTeam .triangle {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  transform: rotate(45deg);
-  top: 50%;
-  left: -58%;
-  background: rgb(22, 22, 22);
-}
-
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .sectionTeam .goodFriends {
     font-size: 2.5rem;
   }
-  .sectionTeam .membersLabel {
-    font-size: 2.5rem;
-  }
-  .sectionTeam .textFont {
-    font-size: 1rem;
-  }
-  .sectionTeam .teamHeader .membersLabel {
-    right: -5%;
-  }
-  .sectionTeam .teamInfo .member1 {
-    width: 400px;
-  }
-  .sectionTeam .teamInfo .member2 {
-    width: 400px;
-  }
 }
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .sectionTeam .goodFriends {
     font-size: 2rem;
     bottom: 2%;
   }
-  .sectionTeam .goodFriends .founders {
-    display: flex;
-  }
-  .sectionTeam .membersLabel {
-    font-size: 2rem;
-  }
-  .sectionTeam .textFont {
-    font-size: 0.7rem;
-  }
-  .sectionTeam .teamHeader .membersLabel {
-    display: none;
-  }
-  .sectionTeam .teamHeader .member1 {
-    bottom: 47%;
-    left: 42%;
-    top: auto;
-  }
-  .sectionTeam .teamHeader .member2 {
-    top: 1%;
-    left: 15%;
-  }
-  .sectionTeam .teamInfo .member1 {
-    width: 200px;
-    left: 5%;
-    bottom: 20%;
-  }
-  .sectionTeam .teamInfo .member2 {
-    width: 200px;
-    bottom: 66%;
-    right: 5%;
-  }
 }
-@media (max-width: 700px) {
-  .sectionTeam .teamHeader .member1 {
-    bottom: 53%;
-    left: 41%;
-  }
-}
-@media (max-width: 500px) {
-  .sectionTeam .memberNameFont {
-    font-size: 1.2rem;
-  }
-  .sectionTeam .teamHeader .member1 {
-    left: 29%;
-    bottom: 54%;
-  }
+@media only screen and (max-width: 500px) {
   .sectionTeam .goodFriends {
     font-size: 1.5rem;
     padding: 1rem;
   }
-  .sectionTeam .teamInfo .member1 {
-    bottom: 15%;
+}
+.sectionTeam .goodFriends .foundersMobile {
+  display: none;
+  justify-content: center;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .goodFriends .foundersMobile {
+    display: flex;
   }
 }
+
 .sectionAbout {
   position: relative;
   overflow: hidden;
 }
-.sectionAbout .textFont {
+.sectionAbout p {
   font-weight: 500;
   color: #fff;
   font-size: 1.4rem;
 }
-.sectionAbout .textFont span {
+@media only screen and (max-width: 1000px) {
+  .sectionAbout p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionAbout p {
+    font-size: 1rem;
+  }
+}
+.sectionAbout p .colorYellow {
   color: #ecc100;
 }
-.sectionAbout .aboutUsHeader {
+.sectionAbout h2 {
   position: absolute;
   left: 0;
   top: 30%;
@@ -954,15 +964,8 @@ img::selection {
   top: 38%;
   width: auto;
 }
-.sectionAbout .aboutUsText {
-  padding-top: 2em;
-  padding-bottom: 4em;
-  padding-left: 22%;
-  padding-right: 10%;
-}
-
-@media (max-width: 1000px) {
-  .sectionAbout .aboutUsHeader {
+@media only screen and (max-width: 1000px) {
+  .sectionAbout h2 {
     left: 0%;
     top: 0%;
     font-size: 2.7rem;
@@ -971,29 +974,31 @@ img::selection {
     transform: none;
     width: 100%;
   }
-  .sectionAbout .aboutUsText {
+}
+@media only screen and (max-width: 500px) {
+  .sectionAbout h2 {
+    font-size: 1.7rem;
+  }
+}
+.sectionAbout .aboutContainer {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  padding-left: 22%;
+  padding-right: 10%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionAbout .aboutContainer {
     padding-top: 8rem;
     padding-bottom: 4rem;
     padding-left: 5%;
     padding-right: 5%;
   }
-  .sectionAbout .textFont {
-    font-size: 1.2rem;
-    text-align: center;
-  }
 }
-@media (max-width: 500px) {
-  .sectionAbout .aboutUsHeader {
-    font-size: 1.7rem;
-  }
-  .sectionAbout .textFont {
-    font-size: 1rem;
-  }
-}
+
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(0deg, #161616, #1e1e1e 80%) no-repeat;
+  background: linear-gradient(0deg, #161616, rgb(29.65, 29.65, 29.65) 80%) no-repeat;
   padding-bottom: 3em;
 }
 .sectionTestimonials .sectionTitle {
@@ -1027,7 +1032,6 @@ img::selection {
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  height: -moz-fit-content;
   height: fit-content;
 }
 @media (min-width: 1400px) {
@@ -1133,6 +1137,8 @@ img::selection {
   display: block;
   height: 100%;
   width: 100%;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
   transform: rotate(45deg);
   top: -90%;
   left: -68%;
@@ -1349,4 +1355,4 @@ img::selection {
 }
 .jobsPage .card-body {
   color: #495057;
-}/*# sourceMappingURL=styles.css.map */
+}
