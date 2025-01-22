@@ -331,6 +331,66 @@ img::selection {
   }
 }
 
+.sectionContact {
+  position: relative;
+  overflow: hidden;
+  background-color: #ecc100;
+}
+.sectionContact .box {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionContact .box {
+    padding: 2rem 0;
+  }
+}
+.sectionContact .box .logo {
+  padding-top: 2%;
+  margin-left: 5%;
+  width: 45%;
+  position: relative;
+  z-index: 2;
+}
+.sectionContact .box .icon {
+  width: 6%;
+  display: inline-block;
+  padding: 1%;
+}
+.sectionContact .box .contactUsTitle {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 3rem;
+}
+.sectionContact .box .contactIcons {
+  text-align: center;
+}
+.sectionContact .box .triangle {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -90%;
+  left: -68%;
+  background: #161616;
+}
+.sectionContact .box .orTitle {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1000px) {
+  .sectionContact .contactUsTitle {
+    font-size: 1.7rem;
+  }
+}
 .footer {
   display: flex;
   box-sizing: border-box;
@@ -462,85 +522,8 @@ img::selection {
   font-weight: bold;
 }
 
-.fontColorAccent {
+.colorYellow {
   color: #ecc100;
-}
-
-.bgColorPageYellow {
-  background-color: #ecc100;
-}
-
-.bgColorPageDarkGray {
-  background-color: #161616;
-}
-
-.bgImageTeam {
-  background-image: url("/img/bg/our-team.jpg");
-  background-size: cover;
-  background-position: 18% 0%;
-}
-
-@media (max-width: 1000px) {
-  .bgImageTeam {
-    background-image: url("/img/bg/our-team.jpg");
-    background-size: cover;
-    background-position: 33% 0%;
-  }
-}
-@media (max-width: 800px) {
-  .bgImageTeam {
-    background-position: 33% 14%;
-    background-image: url("/img/bg/our-team-mobile.jpg");
-    background-size: cover;
-  }
-}
-.bgImageLogo {
-  background-image: url("/img/logo/logo-radbrackets.svg");
-  background-size: cover;
-  padding-bottom: 29.25%;
-}
-
-.bgImageLogoLight {
-  background-image: url("/img/logo/logo-radbrackets-light.svg");
-  background-size: cover;
-  padding-bottom: 29.27%;
-}
-
-.iconLinkedin {
-  background-image: url("/img/icons/linkedin.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-}
-
-.iconTwitter {
-  background-image: url("/img/icons/twitter.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-  width: 100%;
-}
-
-.iconMail {
-  background-image: url("/img/icons/mail.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-  width: 100%;
-}
-
-.iconLinkedinLight {
-  background-image: url("/img/icons/linkedin-light.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 95.7%;
-}
-
-.iconTwitterLight {
-  background-image: url("/img/icons/twitter-light.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 95.7%;
 }
 
 .sectionHero {
@@ -602,19 +585,19 @@ img::selection {
   background-image: url("/img/bg/these-people.jpg");
   background-size: cover;
 }
-.sectionLead__logo {
+.sectionLead .logo {
   position: absolute;
   top: 5%;
   left: 5%;
   width: 300px;
 }
 @media only screen and (max-width: 1000px) {
-  .sectionLead__logo {
+  .sectionLead .logo {
     width: 150px;
   }
 }
 @media only screen and (max-width: 500px) {
-  .sectionLead__logo {
+  .sectionLead .logo {
     width: 100px;
   }
 }
@@ -658,7 +641,7 @@ img::selection {
   font-weight: bold;
   color: #fff;
 }
-.sectionLead__triangle {
+.sectionLead .triangle {
   position: absolute;
   clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
   display: block;
@@ -669,7 +652,7 @@ img::selection {
   background: #ecc100;
 }
 @media only screen and (max-width: 1000px) {
-  .sectionLead__triangle {
+  .sectionLead .triangle {
     clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
   }
 }
@@ -678,6 +661,12 @@ img::selection {
   position: relative;
   overflow: hidden;
   padding: 1%;
+  background-color: #ecc100;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTraits {
+    padding: 2rem 0;
+  }
 }
 .sectionTraits h2 {
   font-weight: bold;
@@ -741,6 +730,20 @@ img::selection {
   min-height: 120vh;
   position: relative;
   overflow: hidden;
+  background-image: url("/img/bg/our-team.jpg");
+  background-size: cover;
+  background-position: 18% 0%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTeam {
+    background-position: 33% 0%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam {
+    background-position: 33% 14%;
+    background-image: url("/img/bg/our-team-mobile.jpg");
+  }
 }
 .sectionTeam h2 {
   font-weight: 800;
@@ -930,6 +933,7 @@ img::selection {
 .sectionAbout {
   position: relative;
   overflow: hidden;
+  background-color: #161616;
 }
 .sectionAbout p {
   font-weight: 500;
@@ -946,9 +950,6 @@ img::selection {
   .sectionAbout p {
     font-size: 1rem;
   }
-}
-.sectionAbout p .colorYellow {
-  color: #ecc100;
 }
 .sectionAbout h2 {
   position: absolute;
@@ -999,58 +1000,9 @@ img::selection {
   position: relative;
   overflow: hidden;
   background: linear-gradient(0deg, #161616, rgb(29.65, 29.65, 29.65) 80%) no-repeat;
-  padding-bottom: 3em;
+  padding-bottom: 3rem;
 }
-.sectionTestimonials .sectionTitle {
-  padding-top: 2em;
-  padding-bottom: 1em;
-}
-.sectionTestimonials .sectionTitle__testimonials {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-.sectionTestimonials .sectionFont {
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 2.7rem;
-}
-.sectionTestimonials .textFont {
-  font-size: 1.4rem;
-  color: #fff;
-  margin-top: 1em;
-}
-.sectionTestimonials .carousel {
-  padding-left: 5%;
-  padding-right: 10%;
-}
-.sectionTestimonials .carousel-content {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: fit-content;
-}
-@media (min-width: 1400px) {
-  .sectionTestimonials .carousel-content {
-    min-height: 530px;
-  }
-}
-.sectionTestimonials .carousel-control-prev {
-  left: -9%;
-}
-.sectionTestimonials .carousel-control-next {
-  right: -4%;
-}
-.sectionTestimonials .carousel-control-next-icon,
-.sectionTestimonials .carousel-control-prev-icon {
-  width: 3vw;
-  height: 3vw;
-}
-.sectionTestimonials .testimonialsHeader {
+.sectionTestimonials h2 {
   position: absolute;
   left: 0;
   top: 55%;
@@ -1061,105 +1013,116 @@ img::selection {
   width: 100%;
   font-weight: bold;
   left: 0%;
-  top: 55%;
+  top: 50%;
   width: auto;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials h2 {
+    left: 0%;
+    top: 0%;
+    font-size: 2.7rem;
+    padding: 2rem;
+    text-align: center;
+    transform: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTestimonials h2 {
+    font-size: 1.7rem;
+  }
+}
+.sectionTestimonials h3 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.7rem;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials h3 {
+    padding-top: 6rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTestimonials h3 {
+    font-size: 1.4rem;
+  }
+}
+.sectionTestimonials .carousel {
+  padding-left: 5%;
+  padding-right: 10%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+.sectionTestimonials .carousel-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: fit-content;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.sectionTestimonials .carousel-content p {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-top: 1em;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTestimonials .carousel-content p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .sectionTestimonials .carousel-content {
+    min-height: 530px;
+  }
+}
+.sectionTestimonials .carousel-control-prev {
+  left: -9%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-control-prev {
+    left: 5%;
+    width: auto;
+  }
+}
+.sectionTestimonials .carousel-control-next {
+  right: -4%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-control-next {
+    right: 5%;
+    width: auto;
+  }
+}
+.sectionTestimonials .carousel-control-next-icon,
+.sectionTestimonials .carousel-control-prev-icon {
+  width: 3vw;
+  height: 3vw;
 }
 .sectionTestimonials .quotationMark {
   font-size: 4vw;
   color: #fff;
 }
 
-@media (max-width: 1000px) {
-  .sectionTestimonials .sectionTitle {
-    padding-top: 2em;
-    padding-bottom: 1em;
-  }
-  .sectionTestimonials .sectionTitle__testimonials {
-    display: flex;
-  }
-  .sectionTestimonials .textFont {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .sectionTestimonials .carousel-control-prev {
-    left: 5%;
-    width: auto;
-  }
-  .sectionTestimonials .carousel-control-next {
-    right: 5%;
-    width: auto;
-  }
-  .sectionTestimonials .carousel {
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-  .sectionTestimonials .carousel-content {
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 500px) {
-  .sectionTestimonials .textFont {
-    font-size: 1rem;
-  }
-  .sectionTestimonials .sectionFont {
-    font-size: 1.7rem;
-  }
-}
-.sectionContact {
-  position: relative;
-  overflow: hidden;
-}
-.sectionContact .logo {
-  padding-top: 2%;
-  margin-left: 5%;
-  width: 45%;
-  position: relative;
-  z-index: 2;
-}
-.sectionContact .icon {
-  width: 6%;
-  display: inline-block;
-  padding: 1%;
-}
-.sectionContact .contactUsTitle {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 3rem;
-}
-.sectionContact .contactIcons {
-  text-align: center;
-}
-.sectionContact .triangle {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: -90%;
-  left: -68%;
-  background: #161616;
-}
-.sectionContact .orTitle {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 2.5rem;
-}
-
-@media (max-width: 1000px) {
-  .bgColorPageYellow {
-    padding: 2rem 0;
-  }
-  .sectionContact .contactUsTitle {
-    font-size: 1.7rem;
-  }
-}
 .offerPage .offerSectionPadding {
   padding-top: 90px;
 }

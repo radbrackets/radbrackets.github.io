@@ -1,4 +1,5 @@
 @use "./colors" as colors;
+@use "./mixin" as mixin;
 @use "./variables" as *;
 body {
   overflow-x: hidden;
@@ -328,6 +329,69 @@ img::selection {
     line-height: 28px;
   }
 }
+.sectionContact {
+  position: relative;
+  overflow: hidden;
+  background-color: colors.$accent;
+ .box{
+  box-sizing: border-box;
+  @include mixin.pc1000px{
+    padding: 2rem 0;
+  }
+  .logo {
+    padding-top: 2%;
+    margin-left: 5%;
+    width: 45%;
+    position: relative;
+    z-index: 2;
+  }
+  .icon {
+    width: 6%;
+    display: inline-block;
+    padding: 1%;
+  }
+  .contactUsTitle {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $black;
+    font-size: 3rem;
+  }
+  .contactIcons {
+    text-align: center;
+  }
+  .triangle {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -90%;
+    left: -68%;
+    background: $darkGrey;
+  }
+  .orTitle {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    // font-size: 2vw;
+    font-size: 2.5rem;
+  }
+
+ }
+  
+}
+@media (max-width: 1000px) {
+  .sectionContact {
+    .contactUsTitle {
+      font-size: 1.7rem;
+    }
+  }
+}
+
 .footer {
   display: flex;
   box-sizing: border-box;

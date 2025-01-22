@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./mixin" as mixin;
+@use "./colors" as colors;
 @use "sass:color";
 .homepage .container-fluid {
   max-width: none;
@@ -10,92 +11,8 @@
 .fontStyleBold {
   font-weight: bold;
 }
-.fontColorAccent {
+.colorYellow {
   color: $accent;
-}
-.bgColorPageYellow {
-  background-color: $accent;
-}
-.bgColorPageDarkGray {
-  background-color: $darkGrey;
-}
-
-// .bgImageLead {
-//   height: 100vh;
-//   background-image: url("/img/bg/these-people.jpg");
-//   background-size: cover;
-//   // padding-bottom: 56.25%; // 1080 / 1920
-// }
-.bgImageTeam {
-  background-image: url("/img/bg/our-team.jpg");
-  background-size: cover;
-  // padding-bottom: 65%;
-  background-position: 18% 0%;
-  //padding-bottom: 70.83%; // 1360 / 1920
-}
-@media (max-width: 1000px) {
-  .bgImageTeam {
-    background-image: url("/img/bg/our-team.jpg");
-    background-size: cover;
-    background-position: 33% 0%;
-    //padding-bottom: 70.83%; // 1360 / 1920
-  }
-}
-@media (max-width: 800px) {
-  .bgImageTeam {
-    background-position: 33% 14%;
-    background-image: url("/img/bg/our-team-mobile.jpg");
-    background-size: cover;
-    //padding-bottom: 70.83%; // 1360 / 1920
-  }
-}
-.bgImageLogo {
-  background-image: url("/img/logo/logo-radbrackets.svg");
-  background-size: cover;
-  padding-bottom: 29.25%; // 86 / 294
-}
-.bgImageLogoLight {
-  background-image: url("/img/logo/logo-radbrackets-light.svg");
-  background-size: cover;
-  padding-bottom: 29.27%; // 260 / 888
-}
-
-.iconLinkedin {
-  background-image: url("/img/icons/linkedin.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-  // padding-bottom: 27.63%; // 76 / 275
-}
-.iconTwitter {
-  background-image: url("/img/icons/twitter.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-  width: 100%;
-  // padding-bottom: 27.63%; // 76 / 275
-}
-.iconMail {
-  background-image: url("/img/icons/mail.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-  width: 100%;
-  // padding-bottom: 27.63%; // 76 / 275
-}
-.iconLinkedinLight {
-  background-image: url("/img/icons/linkedin-light.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 95.7%;
-  //padding-bottom: 42.10%; // 40 / 95
-}
-.iconTwitterLight {
-  background-image: url("/img/icons/twitter-light.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 95.7%;
-  // padding-bottom: 42.10%; // 40 / 95
 }
 
 .sectionHero {
@@ -148,7 +65,7 @@
   height: 100vh;
   background-image: url("/img/bg/these-people.jpg");
   background-size: cover;
-  &__logo {
+  .logo {
     position: absolute;
     top: 5%;
     left: 5%;
@@ -194,7 +111,7 @@
       color: $white;
     }
   }
-  &__triangle {
+  .triangle {
     position: absolute;
     clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
     display: block;
@@ -213,6 +130,10 @@
   position: relative;
   overflow: hidden;
   padding: 1%;
+  background-color: colors.$accent;
+  @include mixin.pc1000px{
+    padding: 2rem 0;
+  }
   h2 {
     font-weight: bold;
     text-transform: uppercase;
@@ -261,11 +182,20 @@
  
 }
 
-
 .sectionTeam {
   min-height: 120vh;
   position: relative;
   overflow: hidden;
+  background-image: url("/img/bg/our-team.jpg");
+  background-size: cover;
+  background-position: 18% 0%;
+  @include mixin.pc1000px{
+    background-position: 33% 0%;
+  }
+  @include mixin.phone800px{
+    background-position: 33% 14%;
+    background-image: url("/img/bg/our-team-mobile.jpg");
+  }
   h2{
     font-weight: 800;
     text-transform: uppercase;
@@ -411,12 +341,12 @@
       }
     }
   }
-
 }
 
 .sectionAbout {
   position: relative;
   overflow: hidden;
+  background-color: colors.$darkGrey;
   p {
     font-weight: 500;
     color: $white;
@@ -427,9 +357,6 @@
     }
     @include mixin.phone500px{
       font-size: 1rem;
-    }
-    .colorYellow {
-      color: $accent;
     }
   }
   h2 {
@@ -450,6 +377,7 @@
       font-size: 1.7rem;
     }
   }
+
   .aboutContainer {
     padding-top: 2rem;
     padding-bottom: 4rem;
@@ -464,7 +392,6 @@
   }
 }
 
-
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
@@ -474,34 +401,47 @@
       color.adjust($darkGrey, $lightness: 3%) 80%
     )
     no-repeat;
-  padding-bottom: 3em;
-  .sectionTitle {
-    padding-top: 2em;
-    padding-bottom: 1em;
-    &__testimonials {
-      display: none;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 2rem;
+  padding-bottom: 3rem;
+  h2 {
+    @include mixin.rotatedHeader(55%);
+    left: 0%;
+    top: 50%;
+    width: auto;
+    @include mixin.pc1000px{
+      left: 0%;
+      top: 0%;
+      font-size: 2.7rem;
+      padding: 2rem;
+      text-align: center;
+      transform: none;
+      width: 100%;
+    }
+    @include mixin.phone500px{
+      font-size: 1.7rem;
     }
   }
-  .sectionFont {
+  h3{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     color: $white;
     font-size: 2.7rem;
-    // font-size: calc(2.6vw);
-  }
-  .textFont {
-    // font-size: calc(1.5vw);
-    font-size: 1.4rem;
-    color: $white;
-    margin-top: 1em;
+    @include mixin.pc1000px{
+      padding-top: 6rem;
+    }
+    @include mixin.phone500px{
+      font-size: 1.4rem;
+    }
   }
   .carousel {
     padding-left: 5%;
     padding-right: 10%;
+    @include mixin.pc1000px{
+      padding-right: 10%;
+      padding-left: 10%;
+    }
   }
   .carousel-content {
     display: flex;
@@ -509,138 +449,48 @@
     flex-direction: column;
     justify-content: flex-start;
     height: fit-content;
-    // @media (min-width: 576px) {
-    //   height: 180px;
-    // }
-    // @media (min-width: 768px) {
-    //   height: 320px;
-    // }
+    @include mixin.pc1000px{
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+      font-size: 1.4rem;
+    color: $white;
+    margin-top: 1em;
+    @include mixin.pc1000px{
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    @include mixin.phone500px{
+      font-size: 1rem;
+    }
+    }
     @media (min-width: 1400px) {
       min-height: 530px;
     }
   }
   .carousel-control-prev {
     left: -9%;
+    @include mixin.pc1000px{
+      left: 5%;
+      width: auto;
+    }
   }
   .carousel-control-next {
     right: -4%;
+    @include mixin.pc1000px{
+      right: 5%;
+      width: auto;
+    }
   }
   .carousel-control-next-icon,
   .carousel-control-prev-icon {
     width: calc(3vw);
     height: calc(3vw);
   }
-  .testimonialsHeader {
-    @include mixin.rotatedHeader(55%);
-    left: 0%;
-    top: 55%;
-    width: auto;
-  }
   .quotationMark {
     font-size: calc(4vw);
     color: $white;
   }
 }
-@media (max-width: 1000px) {
-  .sectionTestimonials {
-    .sectionTitle {
-      padding-top: 2em;
-      padding-bottom: 1em;
-      &__testimonials {
-        display: flex;
-      }
-    }
-    .textFont {
-      font-size: 1.2rem;
-      text-align: center;
-    }
-    .carousel-control-prev {
-      left: 5%;
-      width: auto;
-    }
-    .carousel-control-next {
-      right: 5%;
-      width: auto;
-    }
-    .carousel {
-      padding-right: 10%;
-      padding-left: 10%;
-    }
-    .carousel-content {
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}
-@media (max-width: 500px) {
-  .sectionTestimonials {
-    .textFont {
-      font-size: 1rem;
-    }
-    .sectionFont {
-      font-size: 1.7rem;
-    }
-  }
-}
-.sectionContact {
-  position: relative;
-  overflow: hidden;
-  .logo {
-    padding-top: 2%;
-    margin-left: 5%;
-    width: 45%;
-    position: relative;
-    z-index: 2;
-  }
-  .icon {
-    width: 6%;
-    display: inline-block;
-    padding: 1%;
-  }
-  .contactUsTitle {
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $black;
-    font-size: 3rem;
-    // font-size: calc(4vw);
-  }
-  // .address {
-  //   text-align: center;
-  //   font-size: calc(1.5vw);
-  // }
-  .contactIcons {
-    text-align: center;
-    // padding-bottom: 15%;
-  }
-  .triangle {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: -90%;
-    left: -68%;
-    background: $darkGrey;
-  }
-  .orTitle {
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #000;
-    // font-size: 2vw;
-    font-size: 2.5rem;
-  }
-}
-@media (max-width: 1000px) {
-  .bgColorPageYellow {
-    padding: 2rem 0;
-  }
-  .sectionContact {
-    .contactUsTitle {
-      font-size: 1.7rem;
-    }
-  }
-}
+
