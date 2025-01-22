@@ -135,6 +135,7 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="navigation">
       <span class="logo"></span>
 
@@ -161,19 +162,18 @@
         <a href="jobs.html">Join us</a>
       </nav>
     </div>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- section: header -->
+    
+     <!-- section: hero -->
     <section
       id="home"
-      class="sectionHeader bgImageHeader d-flex flex-col w-100 vh-100"
+      class="sectionHero d-flex flex-col w-100 vh-100"
     >
       <img
         src="/img/logo/logo-yellow-white.png"
-        class="bgImageHeader__logo-mobile"
+        class="sectionHero__logoMobile"
       />
-      <!-- top menu -->
 
-      <nav class="rightMenu">
+      <nav class="sectionHero__rightMenu">
         <ul>
           <li class="fontStyleBold">Listen</li>
           <li>Learn</li>
@@ -183,81 +183,12 @@
         </ul>
       </nav>
 
-      <!-- Chrome SVG as backgroung display bug fix -->
-      <div style="width: 1px; height: 1px">
-        <object
-          type="image/svg+xml"
-          data="img/logo/logo-radbrackets.svg"
-          width="1"
-          height="1"
-        ></object>
-        <object
-          type="image/svg+xml"
-          data="img/logo/logo-radbrackets-light.svg"
-          width="1"
-          height="1"
-        ></object>
-
-        <object
-          type="image/svg+xml"
-          data="img/logo/bracket-1.svg"
-          width="1"
-          height="1"
-        ></object>
-        <object
-          type="image/svg+xml"
-          data="img/logo/bracket-2.svg"
-          width="1"
-          height="1"
-        ></object>
-        <object
-          type="image/svg+xml"
-          data="img/logo/bracket-3.svg"
-          width="1"
-          height="1"
-        ></object>
-
-        <object
-          type="image/svg+xml"
-          data="img/icons/linkedin.svg"
-          width="1"
-          height="1"
-        ></object>
-        <object
-          type="image/svg+xml"
-          data="img/icons/twitter.svg"
-          width="1"
-          height="1"
-        ></object>
-        <object
-          type="image/svg+xml"
-          data="img/icons/mail.svg"
-          width="1"
-          height="1"
-        ></object>
-        <object
-          type="image/svg+xml"
-          data="img/icons/linkedin-light.svg"
-          width="1"
-          height="1"
-        ></object>
-        <object
-          type="image/svg+xml"
-          data="img/icons/twitter-light.svg"
-          width="1"
-          height="1"
-        ></object>
-      </div>
     </section>
 
     <!-- section: lead -->
-    <div class="sectionLead bgImageLead">
+    <div class="sectionLead">
       <div class="triangle"></div>
-
-      <div class="logo">
-        <div class="bgImageLogo"></div>
-      </div>
-      <div>
+<img src='/img/logo/logo-radbrackets.svg' alt='radbrackets' class="logo"/>
         <ul class="lead">
           <li>These are people</li>
           <li>and relations</li>
@@ -265,112 +196,92 @@
           <li>software</li>
           <li class="huge">GREAT</li>
         </ul>
-      </div>
     </div>
 
     <!-- section: traits -->
     <div class="sectionTraits bgColorPageYellow pb-5">
       <div class="d-flex flex-column px-4 px-lg-2">
-        <h2 class="sectionFont sectionTitle" id="traits">
+        <h2 id="traits">
           Let us help you grow your business.
         </h2>
         <div class="d-flex flex-column flex-lg-row">
-          <div class="col">
-            <div class="customSoftware">
-              <div class="sectionFont subsectionFont subsectionTitle">
+          <div class="col px-3">
                 <ul class="text-center text-lg-end pt-0 pt-lg-4">
-                  <li class="d-lg-block d-inline">Custom</li>
-                  <li class="d-lg-block d-inline">software</li>
+                  <li class="d-lg-block d-inline"><h3>Custom</h3></li>
+                  <li class="d-lg-block d-inline"><h3>software</h3></li>
                 </ul>
-              </div>
-              <p class="textFont text-center text-lg-end">
+              <p class="text-center text-lg-end">
                 We are a small software house that implements tailor-made
                 software.<br />
                 We believe that the best applications have their source in
                 thorough knowledge of business domain, as well as effective
                 client communication.
               </p>
-            </div>
           </div>
-          <div class="col-12 col-lg-5">
-            <div class="pursuitOfKnowledge pb-0 pb-lg-5">
-              <div class="brackets">
-                <div class="bracket1"><div class="bracketBg"></div></div>
-                <div class="bracket2"><div class="bracketBg"></div></div>
-                <div class="bracket3"><div class="bracketBg"></div></div>
+          <div class="col-12 col-lg-5 px-3">
+            <div class="text-center pb-0 pb-lg-5">
+              <div class="text-center">
+                <img src='/img/logo/bracket-1.svg' class='bracket mx-1'/>
+                <img src='/img/logo/bracket-2.svg' class='bracket mx-1'/>
+                <img src='/img/logo/bracket-3.svg' class='bracket mx-1'/>
               </div>
 
-              <div
-                class="sectionFont subsectionFont subsectionTitle pb-3 pb-lg-4"
+              <h3
+                class="pt-3 pb-3 pb-lg-4"
               >
                 Pursuit of knowledge
-              </div>
-
-              <p class="textFont lessWide">
+            </h3>
+              <p class="text-center">
                 We are lifelong learners who always opt for tools that fully
-                meet customer needs.<br />
+                meet customer needs.
                 We rely on Test Driven Development and implement our products in
                 the heart of Domain Driven Design.
               </p>
             </div>
           </div>
-          <div class="col">
-            <div class="feedback">
-              <div
-                class="sectionFont subsectionFont subsectionTitle pb-3 pb-lg-5 text-lg-start text-center"
+          <div class="col px-3 text-center text-lg-start">
+              <h3
+                class="pb-3 pb-lg-5"
               >
                 Feedback
-              </div>
+              </h3>
 
-              <p class="textFont text-lg-start text-center">
+              <p class="text-lg-start text-center ">
                 We strongly believe that systematic client feedback, enabling us
                 to make project adjustments regularly, is a key to success.<br />
                 Therefore, Continuous Delivery and agile methodology are
                 essential in our collaboration.
               </p>
             </div>
-          </div>
+          
         </div>
       </div>
     </div>
 
     <!-- section: team -->
-    <div class="sectionTeam bgImageTeam" id="team">
-      <!-- <div class="triangle"></div> -->
-      <div class="container-fluid">
-        <div class="teamHeader">
-          <div class="memberNameFont membersLabel">Founders</div>
-          <div class="member1">
-            <div class="memberNameFont">Patryk Zieliński</div>
-          </div>
-
-          <div class="member2">
-            <div class="memberNameFont">Rafał Piotrowski</div>
-          </div>
-        </div>
-
-        <div class="teamInfo">
-          <div class="goodFriends">
-            <span class="founders">Founders<br /></span>Good friends, excellent
+    <div class="sectionTeam" id="team">
+          <h2 class="rotate90 founders">Founders</h2>
+          <h3>Patryk Zieliński</h3>
+          <h3>Rafał Piotrowski</h3>
+          <h2 class="goodFriends">
+            <span class="foundersMobile">Founders<br /></span>Good friends, excellent
             developers.
-          </div>
-          <div class="member1">
+          </h2>
+          <div class="about about-1">
             <div class="social">
-              <div class="icon">
                 <a
                   href="https://linkedin.com/in/patryk-zielinski"
                   target="_blank"
                 >
-                  <div class="iconLinkedinLight"></div>
+                <img src='/img/icons/linkedin-light.svg' alt='linkedin' class='icon'/>
                 </a>
-              </div>
-              <div class="icon">
+              
                 <a href="https://twitter.com/zielinski1983" target="_blank">
-                  <div class="iconTwitterLight"></div>
+                  <img src='/img/icons/twitter-light.svg' alt='twitter' class='icon'/>
                 </a>
-              </div>
+              
             </div>
-            <p class="textFont">
+            <p class="aboutText">
               Local DDD community co-organiser, Java/JS developer. Domain-Driven
               Design practitioner for more than 6 years. Believes that the key
               to success is a solid understanding of client needs. TDD and
@@ -380,63 +291,57 @@
             </p>
           </div>
 
-          <div class="member2">
+          <div class="about about-2">
             <div class="social">
-              <div class="icon">
                 <a
                   href="https://linkedin.com/in/piotrowskirafal"
                   target="_blank"
                 >
-                  <div class="iconLinkedinLight"></div>
+                <img src='/img/icons/linkedin-light.svg' alt='linkedin' class='icon'/>
                 </a>
-              </div>
-              <div class="icon">
                 <a href="https://twitter.com/RafalPiotrowski" target="_blank">
-                  <div class="iconTwitterLight"></div>
+                  <img src='/img/icons/twitter-light.svg' alt='twitter' class='icon'/>
                 </a>
-              </div>
             </div>
-            <p class="textFont">
+            <p class="aboutText">
               Pragmatic Fullstack developer, clean code freak.<br />
               Software crafter who is passionate about Domain-Driven Design.<br />
               Connected with Java for more than ten years.
             </p>
           </div>
-        </div>
-      </div>
     </div>
 
     <!-- section: about -->
-    <div class="sectionAbout bgColorPageDarkGray d-flex flex-row">
-      <div class="aboutUsHeader">About us</div>
+    <div class="sectionAbout d-flex flex-row">
+      <h2>About us</h2>
 
-      <div class="aboutUsText">
-        <p class="textFont">
-          We are a <span>good pack of friends</span>, who were joined by the
-          same <span>values and views about software development</span>. We know
+      <div class="aboutContainer">
+        <p>
+          We are a <span class='colorYellow'>good pack of friends</span>, who were joined by the
+          same <span class='colorYellow'>values and views about software development</span>. We know
           that an excellent team is nearly half the story.<br />
-          We originate from <span>Java backend</span> and focus on
-          <span>well designed, tested, and clean solutions</span>.
+          We originate from <span class='colorYellow'>Java backend</span> and focus on
+          <span class='colorYellow'>well designed, tested, and clean solutions</span>.
         </p>
-        <p class="textFont">
+        <p>
           Software craftsmanship is where we deliver the most value. At the same
           time, we trust that thorough
-          <span>understanding of business needs</span> and
-          <span>agile delivery</span> are crucial for successful IT projects. We
-          concentrate more on <span>proper architecture</span> rather than
+          <span class='colorYellow'>understanding of business needs</span> and
+          <span class='colorYellow'>agile delivery</span> are crucial for successful IT projects. We
+          concentrate more on <span class='colorYellow'>proper architecture</span> rather than
           frameworks or languages.
         </p>
-        <p class="textFont">
+        <p>
           What we value in our day to day work is
-          <span>knowledge exchange</span>. Pair programming and code review are
-          must - do practices. We rely on <span>test driven development</span>,
-          as it provides <span>higher productivity</span> and makes the
-          <span>code more readable</span>.
+          <span class='colorYellow'>knowledge exchange</span>. Pair programming and code review are
+          must - do practices. We rely on <span class='colorYellow'>test driven development</span>,
+          as it provides <span class='colorYellow'>higher productivity</span> and makes the
+          <span class='colorYellow'>code more readable</span>.
         </p>
-        <p class="textFont">
+        <p>
           We also believe that a few tests are more valuable than often outdated
           documentation. Moreover,
-          <span>we find complicated business rules really interesting</span>
+          <span class='colorYellow'>we find complicated business rules really interesting</span>
           as they create a small unknown world that can be implemented in domain
           driven design.
         </p>
@@ -445,15 +350,11 @@
 
     <!-- section: testimonials -->
     <div class="sectionTestimonials">
-      <div class="row justify-content-center">
-        <h2 class="sectionFont sectionTitle fontStyleBold">
-          <span class="sectionTitle__testimonials">TESTIMONIALS</span>People
-          say...
-        </h2>
-      </div>
+      <h2 class="testimonialsHeader">testimonials</h2>
+      <h3>People say...</h3>
+     
       <div class="row">
         <div class="col-2 d-lg-flex d-none">
-          <div class="testimonialsHeader">testimonials</div>
         </div>
         <div class="col">
           <div
@@ -465,14 +366,14 @@
               <div class="carousel-item active">
                 <div class="carousel-content">
                   <i class="quotationMark fas fa-quote-right"></i>
-                  <p class="textFont">
+                  <p>
                     RadBrackets team helped us with gathering requirements and
                     designing architecture for our flag project OLAF (Assistent
                     of Smart Treatment). They were part of our core team and
-                    <span class="fontColorAccent"
+                    <span class="colorYellow"
                       >mentored other team members</span
                     >. I can recommend RadBrackets to anyone who needs
-                    <span class="fontColorAccent"
+                    <span class="colorYellow"
                       >professional custom development service</span
                     >.
                   </p>
@@ -484,12 +385,12 @@
               <div class="carousel-item">
                 <div class="carousel-content">
                   <i class="quotationMark fas fa-quote-right"></i>
-                  <p class="textFont">
+                  <p>
                     Patryk and Rafal
-                    <span class="fontColorAccent"
+                    <span class="colorYellow"
                       >changed my perspective on software agencies</span
                     >. They
-                    <span class="fontColorAccent"
+                    <span class="colorYellow"
                       >care about building the product</span
                     >
                     that the business needs. Their domain-oriented approach
@@ -504,15 +405,15 @@
               <div class="carousel-item">
                 <div class="carousel-content">
                   <i class="quotationMark fas fa-quote-right"></i>
-                  <p class="textFont">
+                  <p>
                     Audibene engaged Radbrackets to provide consulting for java
                     engineering, ranging from architectural design to
                     development capacity.
-                    <span class="fontColorAccent"
+                    <span class="colorYellow"
                       >The quality of work, execution and delivery</span
                     >
                     within tight deadlines
-                    <span class="fontColorAccent">has been exceptional.</span>
+                    <span class="colorYellow">has been exceptional.</span>
                     We continue to partner with Radbrackets to increase the
                     potential of our engineering organization. Thank you!!.
                   </p>
@@ -550,12 +451,11 @@
         </div>
       </div>
     </div>
+    
     <div class="sectionContact" id="contact">
       <div class="triangle"></div>
-      <div class="bgColorPageYellow">
-        <div class="logo">
-          <div class="bgImageLogoLight"></div>
-        </div>
+      <div class="box">
+        <img class="logo" src='./img/logo/logo-radbrackets-light.svg' alt='logo'/>
         <div class="formBox">
           <form
             id="contact-us"
@@ -629,8 +529,6 @@
             <li>NIP: PL 8982248940, REGON: 38272484500000, KRS: 774598</li>
             <li>+48 453 260 653</li>
           </ul>
-          <!-- RadBrackets Sp. z o.o., Al. Marcina Kromera 51A, 51-163 Wrocław,
-          Poland PL-NIP: 8982248940, REGON: 38272484500000, KRS: 774598 -->
         </div>
 
         <div class="social">
@@ -652,9 +550,6 @@
         </div>
       </footer>
     </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -662,8 +557,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="./js/contactForm.min.js"></script>
     <script src="./js/navigation.js"></script>

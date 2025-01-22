@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2024 Start Bootstrap
+ * Copyright 2013-2025 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 body {
@@ -331,6 +331,66 @@ img::selection {
   }
 }
 
+.sectionContact {
+  position: relative;
+  overflow: hidden;
+  background-color: #ecc100;
+}
+.sectionContact .box {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionContact .box {
+    padding: 2rem 0;
+  }
+}
+.sectionContact .box .logo {
+  padding-top: 2%;
+  margin-left: 5%;
+  width: 45%;
+  position: relative;
+  z-index: 2;
+}
+.sectionContact .box .icon {
+  width: 6%;
+  display: inline-block;
+  padding: 1%;
+}
+.sectionContact .box .contactUsTitle {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 3rem;
+}
+.sectionContact .box .contactIcons {
+  text-align: center;
+}
+.sectionContact .box .triangle {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -90%;
+  left: -68%;
+  background: #161616;
+}
+.sectionContact .box .orTitle {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1000px) {
+  .sectionContact .contactUsTitle {
+    font-size: 1.7rem;
+  }
+}
 .footer {
   display: flex;
   box-sizing: border-box;
@@ -462,24 +522,24 @@ img::selection {
   font-weight: bold;
 }
 
-.fontColorAccent {
+.colorYellow {
   color: #ecc100;
 }
 
-.bgColorPageYellow {
-  background-color: #ecc100;
-}
-
-.bgColorPageDarkGray {
-  background-color: #161616;
-}
-
-.bgImageHeader {
+.sectionHero {
+  position: relative;
+  overflow: hidden;
   background-image: url("/img/bg/header.jpg");
   background-size: cover;
   background-position: 15% 20%;
 }
-.bgImageHeader__logo-mobile {
+@media only screen and (max-width: 1030px) {
+  .sectionHero {
+    background-position: 0%;
+    background-image: url("/img/bg/laptop-brackets.jpeg");
+  }
+}
+.sectionHero__logoMobile {
   display: none;
   position: absolute;
   bottom: 12%;
@@ -487,148 +547,30 @@ img::selection {
   width: 30vw;
   height: auto;
 }
-
-@media (max-width: 1030px) {
-  .bgImageHeader {
-    background-position: 0%;
-    background-image: url("/img/bg/laptop-brackets.jpeg");
-  }
-  .bgImageHeader__logo-mobile {
+@media only screen and (max-width: 1030px) {
+  .sectionHero__logoMobile {
     display: flex;
   }
 }
-@media (max-width: 730px) {
-  .bgImageHeader__logo-mobile {
+@media only screen and (max-width: 730px) {
+  .sectionHero__logoMobile {
     bottom: 10%;
     left: 10%;
     width: 50vw;
   }
 }
-.bgImageLead {
-  height: 100vh;
-  background-image: url("/img/bg/these-people.jpg");
-  background-size: cover;
-}
-
-.bgImageTeam {
-  background-image: url("/img/bg/our-team.jpg");
-  background-size: cover;
-  background-position: 18% 0%;
-}
-
-@media (max-width: 1000px) {
-  .bgImageTeam {
-    background-image: url("/img/bg/our-team.jpg");
-    background-size: cover;
-    background-position: 33% 0%;
-  }
-}
-@media (max-width: 800px) {
-  .bgImageTeam {
-    background-position: 33% 14%;
-    background-image: url("/img/bg/our-team-mobile.jpg");
-    background-size: cover;
-  }
-}
-.bgImageLogo {
-  background-image: url("/img/logo/logo-radbrackets.svg");
-  background-size: cover;
-  padding-bottom: 29.25%;
-}
-
-.bgImageLogoLight {
-  background-image: url("/img/logo/logo-radbrackets-light.svg");
-  background-size: cover;
-  padding-bottom: 29.27%;
-}
-
-.brackets {
-  text-align: center;
-}
-.brackets .bracket1 {
-  width: 23%;
-  padding-left: 0%;
-  padding-right: 10%;
-  display: inline-block;
-}
-.brackets .bracket1 .bracketBg {
-  background-image: url("/img/logo/bracket-1.svg");
-  background-size: cover;
-  padding-bottom: 260%;
-}
-.brackets .bracket2 {
-  width: 23%;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  display: inline-block;
-}
-.brackets .bracket2 .bracketBg {
-  background-image: url("/img/logo/bracket-2.svg");
-  background-size: cover;
-  padding-bottom: 260%;
-}
-.brackets .bracket3 {
-  width: 23%;
-  padding-left: 10%;
-  padding-right: 0%;
-  display: inline-block;
-}
-.brackets .bracket3 .bracketBg {
-  background-image: url("/img/logo/bracket-3.svg");
-  background-size: cover;
-  padding-bottom: 260%;
-}
-
-.iconLinkedin {
-  background-image: url("/img/icons/linkedin.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-}
-
-.iconTwitter {
-  background-image: url("/img/icons/twitter.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-  width: 100%;
-}
-
-.iconMail {
-  background-image: url("/img/icons/mail.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 100%;
-  width: 100%;
-}
-
-.iconLinkedinLight {
-  background-image: url("/img/icons/linkedin-light.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 95.7%;
-}
-
-.iconTwitterLight {
-  background-image: url("/img/icons/twitter-light.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-bottom: 95.7%;
-}
-
-.sectionHeader {
-  position: relative;
-  overflow: hidden;
-}
-.sectionHeader .rightMenu {
+.sectionHero__rightMenu {
   position: absolute;
   right: 5%;
   bottom: 5%;
   width: 100%;
 }
-.sectionHeader .rightMenu ul {
+@media only screen and (max-width: 730px) {
+  .sectionHero__rightMenu {
+    display: none;
+  }
+}
+.sectionHero__rightMenu ul {
   list-style-type: none;
   text-align: right;
   font-size: 2rem;
@@ -636,33 +578,58 @@ img::selection {
   color: #fff;
 }
 
-@media (max-width: 730px) {
-  .sectionHeader .rightMenu {
-    display: none;
-  }
-}
 .sectionLead {
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  background-image: url("/img/bg/these-people.jpg");
+  background-size: cover;
 }
 .sectionLead .logo {
   position: absolute;
   top: 5%;
   left: 5%;
-  width: 15%;
+  width: 300px;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionLead .logo {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionLead .logo {
+    width: 100px;
+  }
 }
 .sectionLead ul.lead {
   position: absolute;
-  right: 0;
+  right: 5%;
   text-align: right;
-  margin-top: 5%;
-  margin-left: 0%;
-  margin-right: 4%;
+  top: 5%;
+  margin: 0;
   font-size: 4vw;
   font-weight: bold;
   list-style-type: none;
   text-align: right;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionLead ul.lead {
+    font-size: 2rem;
+    margin: 0;
+    top: 5%;
+    right: 5%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .sectionLead ul.lead {
+    top: 12%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionLead ul.lead {
+    font-size: 1.5rem;
+  }
 }
 .sectionLead ul.lead li {
   color: #000;
@@ -684,180 +651,245 @@ img::selection {
   right: 0;
   background: #ecc100;
 }
-
-@media (max-width: 1000px) {
-  .sectionLead ul.lead {
-    font-size: 2rem;
-    margin: 0;
-    top: 5%;
-    right: 5%;
-  }
-  .sectionLead .logo {
-    width: 30%;
-  }
+@media only screen and (max-width: 1000px) {
   .sectionLead .triangle {
     clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
   }
 }
-@media (max-width: 700px) {
-  .sectionLead ul.lead {
-    top: 12%;
-  }
-}
-@media (max-width: 500px) {
-  .sectionLead ul.lead {
-    font-size: 1.5rem;
-  }
-}
+
 .sectionTraits {
   position: relative;
   overflow: hidden;
   padding: 1%;
+  background-color: #ecc100;
 }
-.sectionTraits .sectionFont {
+@media only screen and (max-width: 1000px) {
+  .sectionTraits {
+    padding: 2rem 0;
+  }
+}
+.sectionTraits h2 {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
   font-size: 3rem;
-}
-.sectionTraits .subsectionFont {
-  font-size: 2.7rem;
-}
-.sectionTraits .sectionTitle {
   padding-top: 2em;
   padding-bottom: 2em;
   text-align: center;
 }
-.sectionTraits .textFont {
-  font-size: 1.4rem;
-  font-weight: 500;
+@media only screen and (max-width: 500px) {
+  .sectionTraits h2 {
+    font-size: 2.5rem;
+  }
 }
-.sectionTraits .customSoftware ul {
-  padding-top: 2em;
-  padding-bottom: 0em;
+.sectionTraits h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+}
+@media only screen and (max-width: 500px) {
+  .sectionTraits h3 {
+    font-size: 1.5rem;
+  }
+}
+.sectionTraits ul {
   list-style-type: none;
   text-align: right;
   padding-left: 0;
   margin-left: 0;
 }
-.sectionTraits .customSoftware ul li {
+.sectionTraits ul li {
   padding-bottom: 0.5em;
 }
-.sectionTraits .customSoftware p {
+.sectionTraits p {
+  font-size: 1.4rem;
+  font-weight: 500;
   text-align: right;
 }
-.sectionTraits .pursuitOfKnowledge {
-  text-align: center;
-  padding-bottom: 10%;
-}
-.sectionTraits .pursuitOfKnowledge .subsectionTitle {
-  padding-top: 1em;
-  padding-bottom: 2em;
-}
-.sectionTraits .pursuitOfKnowledge .lessWide {
-  text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.sectionTraits .feedback .subsectionTitle {
-  padding-top: 1em;
-  padding-bottom: 3em;
-}
-
-@media (max-width: 1000px) {
-  .sectionTraits .textFont {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 500px) {
-  .sectionTraits .sectionTitle {
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
-  }
-  .sectionTraits .subsectionFont {
-    font-size: 1.7rem;
-  }
-  .sectionTraits .textFont {
+@media only screen and (max-width: 1000px) {
+  .sectionTraits p {
     font-size: 1rem;
   }
 }
+.sectionTraits .bracket {
+  width: 150px;
+}
+@media only screen and (max-width: 1300px) {
+  .sectionTraits .bracket {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTraits .bracket {
+    width: 50px;
+  }
+}
+
 .sectionTeam {
   min-height: 120vh;
   position: relative;
   overflow: hidden;
+  background-image: url("/img/bg/our-team.jpg");
+  background-size: cover;
+  background-position: 18% 0%;
 }
-.sectionTeam .memberNameFont {
+@media only screen and (max-width: 1000px) {
+  .sectionTeam {
+    background-position: 33% 0%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam {
+    background-position: 33% 14%;
+    background-image: url("/img/bg/our-team-mobile.jpg");
+  }
+}
+.sectionTeam h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3.5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTeam h2 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTeam h2 {
+    font-size: 1.2rem;
+  }
+}
+.sectionTeam .rotate90 {
+  transform: rotate(90deg);
+}
+.sectionTeam .founders {
+  position: absolute;
+  top: 59%;
+  right: -3%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTeam .founders {
+    right: -5%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .founders {
+    display: none;
+  }
+}
+.sectionTeam h3 {
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
   font-size: 1.4rem;
 }
-.sectionTeam .memberNameFontBlack {
-  color: #000;
-}
-.sectionTeam .membersLabel {
-  font-weight: bold;
-  font-size: 3.5rem;
-  transform: rotate(90deg);
-}
-.sectionTeam .textFont {
-  font-weight: bold;
-  color: #fff;
-  font-size: 1.2rem;
-}
-.sectionTeam .teamHeader {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.sectionTeam .teamHeader .member1 {
+.sectionTeam h3:nth-of-type(1) {
   position: absolute;
   top: 7%;
   left: 15%;
 }
-.sectionTeam .teamHeader .member2 {
+@media only screen and (max-width: 800px) {
+  .sectionTeam h3:nth-of-type(1) {
+    bottom: 47%;
+    left: 42%;
+    top: auto;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .sectionTeam h3:nth-of-type(1) {
+    bottom: 53%;
+    left: 41%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTeam h3:nth-of-type(1) {
+    left: 29%;
+    bottom: 54%;
+  }
+}
+.sectionTeam h3:nth-of-type(2) {
   position: absolute;
   top: 2%;
   left: 53%;
 }
-.sectionTeam .teamHeader .membersLabel {
-  position: absolute;
-  top: 59%;
-  right: -3%;
+@media only screen and (max-width: 800px) {
+  .sectionTeam h3:nth-of-type(2) {
+    top: 1%;
+    left: 15%;
+  }
 }
-.sectionTeam .teamInfo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.sectionTeam .aboutText {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
 }
-.sectionTeam .teamInfo .social .icon {
-  width: 1.3em;
+@media only screen and (max-width: 1000px) {
+  .sectionTeam .aboutText {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .aboutText {
+    font-size: 0.7rem;
+  }
+}
+.sectionTeam .icon {
+  width: 1.3rem;
   display: inline-block;
   overflow: visible;
 }
-.sectionTeam .teamInfo .member1 {
+.sectionTeam .about {
   width: 600px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTeam .about {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .about {
+    width: 200px;
+  }
+}
+.sectionTeam .about-1 {
   left: 5%;
   bottom: 27%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
 }
-.sectionTeam .teamInfo .member2 {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
+@media only screen and (max-width: 800px) {
+  .sectionTeam .about-1 {
+    left: 5%;
+    bottom: 20%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTeam .about-1 {
+    bottom: 15%;
+  }
+}
+.sectionTeam .about-2 {
   bottom: 55%;
-  position: absolute;
   right: 5%;
 }
-.sectionTeam .teamInfo .member2 .social {
+@media only screen and (max-width: 800px) {
+  .sectionTeam .about-2 {
+    bottom: 66%;
+    right: 5%;
+  }
+}
+.sectionTeam .about-2 .social {
   text-align: right;
 }
-.sectionTeam .teamInfo .member2 p {
+.sectionTeam .about-2 .aboutText {
   text-align: right;
 }
 .sectionTeam .goodFriends {
@@ -868,116 +900,58 @@ img::selection {
   font-weight: bold;
   color: #fff;
   font-size: 3rem;
+  text-transform: lowercase;
 }
-.sectionTeam .goodFriends .founders {
-  display: none;
-  justify-content: center;
-}
-.sectionTeam .triangle {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 50%;
-  left: -58%;
-  background: rgb(22, 22, 22);
-}
-
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .sectionTeam .goodFriends {
     font-size: 2.5rem;
   }
-  .sectionTeam .membersLabel {
-    font-size: 2.5rem;
-  }
-  .sectionTeam .textFont {
-    font-size: 1rem;
-  }
-  .sectionTeam .teamHeader .membersLabel {
-    right: -5%;
-  }
-  .sectionTeam .teamInfo .member1 {
-    width: 400px;
-  }
-  .sectionTeam .teamInfo .member2 {
-    width: 400px;
-  }
 }
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .sectionTeam .goodFriends {
     font-size: 2rem;
     bottom: 2%;
   }
-  .sectionTeam .goodFriends .founders {
-    display: flex;
-  }
-  .sectionTeam .membersLabel {
-    font-size: 2rem;
-  }
-  .sectionTeam .textFont {
-    font-size: 0.7rem;
-  }
-  .sectionTeam .teamHeader .membersLabel {
-    display: none;
-  }
-  .sectionTeam .teamHeader .member1 {
-    bottom: 47%;
-    left: 42%;
-    top: auto;
-  }
-  .sectionTeam .teamHeader .member2 {
-    top: 1%;
-    left: 15%;
-  }
-  .sectionTeam .teamInfo .member1 {
-    width: 200px;
-    left: 5%;
-    bottom: 20%;
-  }
-  .sectionTeam .teamInfo .member2 {
-    width: 200px;
-    bottom: 66%;
-    right: 5%;
-  }
 }
-@media (max-width: 700px) {
-  .sectionTeam .teamHeader .member1 {
-    bottom: 53%;
-    left: 41%;
-  }
-}
-@media (max-width: 500px) {
-  .sectionTeam .memberNameFont {
-    font-size: 1.2rem;
-  }
-  .sectionTeam .teamHeader .member1 {
-    left: 29%;
-    bottom: 54%;
-  }
+@media only screen and (max-width: 500px) {
   .sectionTeam .goodFriends {
     font-size: 1.5rem;
     padding: 1rem;
   }
-  .sectionTeam .teamInfo .member1 {
-    bottom: 15%;
+}
+.sectionTeam .goodFriends .foundersMobile {
+  display: none;
+  justify-content: center;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 800px) {
+  .sectionTeam .goodFriends .foundersMobile {
+    display: flex;
   }
 }
+
 .sectionAbout {
   position: relative;
   overflow: hidden;
+  background-color: #161616;
 }
-.sectionAbout .textFont {
+.sectionAbout p {
   font-weight: 500;
   color: #fff;
   font-size: 1.4rem;
 }
-.sectionAbout .textFont span {
-  color: #ecc100;
+@media only screen and (max-width: 1000px) {
+  .sectionAbout p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
-.sectionAbout .aboutUsHeader {
+@media only screen and (max-width: 500px) {
+  .sectionAbout p {
+    font-size: 1rem;
+  }
+}
+.sectionAbout h2 {
   position: absolute;
   left: 0;
   top: 30%;
@@ -991,15 +965,8 @@ img::selection {
   top: 38%;
   width: auto;
 }
-.sectionAbout .aboutUsText {
-  padding-top: 2em;
-  padding-bottom: 4em;
-  padding-left: 22%;
-  padding-right: 10%;
-}
-
-@media (max-width: 1000px) {
-  .sectionAbout .aboutUsHeader {
+@media only screen and (max-width: 1000px) {
+  .sectionAbout h2 {
     left: 0%;
     top: 0%;
     font-size: 2.7rem;
@@ -1008,81 +975,34 @@ img::selection {
     transform: none;
     width: 100%;
   }
-  .sectionAbout .aboutUsText {
+}
+@media only screen and (max-width: 500px) {
+  .sectionAbout h2 {
+    font-size: 1.7rem;
+  }
+}
+.sectionAbout .aboutContainer {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  padding-left: 22%;
+  padding-right: 10%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionAbout .aboutContainer {
     padding-top: 8rem;
     padding-bottom: 4rem;
     padding-left: 5%;
     padding-right: 5%;
   }
-  .sectionAbout .textFont {
-    font-size: 1.2rem;
-    text-align: center;
-  }
 }
-@media (max-width: 500px) {
-  .sectionAbout .aboutUsHeader {
-    font-size: 1.7rem;
-  }
-  .sectionAbout .textFont {
-    font-size: 1rem;
-  }
-}
+
 .sectionTestimonials {
   position: relative;
   overflow: hidden;
   background: linear-gradient(0deg, #161616, rgb(29.65, 29.65, 29.65) 80%) no-repeat;
-  padding-bottom: 3em;
+  padding-bottom: 3rem;
 }
-.sectionTestimonials .sectionTitle {
-  padding-top: 2em;
-  padding-bottom: 1em;
-}
-.sectionTestimonials .sectionTitle__testimonials {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-.sectionTestimonials .sectionFont {
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 2.7rem;
-}
-.sectionTestimonials .textFont {
-  font-size: 1.4rem;
-  color: #fff;
-  margin-top: 1em;
-}
-.sectionTestimonials .carousel {
-  padding-left: 5%;
-  padding-right: 10%;
-}
-.sectionTestimonials .carousel-content {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: fit-content;
-}
-@media (min-width: 1400px) {
-  .sectionTestimonials .carousel-content {
-    min-height: 530px;
-  }
-}
-.sectionTestimonials .carousel-control-prev {
-  left: -9%;
-}
-.sectionTestimonials .carousel-control-next {
-  right: -4%;
-}
-.sectionTestimonials .carousel-control-next-icon,
-.sectionTestimonials .carousel-control-prev-icon {
-  width: 3vw;
-  height: 3vw;
-}
-.sectionTestimonials .testimonialsHeader {
+.sectionTestimonials h2 {
   position: absolute;
   left: 0;
   top: 55%;
@@ -1093,108 +1013,116 @@ img::selection {
   width: 100%;
   font-weight: bold;
   left: 0%;
-  top: 55%;
+  top: 50%;
   width: auto;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials h2 {
+    left: 0%;
+    top: 0%;
+    font-size: 2.7rem;
+    padding: 2rem;
+    text-align: center;
+    transform: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTestimonials h2 {
+    font-size: 1.7rem;
+  }
+}
+.sectionTestimonials h3 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2.7rem;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials h3 {
+    padding-top: 6rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTestimonials h3 {
+    font-size: 1.4rem;
+  }
+}
+.sectionTestimonials .carousel {
+  padding-left: 5%;
+  padding-right: 10%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+.sectionTestimonials .carousel-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: fit-content;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.sectionTestimonials .carousel-content p {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-top: 1em;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionTestimonials .carousel-content p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .sectionTestimonials .carousel-content {
+    min-height: 530px;
+  }
+}
+.sectionTestimonials .carousel-control-prev {
+  left: -9%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-control-prev {
+    left: 5%;
+    width: auto;
+  }
+}
+.sectionTestimonials .carousel-control-next {
+  right: -4%;
+}
+@media only screen and (max-width: 1000px) {
+  .sectionTestimonials .carousel-control-next {
+    right: 5%;
+    width: auto;
+  }
+}
+.sectionTestimonials .carousel-control-next-icon,
+.sectionTestimonials .carousel-control-prev-icon {
+  width: 3vw;
+  height: 3vw;
 }
 .sectionTestimonials .quotationMark {
   font-size: 4vw;
   color: #fff;
 }
 
-@media (max-width: 1000px) {
-  .sectionTestimonials .sectionTitle {
-    padding-top: 2em;
-    padding-bottom: 1em;
-  }
-  .sectionTestimonials .sectionTitle__testimonials {
-    display: flex;
-  }
-  .sectionTestimonials .textFont {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .sectionTestimonials .carousel-control-prev {
-    left: 5%;
-    width: auto;
-  }
-  .sectionTestimonials .carousel-control-next {
-    right: 5%;
-    width: auto;
-  }
-  .sectionTestimonials .carousel {
-    padding-right: 10%;
-    padding-left: 10%;
-  }
-  .sectionTestimonials .carousel-content {
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 500px) {
-  .sectionTestimonials .textFont {
-    font-size: 1rem;
-  }
-  .sectionTestimonials .sectionFont {
-    font-size: 1.7rem;
-  }
-}
-.sectionContact {
-  position: relative;
-  overflow: hidden;
-}
-.sectionContact .logo {
-  padding-top: 2%;
-  margin-left: 5%;
-  width: 45%;
-  position: relative;
-  z-index: 2;
-}
-.sectionContact .icon {
-  width: 6%;
-  display: inline-block;
-  padding: 1%;
-}
-.sectionContact .contactUsTitle {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 3rem;
-}
-.sectionContact .contactIcons {
-  text-align: center;
-}
-.sectionContact .triangle {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: -90%;
-  left: -68%;
-  background: #161616;
-}
-.sectionContact .orTitle {
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 2.5rem;
-}
-
-@media (max-width: 1000px) {
-  .bgColorPageYellow {
-    padding: 2rem 0;
-  }
-  .sectionContact .contactUsTitle {
-    font-size: 1.7rem;
-  }
-}
-.offerPage .subpageHeader .navbarListItemLink.offerPage {
-  color: #ecc100;
-}
 .offerPage .offerSectionPadding {
   padding-top: 90px;
 }
@@ -1270,9 +1198,6 @@ img::selection {
   }
 }
 
-.jobsPage .subpageHeader .navbarListItemLink.jobsPage {
-  text-decoration: underline;
-}
 .jobsPage .jobsSectionPadding {
   padding-top: 5px;
 }
