@@ -1,0 +1,145 @@
+@use '../mixins/mixin' as mixin;
+@use '../mixins/colors' as colors;
+
+.navigation {
+    background: colors.$darkGrey;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 0 5%;
+    z-index: 3;
+    @include mixin.pc1000px{
+        background: transparent;
+      justify-content: flex-end;
+    }
+    @include mixin.phone500px{
+        height: fit-content;
+        padding: 2vw;
+    }
+    .logo {
+      height: 60%;
+      width: 300px;
+      object-position: left;
+      object-fit: contain;
+      @include mixin.pc1000px{
+        display: none;
+    }
+    }
+    .hamburger-menu {
+      display: flex;
+      box-sizing: border-box;
+      padding-top: 5vv;
+      padding: 5vh 0%;
+      position: fixed;
+      visibility: hidden;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 0vh;
+      background-color: #161616;
+      transition: height 0.5s;
+      &__open {
+        visibility: visible;
+        width: 100%;
+        height: 100vh;
+      }
+      a.active {
+        border-bottom-color: #161616;
+        background: #ecc100;
+        color: #161616;
+        font-weight: 500;
+      }
+      a {
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+        padding: 0.5em;
+        color: colors.$white;
+        text-decoration: none;
+        transition: background 0.5s;
+        border-bottom: 2px solid white;
+        &:active {
+          border-bottom-color: #161616;
+          background: #ecc100;
+          color: #161616;
+        }
+        &:hover {
+          border-bottom-color: #161616;
+          background: #ecc100;
+          color: #161616;
+        }
+      }
+      .close-button {
+        padding-right: 5%;
+        justify-content: flex-end;
+        display: flex;
+        align-self: flex-end;
+        border: 0;
+        background: transparent;
+        width: 30%;
+  
+        .fa-solid {
+          font-family: "Font Awesome 5 Free" !important;
+        }
+        i {
+          font-size: 35px;
+          color: white;
+        }
+      }
+    }
+    .topMenu {
+      align-items: center;
+      height: 100%;
+      width: fit-content;
+      flex-direction: row;
+      display: flex;
+      text-align: right;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      @include mixin.pc1000px{
+        display: none;
+    }
+      a.active {
+        color: #ecc100 !important;
+        font-weight: 500;
+      }
+      a {
+        padding: 0.5em;
+        color: colors.$white;
+        text-decoration: none;
+        transition: color 0.5s;
+  
+        &:hover {
+          color: #ecc100;
+        }
+      }
+    }
+    .hamburger-button {
+      display: none;
+      border: 1px solid #ecc100;
+      width: 60px;
+      height: 60px;
+      background-color: #ecc100;
+      align-items: center;
+      justify-content: center;
+      @include mixin.pc1000px{
+        display: flex;
+      }
+      i {
+        font-size: 1.5rem;
+        color: white;
+      }
+    }
+  }
+
+ 

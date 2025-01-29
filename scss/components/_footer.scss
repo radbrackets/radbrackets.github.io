@@ -1,0 +1,60 @@
+@use '../mixins/colors' as colors;
+@use '../mixins/mixin' as mixin;
+.footer {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3% 5%;
+    background-color: colors.$black;
+    @include mixin.pc1250px{
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    @include mixin.phone500px{
+      padding: 2rem;
+    }
+    .logo {
+      width: 260px;
+      height: 60px;
+      object-position: left;
+      object-fit: contain;
+    }
+    .address {
+      text-align: center;
+      font-size: 1rem;
+      color: colors.$white;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+        font-size: 1.1rem;
+        @include mixin.pc1250px{
+          text-align: left;
+          font-size: 1rem;
+        }
+      }
+    }
+    .socialLink{
+      display: inline-block;
+      height: auto;
+      width: 20%;
+      text-decoration: none;
+      margin: .5rem;
+      @include mixin.pc1250px{
+        img{
+          width: 40px;
+            height: 40px;
+        }
+      }
+      img {
+        width: 50px;
+        height: 50px;
+       
+      }
+    }
+    
+  }
