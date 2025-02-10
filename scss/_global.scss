@@ -103,22 +103,28 @@ img::selection {
 
   & + .details {
     margin-left: 28px;
+    @include mixin.phone500px{
+      margin-left: 1rem;
+    }
   }
   & + ul.details {
     margin-left: 10px;
-  }
-  @media (min-width: 992px) {
-    font-size: 24px;
+    @include mixin.phone500px{
+      margin-left: 0;
+    }
   }
 }
 .details {
   font-size: 20px;
     line-height: 28px;
   font-weight: 300;
-  // @media (min-width: 992px) {
-  //   font-size: 20px;
-  //   line-height: 28px;
-  // }
+  @include mixin.phone700px{
+    font-size: 1rem;
+  }
+  @include mixin.phone500px{
+    font-size: .7rem;
+    line-height: 1rem;
+  }
 }
 
 

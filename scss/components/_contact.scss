@@ -16,6 +16,9 @@
       width: 30%;
       position: relative;
       z-index: 2;
+      @include mixin.phone500px{
+        width: 50%;
+      }
     }
     .contactBox {
       align-items: center;
