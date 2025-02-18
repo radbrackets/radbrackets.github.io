@@ -1,11 +1,11 @@
-@use "./variables" as *;
+@use './colors' as colors;
 @mixin rotatedHeader($top) {
   position: absolute;
   left: 0;
   top: $top;
   transform: translateX(-12%) translateY(-50%) rotate(-90deg);
   text-transform: uppercase;
-  color: $white;
+  color: colors.$white;
   font-size: calc(2.6vw);
   width: 100%;
   font-weight: bold;

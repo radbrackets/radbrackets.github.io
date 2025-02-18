@@ -73,11 +73,11 @@
     />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link
+    <!-- <link
       href="vendor/font-awesome/css/font-awesome.min.css"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
     
     <!-- Custom font - Monterrat -->
      
@@ -105,8 +105,7 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="navigation">
-      <span class="logo"></span>
-
+      <img src='/img/logo/logo-radbrackets-light.svg' alt='radbracketsLogo' class='logo'/>
       <button id="hamburger-button" class="hamburger-button">
         <i class="fas fa-bars" style="width: 70px"></i>
       </button>
@@ -131,48 +130,10 @@
       </nav>
     </div>
     
-    <!-- Chrome SVG as background display bug fix -->
-    <div style="width: 1px; height: 1px">
-      <object
-        type="image/svg+xml"
-        data="img/logo/logo-radbrackets-light.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/software-audit.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/project-kick-off.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/consiltancy-per-hour.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/custom-development"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/team-extension.svg"
-        width="1"
-        height="1"
-      ></object>
-    </div>
-    <section class="sectionTableOfContent offerSectionPadding">
+   
+    <section class="sectionTableOfContent">
       <div class="container-fluid">
-        <h1 class="offerMainHeading">Service Overview</h1>
+        <h1 >Service Overview</h1>
         <h2 class="highlightedHeading">Table of content</h2>
         <ul class="details">
           <li><a href="#software-audit">Software audit</a></li>
@@ -185,7 +146,7 @@
     </section>
     <section
       id="software-audit"
-      class="sectionSoftwareAudit offerSectionPadding"
+      class="sectionSoftwareAudit"
     >
       <div class="container-fluid">
         <img src="img/offer/software-audit.svg" alt="" class="offerImage" />
@@ -286,7 +247,7 @@
     </section>
     <section
       id="project-kick-off"
-      class="sectionProjectKickOff offerSectionPadding"
+      class="sectionProjectKickOff"
     >
       <div class="container-fluid">
         <img src="img/offer/project-kick-off.svg" alt="" class="offerImage" />
@@ -328,7 +289,7 @@
     </section>
     <section
       id="custom-development"
-      class="sectionCustomDevelopment offerSectionPadding"
+      class="sectionCustomDevelopment"
     >
       <div class="container-fluid">
         <img src="img/offer/custom-development.svg" alt="" class="offerImage" />
@@ -399,7 +360,7 @@
     </section>
     <section
       id="consultancy-per-hour"
-      class="sectionConsultancyPerHour offerSectionPadding"
+      class="sectionConsultancyPerHour"
     >
       <div class="container-fluid">
         <img
@@ -436,7 +397,7 @@
     </section>
     <section
       id="team-extension"
-      class="sectionTeamExtension offerSectionPadding"
+      class="sectionTeamExtension"
     >
       <div class="container-fluid">
         <img src="img/offer/team-extension.svg" alt="" class="offerImage" />
@@ -495,119 +456,104 @@
         </p>
       </div>
     </section>
-    <div class="sectionContact" id="contact">
-      <div class="triangle"></div>
-      <div class="box">
-        <img class="logo" src='./img/logo/logo-radbrackets-light.svg' alt='logo'/>
-        <div class="formBox">
-          <form
-            id="contact-us"
-            action="https://hooks.zapier.com/hooks/catch/15191504/2yf7d59"
+    <!-- SECTION: CONTACT -->
+    <section class="sectionContact" id="contact">
+      <img class="logo" src='./img/logo/logo-radbrackets-light.svg' alt='logo'/>
+      <div class="contactBox">
+        <form
+        class='formBox'
+          id="contact-us"
+          action="https://hooks.zapier.com/hooks/catch/15191504/2yf7d59"
+        >
+         
+            <label for="email" class="textFont text-white"
+              >Drop us your e-mail</label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control form-control-lg"
+              required
+            />
+         
+         
+            <label for="reason" class="textFont text-white"
+              >We are here to solve problems, write about yours</label
+            >
+            <textarea
+              id="reason"
+              name="reason"
+              type="email"
+              class="form-control form-control-lg"
+              rows="6"
+              required
+            ></textarea>
+          
+          <button
+            type="submit"
+            class="btn btn-primary mr-1"
+            id="submit-button"
           >
-            <div class="form-group">
-              <label for="email" class="textFont text-white"
-                >Drop us your e-mail</label
+            Let's talk
+          </button>
+        </form>
+        <span class="fw-bold text-uppercase text-center fs-1 textBlack">Or</span>
+        <div class="flex-col">
+          <span class="fw-bold text-uppercase text-center fs-1 textBlack">Catch us by</span>
+          <div class="text-center">
+              <a class="socialLink"
+                href="https://linkedin.com/company/radbrackets"
+                target="_blank"
               >
-              <input
-                id="email"
-                name="email"
-                type="email"
-                class="form-control form-control-lg"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="reason" class="textFont text-white"
-                >We are here to solve problems, write about yours</label
-              >
-              <textarea
-                id="reason"
-                name="reason"
-                type="email"
-                class="form-control form-control-lg"
-                rows="6"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="btn btn-primary mr-1"
-              id="submit-button"
-            >
-              Let's talk
-            </button>
-          </form>
-          <div class="orTitle">Or</div>
-          <div class="flex-col">
-            <div class="contactUsTitle">Catch us by</div>
-            <div class="contactIcons">
-              <div class="icon">
-                <a
-                  href="https://linkedin.com/company/radbrackets"
-                  target="_blank"
-                >
-                  <div class="iconLinkedin"></div>
-                </a>
-              </div>
-              <div class="icon">
-                <a href="https://twitter.com/radbrackets" target="_blank">
-                  <div class="iconTwitter"></div>
-                </a>
-              </div>
-              <div class="icon">
-                <a href="mailto:contact@radbrackets.com" target="_blank">
-                  <div class="iconMail"></div>
-                </a>
-              </div>
-            </div>
+                <img  src='/img/icons/linkedin-light.svg' alt='linkedin'/>
+              </a>
+            
+            
+              <a class="socialLink" href="https://twitter.com/radbrackets" target="_blank">
+                <img  src='/img/icons/twitter-light.svg' alt='twitter'/>
+              </a>
+           
+            
+              <a class="socialLink" href="mailto:contact@radbrackets.com" target="_blank">
+                <img  src='/img/icons/mail-light.svg' alt='e-mail'/>
+              </a>
+            
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <span class="logoFooter"></span>
-        <div class="address">
-          <ul>
-            <li>RadBrackets Sp. z o.o.</li>
-            <li>Al. Marcina Kromera 51A, 51-163 Wrocław, Poland</li>
-            <li>NIP: PL 8982248940, REGON: 38272484500000, KRS: 774598</li>
-            <li>+48 453 260 653</li>
-          </ul>
-          <!-- RadBrackets Sp. z o.o., Al. Marcina Kromera 51A, 51-163 Wrocław,
-          Poland PL-NIP: 8982248940, REGON: 38272484500000, KRS: 774598 -->
-        </div>
+  </section>
+<!-- SECTION: FOOTER -->
+    <footer class="footer">
+      <img src='/img/logo/logo-radbrackets-light.svg' class='logo' alt='radbracketsLogo'/>
+      
+      <div class="address">
+        <ul>
+          <li>RadBrackets Sp. z o.o.</li>
+          <li>Al. Marcina Kromera 51A, 51-163 Wrocław, Poland</li>
+          <li>NIP: PL 8982248940, REGON: 38272484500000, KRS: 774598</li>
+          <li>+48 453 260 653</li>
+        </ul>
+      </div>
 
-        <div class="social">
-          <div class="social-icon">
-            <a href="https://linkedin.com/company/radbrackets" target="_blank">
-              <img src="./img/icons/linkedin-light.svg" alt="linkedin" />
-            </a>
-          </div>
-          <div class="social-icon">
-            <a href="https://twitter.com/radbrackets" target="_blank">
-              <img src="./img/icons/twitter-light.svg" alt="linkedin" />
-            </a>
-          </div>
-          <div class="social-icon">
-            <a href="mailto:contact@radbrackets.com" target="_blank">
-              <img src="./img/icons/mail-light.svg" alt="linkedin" />
-            </a>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <!-- <section class="sectionContact">
-      <div class="container-fluid text-center fontStyleBold"></div>
-      <div class="infoBox text-center">
-        <div class="container-fluid">
-          <div class="text">
-            <p class="mb-5">Thank you!<br />Feel free to contact us!</p>
-            <a class="contactInfo" href="mailto:contact@radbrackets.com"
-              >contact@radbrackets.com</a
-            >
-          </div>
-        </div>
+      <div class="social">
+        
+          <a class='socialLink' href="https://linkedin.com/company/radbrackets" target="_blank">
+            <img src="./img/icons/linkedin-light.svg" alt="linkedin" />
+          </a>
+        
+        
+          <a class='socialLink' href="https://twitter.com/radbrackets" target="_blank">
+            <img src="./img/icons/twitter-light.svg" alt="twitter" />
+          </a>
+        
+        
+          <a class='socialLink' href="mailto:contact@radbrackets.com" target="_blank">
+            <img src="./img/icons/mail-light.svg" alt="e-mail" />
+          </a>
+        
       </div>
-    </section> -->
+    </footer>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="index.js"></script>
     <script src="./js/contactForm.min.js"></script>

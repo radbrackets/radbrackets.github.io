@@ -1,0 +1,63 @@
+@use "../mixins/colors" as colors;
+@use "../mixins/mixin" as mixin;
+
+
+.offerPage {
+  .sectionSoftwareAudit,.sectionProjectKickOff,.sectionCustomDevelopment,.sectionConsultancyPerHour,.sectionTeamExtension{
+    padding: 2rem 0;
+  }
+  .sectionTableOfContent {
+    padding: 10rem 0 2rem 0;
+    // padding: 200px 0 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url("/img/bg/these-people.jpg");
+    li {
+      padding-bottom: 20px;
+      font-size: 1.5rem;
+     @include mixin.phone700px{
+      font-size: 1.2rem;
+     }
+    }
+    h1{
+      font-size: 3rem;
+    color: colors.$gray-700;
+    text-align: center;
+    }
+  }
+
+  .infoBox {
+    background: colors.$accent;
+    margin: 1rem 0;
+    .text {
+      padding: 4rem 0;
+      font-size: 2rem;
+      line-height: 2rem;
+      font-weight: 600;
+      text-align: center;
+     @include mixin.pc1250px{
+      font-size: 1.5rem;
+      padding: 2rem 0;
+     }
+    }
+    
+  }
+  .offerImage {
+    float: right;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 400px;
+    display: block;
+    @include mixin.pc1000px{
+      float: none;
+      width: 250px;
+      margin: 0 auto 30px auto;
+    }
+  
+  }
+}

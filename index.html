@@ -137,9 +137,8 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="navigation">
-      <span class="logo"></span>
-
-      <button id="hamburger-button" class="hamburger-button">
+      <img src='/img/logo/logo-radbrackets-light.svg' alt='radbracketsLogo' class='logo'/>
+           <button id="hamburger-button" class="hamburger-button">
         <i class="fas fa-bars" style="width: 70px"></i>
       </button>
       <nav id="hamburger-menu" class="hamburger-menu">
@@ -186,7 +185,7 @@
     </section>
 
     <!-- section: lead -->
-    <div class="sectionLead">
+    <section class="sectionLead">
       <div class="triangle"></div>
 <img src='/img/logo/logo-radbrackets.svg' alt='radbrackets' class="logo"/>
         <ul class="lead">
@@ -196,10 +195,10 @@
           <li>software</li>
           <li class="huge">GREAT</li>
         </ul>
-    </div>
+    </section>
 
     <!-- section: traits -->
-    <div class="sectionTraits bgColorPageYellow pb-5">
+    <section class="sectionTraits bgColorPageYellow pb-5">
       <div class="d-flex flex-column px-4 px-lg-2">
         <h2 id="traits">
           Let us help you grow your business.
@@ -256,10 +255,10 @@
           
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- section: team -->
-    <div class="sectionTeam" id="team">
+    <section class="sectionTeam" id="team">
           <h2 class="rotate90 founders">Founders</h2>
           <h3>Patryk Zieliński</h3>
           <h3>Rafał Piotrowski</h3>
@@ -309,10 +308,10 @@
               Connected with Java for more than ten years.
             </p>
           </div>
-    </div>
+    </section>
 
     <!-- section: about -->
-    <div class="sectionAbout d-flex flex-row">
+    <section class="sectionAbout d-flex flex-row">
       <h2>About us</h2>
 
       <div class="aboutContainer">
@@ -346,10 +345,10 @@
           driven design.
         </p>
       </div>
-    </div>
+    </section>
 
     <!-- section: testimonials -->
-    <div class="sectionTestimonials">
+    <section class="sectionTestimonials">
       <h2 class="testimonialsHeader">testimonials</h2>
       <h3>People say...</h3>
      
@@ -450,18 +449,17 @@
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="sectionContact" id="contact">
-      <div class="triangle"></div>
-      <div class="box">
+    </section>
+    <!-- SECTION: CONTACT -->
+    <section class="sectionContact" id="contact">
         <img class="logo" src='./img/logo/logo-radbrackets-light.svg' alt='logo'/>
-        <div class="formBox">
+        <div class="contactBox">
           <form
+          class='formBox'
             id="contact-us"
             action="https://hooks.zapier.com/hooks/catch/15191504/2yf7d59"
           >
-            <div class="form-group">
+           
               <label for="email" class="textFont text-white"
                 >Drop us your e-mail</label
               >
@@ -472,8 +470,8 @@
                 class="form-control form-control-lg"
                 required
               />
-            </div>
-            <div class="form-group">
+           
+           
               <label for="reason" class="textFont text-white"
                 >We are here to solve problems, write about yours</label
               >
@@ -485,7 +483,7 @@
                 rows="6"
                 required
               ></textarea>
-            </div>
+            
             <button
               type="submit"
               class="btn btn-primary mr-1"
@@ -494,34 +492,35 @@
               Let's talk
             </button>
           </form>
-          <div class="orTitle">Or</div>
+          <span class="fw-bold text-uppercase text-center fs-1 textBlack">Or</span>
           <div class="flex-col">
-            <div class="contactUsTitle">Catch us by</div>
-            <div class="contactIcons">
-              <div class="icon">
-                <a
+            <span class="fw-bold text-uppercase text-center fs-1 textBlack">Catch us by</span>
+            <div class="text-center">
+                <a class="socialLink"
                   href="https://linkedin.com/company/radbrackets"
                   target="_blank"
                 >
-                  <div class="iconLinkedin"></div>
+                  <img  src='/img/icons/linkedin-light.svg' alt='linkedin'/>
                 </a>
-              </div>
-              <div class="icon">
-                <a href="https://twitter.com/radbrackets" target="_blank">
-                  <div class="iconTwitter"></div>
+              
+              
+                <a class="socialLink" href="https://twitter.com/radbrackets" target="_blank">
+                  <img  src='/img/icons/twitter-light.svg' alt='twitter'/>
                 </a>
-              </div>
-              <div class="icon">
-                <a href="mailto:contact@radbrackets.com" target="_blank">
-                  <div class="iconMail"></div>
+             
+              
+                <a class="socialLink" href="mailto:contact@radbrackets.com" target="_blank">
+                  <img  src='/img/icons/mail-light.svg' alt='e-mail'/>
                 </a>
-              </div>
+              
             </div>
           </div>
         </div>
-      </div>
+    </section>
+ <!-- SECTION: FOOTER -->
       <footer class="footer">
-        <span class="logoFooter"></span>
+        <img src='/img/logo/logo-radbrackets-light.svg' class='logo' alt='radbracketsLogo'/>
+        
         <div class="address">
           <ul>
             <li>RadBrackets Sp. z o.o.</li>
@@ -532,21 +531,21 @@
         </div>
 
         <div class="social">
-          <div class="social-icon">
-            <a href="https://linkedin.com/company/radbrackets" target="_blank">
+          
+            <a class='socialLink' href="https://linkedin.com/company/radbrackets" target="_blank">
               <img src="./img/icons/linkedin-light.svg" alt="linkedin" />
             </a>
-          </div>
-          <div class="social-icon">
-            <a href="https://twitter.com/radbrackets" target="_blank">
-              <img src="./img/icons/twitter-light.svg" alt="linkedin" />
+          
+          
+            <a class='socialLink' href="https://twitter.com/radbrackets" target="_blank">
+              <img src="./img/icons/twitter-light.svg" alt="twitter" />
             </a>
-          </div>
-          <div class="social-icon">
-            <a href="mailto:contact@radbrackets.com" target="_blank">
-              <img src="./img/icons/mail-light.svg" alt="linkedin" />
+          
+          
+            <a class='socialLink' href="mailto:contact@radbrackets.com" target="_blank">
+              <img src="./img/icons/mail-light.svg" alt="e-mail" />
             </a>
-          </div>
+          
         </div>
       </footer>
     </div>

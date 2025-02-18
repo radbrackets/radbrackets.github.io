@@ -110,26 +110,8 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- <header class="subpageHeader">
-      <nav class="navbar container-fluid">
-        <a href="/"
-          ><img
-            class="navbarLogo"
-            src="img/logo/logo-radbrackets-light.svg"
-            alt="company logo"
-        /></a>
-        <ul class="navbarList">
-          <li class="navbarListItem">
-            <a class="navbarListItemLink homePage" href="/">home</a>
-          </li>
-          <li class="navbarListItem">
-            <a class="navbarListItemLink jobsPage" href="/jobs.html">join us</a>
-          </li>
-        </ul>
-      </nav>
-    </header> -->
     <div class="navigation">
-      <span class="logo"></span>
+      <img src='/img/logo/logo-radbrackets-light.svg' alt='radbracketsLogo' class='logo'/>
 
       <button id="hamburger-button" class="hamburger-button">
         <i class="fas fa-bars" style="width: 70px"></i>
@@ -154,46 +136,8 @@
         <a href="jobs.html" class="active">Join us</a>
       </nav>
     </div>
-    <!-- Chrome SVG as background display bug fix -->
-    <div style="width: 1px; height: 1px">
-      <object
-        type="image/svg+xml"
-        data="img/logo/logo-radbrackets-light.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/software-audit.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/project-kick-off.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/consiltancy-per-hour.svg"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/custom-development"
-        width="1"
-        height="1"
-      ></object>
-      <object
-        type="image/svg+xml"
-        data="img/offer/team-extension.svg"
-        width="1"
-        height="1"
-      ></object>
-    </div>
-    <section class="sectionAboutUs jobsSectionPadding">
+        <!-- section: aboutUs -->
+    <section class="sectionAboutUs">
       <div class="container-fluid">
         <h2 class="highlightedHeading">About Us</h2>
         <p>
@@ -212,15 +156,14 @@
         <p>Radbrackets zawsze będzie firmą skierowaną na współpracę zdalną.</p>
       </div>
     </section>
-    <section class="sectionJobs jobsSectionPadding">
+    <section class="sectionJobs">
       <div class="container-fluid">
         <h1 class="highlightedHeading">Open Positions</h1>
-        <div id="jobsAccordion" class="accordion">
-          <div class="card">
-            <div class="card-header" id="jobOne">
-              <h2>
+        <div id="jobsAccordion" class="accordion card">
+         
+            <h2 class="card-header" id="jobOne">
                 <button
-                  class="jobHeader"
+                  class="buttonJob"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#senior-kotlin-developer"
@@ -243,8 +186,7 @@
                     aria-hidden="true"
                   ></i>
                 </button>
-              </h2>
-            </div>
+            </h2>
             <div id="senior-kotlin-developer" class="collapse">
               <div class="card-body">
                 <h3 class="highlightedSubheading mt-2">Client</h3>
@@ -267,29 +209,29 @@
                 </ul>
                 <h3 class="highlightedSubheading mt-2">You</h3>
                 <ul class="details">
-                  <li>lubisz wyzwania i nowe środowisko</li>
+                  <li>Lubisz wyzwania i nowe środowisko.</li>
                   <li>
-                    potrafisz rozmawiać z biznesem, służysz radą, wspierasz
-                    rozwój oprogramowania nie tylko poprzez kodowanie
+                    Potrafisz rozmawiać z biznesem, służysz radą, wspierasz
+                    rozwój oprogramowania nie tylko poprzez kodowanie.
                   </li>
-                  <li>Fascynujesz się tematami z dziedziny architektury</li>
+                  <li>Fascynujesz się tematami z dziedziny architektury.</li>
                   <li>
                     Domain Driven Design to nie tylko frazes zasłyszany na
-                    konferencji
+                    konferencji.
                   </li>
                   <li>
-                    potrafisz usprawnić proces wytwarzania oprogramowania,
-                    wspierasz mniej doświadczonych koderów
+                    Potrafisz usprawnić proces wytwarzania oprogramowania,
+                    wspierasz mniej doświadczonych koderów.
                   </li>
                   <li>
-                    jesteś decyzyjny - empatia i komunikatywność są Ci bliskie
+                    Jesteś decyzyjny - empatia i komunikatywność są Ci bliskie.
                   </li>
-                  <li>język angielski to Twój naturalny drugi język</li>
+                  <li>Język angielski to Twój naturalny drugi język.</li>
                 </ul>
                 <h3 class="highlightedSubheading mt-2">Project</h3>
                 <ul class="details">
-                  <li>praca wyłącznie zdalna</li>
-                  <li>elastyczne godziny pracy</li>
+                  <li>Praca wyłącznie zdalna</li>
+                  <li>Elastyczne godziny pracy</li>
                 </ul>
                 <a
                   class="joinUsLink"
@@ -298,11 +240,10 @@
                 >
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
-    <section class="sectionContact">
+    <section class="sectionJobsContact">
       <div class="container-fluid text-center fontStyleBold"></div>
       <div class="infoBox text-center">
         <div class="container-fluid">
@@ -321,6 +262,37 @@
         </div>
       </div>
     </section>
+    <!-- SECTION: FOOTER -->
+    <footer class="footer">
+      <img src='/img/logo/logo-radbrackets-light.svg' class='logo' alt='radbracketsLogo'/>
+      
+      <div class="address">
+        <ul>
+          <li>RadBrackets Sp. z o.o.</li>
+          <li>Al. Marcina Kromera 51A, 51-163 Wrocław, Poland</li>
+          <li>NIP: PL 8982248940, REGON: 38272484500000, KRS: 774598</li>
+          <li>+48 453 260 653</li>
+        </ul>
+      </div>
+
+      <div class="social">
+        
+          <a class='socialLink' href="https://linkedin.com/company/radbrackets" target="_blank">
+            <img src="./img/icons/linkedin-light.svg" alt="linkedin" />
+          </a>
+        
+        
+          <a class='socialLink' href="https://twitter.com/radbrackets" target="_blank">
+            <img src="./img/icons/twitter-light.svg" alt="twitter" />
+          </a>
+        
+        
+          <a class='socialLink' href="mailto:contact@radbrackets.com" target="_blank">
+            <img src="./img/icons/mail-light.svg" alt="e-mail" />
+          </a>
+        
+      </div>
+    </footer>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.min.js"></script>

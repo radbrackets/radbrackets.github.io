@@ -1,0 +1,494 @@
+@use "../mixins/mixin" as mixin;
+@use "../mixins/colors" as colors;
+.homepage .container-fluid {
+  max-width: none;
+}
+.fontStyleItalic {
+  font-style: italic;
+}
+.fontStyleBold {
+  font-weight: bold;
+}
+.colorYellow {
+  color: colors.$accent;
+}
+
+.sectionHero {
+  position: relative;
+  overflow: hidden;
+  background-image: url("/img/bg/header.jpg");
+  background-size: cover;
+  background-position: 15% 20%;
+  @include mixin.pc1030px{
+    background-position: 0%;
+    background-image: url("/img/bg/laptop-brackets.jpeg");
+  }
+  &__logoMobile {
+    display: none;
+    position: absolute;
+    bottom: 12%;
+    left: 10%;
+    width: 30vw;
+    height: auto;
+    @include mixin.pc1030px{
+      display: flex;
+    }
+    @include mixin.phone730px{
+      bottom: 10%;
+      left: 10%;
+      width: 50vw;
+    }
+  }
+  &__rightMenu {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 100%;
+    @include mixin.phone730px{
+      display: none;
+    }
+    ul {
+      list-style-type: none;
+      text-align: right;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: colors.$white;
+    }
+  }
+}
+
+.sectionLead {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url("/img/bg/these-people.jpg");
+  background-size: cover;
+  .logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 300px;
+    @include mixin.pc1000px{
+      width: 150px;
+    }
+    @include mixin.phone500px{
+      width: 100px;
+    }
+  }
+  ul.lead {
+    position: absolute;
+    right: 5%;
+    text-align: right;
+    top: 5%;
+    margin: 0;
+    font-size: calc(4vw);
+    font-weight: bold;
+    list-style-type: none;
+    text-align: right;
+    text-transform: uppercase;
+    @include mixin.pc1000px{
+      font-size: 2rem;
+      margin: 0;
+      top: 5%;
+      right: 5%;
+    }
+    @include mixin.phone730px{
+      top: 12%;
+    }
+    @include mixin.phone500px{
+      font-size: 1.5rem;
+    }
+    li {
+      color: colors.$black;
+    }
+    li.huge {
+      margin-top: 3%;
+      padding-right: 1%;
+      font-size: calc(8vw);
+      font-weight: bold;
+      color: colors.$white;
+    }
+  }
+  .triangle {
+    position: absolute;
+    clip-path: polygon(44% 0, 100% 0, 100% 100%, 86% 100%);
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background: colors.$accent;
+    @include mixin.pc1000px{
+      clip-path: polygon(-30% 0%, 100% 0, 100% 100%, 100% 50%);
+    }
+  }
+}
+
+.sectionTraits {
+  position: relative;
+  overflow: hidden;
+  padding: 1%;
+  background-color: colors.$accent;
+  @include mixin.pc1000px{
+    padding: 2rem 0;
+  }
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: colors.$white;
+    font-size: 3rem;padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    @include mixin.phone500px{
+      font-size: 2.5rem;
+    }
+  }
+  h3{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: colors.$white;
+    display: inline-block;
+    @include mixin.phone500px{
+      font-size: 1.5rem;
+    }
+  }
+    ul {
+      list-style-type: none;
+      text-align: right;
+      padding-left: 0;
+      margin-left: 0;
+      li {
+        padding-bottom: 0.5em;
+      }
+    }
+    p { font-size: 1.4rem;
+      font-weight: 500;
+      text-align: right;
+      @include mixin.pc1000px{
+        font-size: 1rem;
+      }
+    }
+  .bracket{
+    width: 150px;
+    @include mixin.pc1300px{
+      width: 100px;
+    }
+    @include mixin.phone500px{
+      width: 50px;
+    }
+  }
+ 
+}
+
+.sectionTeam {
+  min-height: 120vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url("/img/bg/our-team.jpg");
+  background-size: cover;
+  background-position: 18% 0%;
+  @include mixin.pc1000px{
+    background-position: 33% 0%;
+  }
+  @include mixin.phone800px{
+    background-position: 33% 14%;
+    background-image: url("/img/bg/our-team-mobile.jpg");
+  }
+  h2{
+    font-weight: 800;
+    text-transform: uppercase;
+    color: colors.$white;
+    font-size: 3.5rem;
+    @include mixin.pc1000px{
+      font-size: 2.5rem;
+    }
+    @include mixin.phone800px{
+      font-size: 2rem;
+    }
+    @include mixin.phone500px{
+      font-size: 1.2rem;
+    }
+  }
+  .rotate90{
+    transform: rotate(90deg);
+    
+  }
+  .founders{
+    position: absolute;
+    top: 59%;
+    right: -3%;
+    @include mixin.pc1000px{
+      right: -5%;
+    }
+    @include mixin.phone800px{
+      display: none;
+    }
+  }
+  h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: colors.$white;
+    font-size: 1.4rem;
+    &:nth-of-type(1){
+      position: absolute;
+    top: 7%;
+    left: 15%;
+    @include mixin.phone800px{
+      bottom: 47%;
+      left: 42%;
+      top: auto;
+    }
+    @include mixin.phone700px{
+      bottom: 53%;
+        left: 41%;
+    }
+    @include mixin.phone500px{
+      left: 29%;
+        bottom: 54%;
+    }
+    }
+    &:nth-of-type(2){
+      position: absolute;
+      top: 2%;
+      left: 53%;
+      @include mixin.phone800px{
+        top: 1%;
+        left: 15%;
+      }
+    }
+  }
+  .aboutText {
+    font-weight: bold;
+    color: colors.$white;
+    font-size: 1.2rem;
+    @include mixin.pc1000px{
+      font-size: 1rem;
+    }
+    @include mixin.phone800px{
+      font-size: 0.7rem;
+    }
+  }
+  .icon {
+    width: 1.3rem;
+    display: inline-block;
+    overflow: visible;
+  }
+  .about {
+    width: 600px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    @include mixin.pc1000px{
+      width: 400px;
+    }
+    @include mixin.phone800px{
+      width: 200px;
+    }
+  }
+  .about-1{
+    left: 5%;
+    bottom: 27%;
+    @include mixin.phone800px{
+      left: 5%;
+      bottom: 20%;
+    }
+    @include mixin.phone500px{
+      bottom: 15%;
+    }
+  }
+  .about-2{
+    bottom: 55%;
+    right: 5%;
+    @include mixin.phone800px{
+      bottom: 66%;
+        right: 5%;
+    }
+    .social {
+      text-align: right;
+    }
+    .aboutText {
+      text-align: right;
+    }
+  }
+  .goodFriends {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: colors.$white;
+    font-size: 3rem;
+    text-transform: lowercase;
+    @include mixin.pc1000px{
+      font-size: 2.5rem;
+    }
+    @include mixin.phone800px{
+      font-size: 2rem;
+      bottom: 2%;
+    }
+    @include mixin.phone500px{
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+    .foundersMobile {
+      display: none;
+      justify-content: center;
+      text-transform: uppercase;
+      @include mixin.phone800px{
+        display: flex;
+      }
+    }
+  }
+}
+
+.sectionAbout {
+  position: relative;
+  overflow: hidden;
+  background-color: colors.$darkGrey;
+  p {
+    font-weight: 500;
+    color: colors.$white;
+    font-size: 1.4rem;
+    @include mixin.pc1000px{
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    @include mixin.phone500px{
+      font-size: 1rem;
+    }
+  }
+  h2 {
+    @include mixin.rotatedHeader(30%);
+    left: 2%;
+    top: 38%;
+    width: auto;
+    @include mixin.pc1000px{
+      left: 0%;
+      top: 0%;
+      font-size: 2.7rem;
+      padding: 2rem;
+      text-align: center;
+      transform: none;
+      width: 100%;
+    }
+    @include mixin.phone500px{
+      font-size: 1.7rem;
+    }
+  }
+
+  .aboutContainer {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 22%;
+    padding-right: 10%;
+    @include mixin.pc1000px{
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+}
+
+.sectionTestimonials {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+      0deg,
+      colors.$darkGrey,
+      (colors.$darkGrey) 80%
+    )
+    no-repeat;
+  padding-bottom: 3rem;
+  h2 {
+    @include mixin.rotatedHeader(55%);
+    left: 0%;
+    top: 50%;
+    width: auto;
+    @include mixin.pc1000px{
+      left: 0%;
+      top: 0%;
+      font-size: 2.7rem;
+      padding: 2rem;
+      text-align: center;
+      transform: none;
+      width: 100%;
+    }
+    @include mixin.phone500px{
+      font-size: 1.7rem;
+    }
+  }
+  h3{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: colors.$white;
+    font-size: 2.7rem;
+    @include mixin.pc1000px{
+      padding-top: 6rem;
+    }
+    @include mixin.phone500px{
+      font-size: 1.4rem;
+    }
+  }
+  .carousel {
+    padding-left: 5%;
+    padding-right: 10%;
+    @include mixin.pc1000px{
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+  }
+  .carousel-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: fit-content;
+    @include mixin.pc1000px{
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+      font-size: 1.4rem;
+    color: colors.$white;
+    margin-top: 1em;
+    @include mixin.pc1000px{
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    @include mixin.phone500px{
+      font-size: 1rem;
+    }
+    }
+    @media (min-width: 1400px) {
+      min-height: 530px;
+    }
+  }
+  .carousel-control-prev {
+    left: -9%;
+    @include mixin.pc1000px{
+      left: 5%;
+      width: auto;
+    }
+  }
+  .carousel-control-next {
+    right: -4%;
+    @include mixin.pc1000px{
+      right: 5%;
+      width: auto;
+    }
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: calc(3vw);
+    height: calc(3vw);
+  }
+  .quotationMark {
+    font-size: calc(4vw);
+    color: colors.$white;
+  }
+}
+
